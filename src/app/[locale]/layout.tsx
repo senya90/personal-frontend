@@ -3,6 +3,10 @@ import { routing } from '@/i18n/routing'
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import { setRequestLocale } from 'next-intl/server'
+import { Header } from '@/shared/ui/Header'
+import './globals.css'
+
+export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   title: 'Semoshin',
@@ -26,7 +30,10 @@ export default async function LocaleLayout({ children, params }: IProps) {
   return (
     <html lang={locale}>
       <body>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <Header />
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   )
