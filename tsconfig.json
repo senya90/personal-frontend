@@ -20,6 +20,8 @@
     ],
     "baseUrl": ".",
     "paths": {
+      "@/styles": ["./src/shared/ui/styles/index.ts"], // ---------------------- ◉
+      "@/shared/ui/styles": ["./__disabled__/"], // special rule for short alias ↑
       "@/*": ["./src/*"],
       "@/shared/*": ["./src/shared/*"],
       "@/entity/*": ["./src/entity/*"],

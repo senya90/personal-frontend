@@ -4,7 +4,9 @@ import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import { setRequestLocale } from 'next-intl/server'
 import { Header } from '@/shared/ui/Header'
+import { mainFont } from '@/shared/ui/fonts'
 import './globals.css'
+import './normalize.css'
 
 export const dynamic = 'force-static'
 
@@ -28,7 +30,7 @@ export default async function LocaleLayout({ children, params }: IProps) {
   setRequestLocale(locale)
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={mainFont.variable}>
       <body>
         <NextIntlClientProvider>
           <Header />
