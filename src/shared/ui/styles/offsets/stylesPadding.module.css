@@ -1,0 +1,156 @@
+/* All */
+.p_xs {
+  padding: var(--space-xs);
+}
+
+.p_s {
+  padding: var(--space-s);
+}
+
+.p_m {
+  padding: var(--space-m);
+}
+
+.p_l {
+  padding: var(--space-l);
+}
+
+.p_xl {
+  padding: var(--space-xl);
+}
+
+/* X Axis */
+.px_xs {
+  padding-left: var(--space-xs);
+  padding-right: var(--space-xs);
+}
+
+.px_s {
+  padding-left: var(--space-s);
+  padding-right: var(--space-s);
+}
+
+.px_m {
+  padding-left: var(--space-m);
+  padding-right: var(--space-m);
+}
+
+.px_l {
+  padding-left: var(--space-l);
+  padding-right: var(--space-l);
+}
+
+.px_xl {
+  padding-left: var(--space-xl);
+  padding-right: var(--space-xl);
+}
+
+/* Y Axis */
+.py_xs {
+  padding-top: var(--space-xs);
+  padding-bottom: var(--space-xs);
+}
+
+.py_s {
+  padding-top: var(--space-s);
+  padding-bottom: var(--space-s);
+}
+
+.py_m {
+  padding-top: var(--space-m);
+  padding-bottom: var(--space-m);
+}
+
+.py_l {
+  padding-top: var(--space-l);
+  padding-bottom: var(--space-l);
+}
+
+.py_xl {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+}
+
+/* Left */
+.pl_xs {
+  padding-left: var(--space-xs);
+}
+
+.pl_s {
+  padding-left: var(--space-s);
+}
+
+.pl_m {
+  padding-left: var(--space-m);
+}
+
+.pl_l {
+  padding-left: var(--space-l);
+}
+
+.pl_xl {
+  padding-left: var(--space-xl);
+}
+
+/* Right */
+.pr_xs {
+  padding-right: var(--space-xs);
+}
+
+.pr_s {
+  padding-right: var(--space-s);
+}
+
+.pr_m {
+  padding-right: var(--space-m);
+}
+
+.pr_l {
+  padding-right: var(--space-l);
+}
+
+.pr_xl {
+  padding-right: var(--space-xl);
+}
+
+/* Top */
+.pt_xs {
+  padding-top: var(--space-xs);
+}
+
+.pt_s {
+  padding-top: var(--space-s);
+}
+
+.pt_m {
+  padding-top: var(--space-m);
+}
+
+.pt_l {
+  padding-top: var(--space-l);
+}
+
+.pt_xl {
+  padding-top: var(--space-xl);
+}
+
+/* Bottom */
+.pb_xs {
+  padding-bottom: var(--space-xs);
+}
+
+.pb_s {
+  padding-bottom: var(--space-s);
+}
+
+.pb_m {
+  padding-bottom: var(--space-m);
+}
+
+.pb_l {
+  padding-bottom: var(--space-l);
+}
+
+.pb_xl {
+  padding-bottom: var(--space-xl);
+}

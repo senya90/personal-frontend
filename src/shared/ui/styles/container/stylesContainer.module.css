@@ -1,11 +1,11 @@
-.container {
+.main {
   width: 100%;
   padding-left: var(--space-m);
   padding-right: var(--space-m);
   max-width: var(--max-width);
 }
 
-.container_pure {
+.pure {
   width: 100%;
   max-width: var(--max-width);
 }

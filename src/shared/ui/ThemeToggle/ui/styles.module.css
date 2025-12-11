@@ -1,0 +1,4 @@
+.themeToggle {
+  display: flex;
+  gap: var(--space-s);
+}

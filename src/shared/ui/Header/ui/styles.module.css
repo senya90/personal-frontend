@@ -1,6 +1,19 @@
 .header {
   width: 100%;
   border-bottom: 1px solid var(--additional);
-  padding-top: var(--space-l);
-  padding-bottom: var(--space-l);
+  padding-top: var(--space-s);
+  padding-bottom: var(--space-s);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rightBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
 }

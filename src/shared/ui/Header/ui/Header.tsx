@@ -1,16 +1,18 @@
 import { LanguageSwitcher } from '@/shared/ui/LanguageSwitcher'
 import { ThemeToggle } from '@/shared/ui/ThemeToggle'
 import styles from './styles.module.css'
+import { container, margins } from '@/shared/ui/styles'
 import cn from 'classnames'
-import { container } from '@/styles'
 
 export const Header = () => {
   return (
     <header className={styles.header}>
-      <div className={container.main}>
+      <div className={cn(container.main, styles.container)}>
         <span>Semoshin</span>
-        <div>
-          <LanguageSwitcher />
+        <div className={styles.rightBlock}>
+          <div className={margins.mb_xs}>
+            <LanguageSwitcher />
+          </div>
           <ThemeToggle />
         </div>
       </div>
