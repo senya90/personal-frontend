@@ -8,7 +8,7 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <div className={cn(container.main, styles.container)}>
-        <span>Semoshin</span>
+        <span>SEMOSHIN</span>
         <div className={styles.rightBlock}>
           <div className={margins.mb_xs}>
             <LanguageSwitcher />

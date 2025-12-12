@@ -1,3 +1,5 @@
+import { container } from '@/shared/ui/styles'
+import { Typography } from '@/shared/ui/Typography'
 import { useTranslations } from 'next-intl'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { use } from 'react'
@@ -23,12 +25,8 @@ export default function Home({ params }: IProps) {
   const t = useTranslations('Home')
 
   return (
-    <div className="">
-      <main className="">
-        <div className="">
-          <h1 className="">{t('greetings')}</h1>
-        </div>
-      </main>
-    </div>
+    <main className={container.main}>
+      <Typography variant="h1">{t('greetings')}</Typography>
+    </main>
   )
 }
