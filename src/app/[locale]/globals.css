@@ -43,7 +43,28 @@ html {
   font-size: 1rem;
 }
 
-/* html[data-theme='light'] {} */
+html[data-theme='light'] {
+  --bg: #f9fafb;
+  --text: #111827;
+  --text-secondary: #6b7280;
+  --text-error: #dc2626;
+  --accent: #2563eb;
+  --additional: #e5e7eb;
+  --border: #e5e7eb;
+
+  --color_sun: #fbbf24;
+  --color_moon: #d1d5db;
+  --color_system: #d1d5db;
+
+  --link-content: #2563eb;
+  --link-content-hover: #1d4ed8;
+  --link-content-visited: #3730a3;
+  --link-nav: #111827;
+  --link-nav-hover: #2563eb;
+  --link-nav-active: #2563eb;
+  --link-secondary: #6b7280;
+  --link-secondary-hover: #111827;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -61,8 +82,10 @@ html {
 
     --link-content: #38bdf8;
     --link-content-hover: #0ea5e9;
+    --link-content-visited: #818cf8;
     --link-nav: #e5e7eb;
     --link-nav-hover: #38bdf8;
+    --link-nav-active: #0284c7;
     --link-secondary: #94a3b8;
     --link-secondary-hover: #e5e7eb;
   }

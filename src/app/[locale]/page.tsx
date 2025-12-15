@@ -1,12 +1,12 @@
+import { ILocaleProps } from '@/i18n/ILocaleProps'
 import { container } from '@/shared/ui/styles'
 import { Typography } from '@/shared/ui/Typography'
 import { useTranslations } from 'next-intl'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { use } from 'react'
 
-interface IProps {
+interface IProps extends ILocaleProps {
   children: React.ReactNode
-  params: Promise<{ locale: string }>
 }
 
 export async function generateMetadata({ params }: IProps) {

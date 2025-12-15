@@ -11,7 +11,12 @@
     "education": "Education",
     "contacts": "Contacts"
   },
+  "Contacts": {
+    "title": "Contacts"
+  },
   "Education": {
-    "title": "Education"
+    "title": "Education",
+    "specialization": "Specialization",
+    "faculty": "Faculty"
   }
 }

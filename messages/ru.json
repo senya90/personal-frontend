@@ -11,7 +11,12 @@
     "education": "Образование",
     "contacts": "Контакты"
   },
+  "Contacts": {
+    "title": "Контакты"
+  },
   "Education": {
-    "title": "Образование"
+    "title": "Образование",
+    "specialization": "Специальность",
+    "faculty": "Факультет"
   }
 }
