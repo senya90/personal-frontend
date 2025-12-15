@@ -14,12 +14,12 @@ export const EducationCard = ({ education }: IProps) => {
       <Card.Header title={title} additional={degree} />
 
       <Card.Section>
-        <Typography align="right" variant="light2">
+        <Typography align="right" variant="light2" color="secondary">
           Специальность: {field.specialization}
         </Typography>
 
         {education.field.faculty && (
-          <Typography align="right" variant="light2">
+          <Typography align="right" variant="light2" color="secondary">
             Факультет: {field.faculty}
           </Typography>
         )}
@@ -47,10 +47,14 @@ export const EducationCard = ({ education }: IProps) => {
 
       <Card.Footer withDivider={false}>
         <time dateTime={period.from}>
-          <Typography variant="caption">{period.from}</Typography>
+          <Typography variant="caption" color="secondary">
+            {period.from}
+          </Typography>
         </time>
         <time dateTime={period.to}>
-          <Typography variant="caption">-{period.to}</Typography>
+          <Typography variant="caption" color="secondary">
+            -{period.to}
+          </Typography>
         </time>
       </Card.Footer>
     </Card>

@@ -21,7 +21,7 @@ export const CardFooter = ({ children, withDivider = true }: IProps) => {
       {isCustom ? (
         children
       ) : (
-        <Typography variant="caption" color={'secondary'}>
+        <Typography variant="caption" color="secondary">
           {children}
         </Typography>
       )}
