@@ -11,6 +11,15 @@
   --color_moon: #d1d5db;
   --color_system: #d1d5db;
 
+  --link-content: #2563eb;
+  --link-content-hover: #1d4ed8;
+  --link-content-visited: #3730a3;
+  --link-nav: #111827;
+  --link-nav-hover: #2563eb;
+  --link-nav-active: #2563eb;
+  --link-secondary: #6b7280;
+  --link-secondary-hover: #111827;
+
   --font-size: 18px;
 
   --space-xs: 6px;
@@ -44,10 +53,18 @@ html {
     --text-error: #f87171;
     --accent: #38bdf8;
     --additional: #020617;
+    --border: #1e293b;
 
     --color_sun: #475569;
     --color_moon: #2563eb;
     --color_system: #475569;
+
+    --link-content: #38bdf8;
+    --link-content-hover: #0ea5e9;
+    --link-nav: #e5e7eb;
+    --link-nav-hover: #38bdf8;
+    --link-secondary: #94a3b8;
+    --link-secondary-hover: #e5e7eb;
   }
 }
 
@@ -63,6 +80,15 @@ html[data-theme='dark'] {
   --color_sun: #475569;
   --color_moon: #2563eb;
   --color_system: #475569;
+
+  --link-content: #38bdf8;
+  --link-content-hover: #0ea5e9;
+  --link-content-visited: #818cf8;
+  --link-nav: #e5e7eb;
+  --link-nav-hover: #38bdf8;
+  --link-nav-active: #0284c7;
+  --link-secondary: #94a3b8;
+  --link-secondary-hover: #e5e7eb;
 }
 
 body {
@@ -77,4 +103,17 @@ body {
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+a {
+  color: var(--link-content);
+}
+
+a:hover {
+  color: var(--link-content-hover);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--link-content-visited);
 }

@@ -13,7 +13,14 @@
 
 .rightBlock {
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightCtrls {
+  display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
+  margin-left: var(--space-xl);
 }
