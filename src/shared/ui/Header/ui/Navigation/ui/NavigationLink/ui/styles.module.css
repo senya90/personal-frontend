@@ -1,0 +1,16 @@
+.link,
+.link * {
+  color: var(--link-nav);
+  margin-left: var(--space-m);
+  text-decoration: none;
+}
+
+.link:hover,
+.link:hover * {
+  color: var(--link-nav-hover);
+}
+
+.link.active,
+.link.active * {
+  color: var(--link-nav-active);
+}

@@ -5,5 +5,13 @@
     },
     "greetings": "Hi",
     "pangram": "The quick brown fox jumps over the lazy dog"
+  },
+  "Nav": {
+    "home": "Home",
+    "education": "Education",
+    "contacts": "Contacts"
+  },
+  "Education": {
+    "title": "Education"
   }
 }
