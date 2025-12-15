@@ -4,10 +4,19 @@ import { ILocaleProps } from '@/i18n/ILocaleProps'
 import { container } from '@/shared/ui/styles'
 import { Typography } from '@/shared/ui/Typography'
 import { useTranslations } from 'next-intl'
-import { setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { use } from 'react'
 
 interface IProps extends ILocaleProps {}
+
+export async function generateMetadata({ params }: IProps) {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'Education.meta' })
+
+  return {
+    title: t('title'),
+  }
+}
 
 export default function Education({ params }: IProps) {
   const { locale } = use(params)

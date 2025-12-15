@@ -1,7 +1,7 @@
 {
   "Home": {
     "meta": {
-      "title": "Семён Мамошин Dev"
+      "title": "SEMOSHIN"
     },
     "greetings": "Привет",
     "pangram": "Съешь ещё этих мягких французских булок, да выпей чаю"
@@ -12,9 +12,15 @@
     "contacts": "Контакты"
   },
   "Contacts": {
+    "meta": {
+      "title": "Контакты"
+    },
     "title": "Контакты"
   },
   "Education": {
+    "meta": {
+      "title": "Образование"
+    },
     "title": "Образование",
     "specialization": "Специальность",
     "faculty": "Факультет"

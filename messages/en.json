@@ -1,7 +1,7 @@
 {
   "Home": {
     "meta": {
-      "title": "Semyon Mamoshin Dev"
+      "title": "SEMOSHIN"
     },
     "greetings": "Hi",
     "pangram": "The quick brown fox jumps over the lazy dog"
@@ -12,9 +12,15 @@
     "contacts": "Contacts"
   },
   "Contacts": {
+    "meta": {
+      "title": "Contacts"
+    },
     "title": "Contacts"
   },
   "Education": {
+    "meta": {
+      "title": "Education"
+    },
     "title": "Education",
     "specialization": "Specialization",
     "faculty": "Faculty"
