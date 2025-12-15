@@ -1,0 +1,9 @@
+.footer {
+  display: block;
+  padding-top: var(--space-xs);
+  padding-bottom: var(--space-xs);
+}
+
+.withDivider {
+  border-top: 1px solid var(--border);
+}

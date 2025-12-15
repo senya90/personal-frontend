@@ -1,0 +1,6 @@
+.section {
+  display: block;
+  padding-top: var(--space-xs);
+  padding-bottom: var(--space-xs);
+  margin-bottom: var(--space-xs);
+}
