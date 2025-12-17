@@ -32,7 +32,7 @@
   --max-width-small: 800px;
 
   --radius: 15px;
-  --radius-inner: 9px;
+  --radius-m: 9px;
 
   font-size: var(--font-size);
   font-family: var(--font-main), sans-serif; /* --font-main from nextjs fonts */

@@ -1,0 +1,17 @@
+.stackBox {
+  display: grid;
+  gap: var(--space-s);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.advancedBox {
+  display: grid;
+  gap: var(--space-s);
+  grid-template-columns: 1fr 1fr;
+}
+
+.stackBoxMini {
+  display: grid;
+  gap: var(--space-s);
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
