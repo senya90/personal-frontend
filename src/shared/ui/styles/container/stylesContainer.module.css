@@ -16,3 +16,11 @@
   padding-top: var(--space-m);
   padding-bottom: var(--space-l);
 }
+
+.bg {
+  background-color: var(--bg);
+}
+
+.bgAdditional {
+  background-color: var(--additional);
+}

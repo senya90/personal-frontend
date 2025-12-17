@@ -1,0 +1,4 @@
+section .sectionMain {
+  padding-top: calc(var(--space-xl) * 4);
+  padding-bottom: calc(var(--space-xl) * 4);
+}
