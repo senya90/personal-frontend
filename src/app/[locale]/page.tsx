@@ -1,12 +1,16 @@
+import { ILocaleProps } from '@/i18n/ILocaleProps'
 import { container } from '@/shared/ui/styles'
-import { Typography } from '@/shared/ui/Typography'
-import { useTranslations } from 'next-intl'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { use } from 'react'
+import { Greetings } from '@/app/[locale]/_ui/Greetings'
+import { Experience } from '@/app/[locale]/_ui/Experience'
+import { Stack } from '@/app/[locale]/_ui/Stack'
+import { Work } from '@/app/[locale]/_ui/Work'
+import { RecentProjects } from '@/app/[locale]/_ui/RecentProjects'
+import { Contacts } from '@/app/[locale]/_ui/Contacts'
 
-interface IProps {
+interface IProps extends ILocaleProps {
   children: React.ReactNode
-  params: Promise<{ locale: string }>
 }
 
 export async function generateMetadata({ params }: IProps) {
@@ -20,13 +24,23 @@ export async function generateMetadata({ params }: IProps) {
 
 export default function Home({ params }: IProps) {
   const { locale } = use(params)
-
   setRequestLocale(locale)
-  const t = useTranslations('Home')
 
   return (
-    <main className={container.main}>
-      <Typography variant="h1">{t('greetings')}</Typography>
+    <main>
+      <article className={container.bg}>
+        <Greetings />
+
+        <Experience />
+
+        <Stack />
+
+        <Work />
+
+        <RecentProjects />
+
+        <Contacts />
+      </article>
     </main>
   )
 }

@@ -15,6 +15,7 @@ const eslintConfig = defineConfig([
     },
     rules: {
       'prettier/prettier': 'error',
+      '@typescript-eslint/no-empty-object-type': 'off',
     },
   },
 

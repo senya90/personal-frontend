@@ -3,7 +3,7 @@ import { ThemeToggle } from '@/shared/ui/ThemeToggle'
 import styles from './styles.module.css'
 import { container, margins } from '@/shared/ui/styles'
 import cn from 'classnames'
-import { Navigation } from '@/shared/ui/Header/ui/Navigation/ui/Navigation'
+import { Navigation } from '@/shared/ui/Navigation'
 
 export const Header = () => {
   return (
@@ -23,14 +23,3 @@ export const Header = () => {
     </header>
   )
 }
-
-// export function LanguageSwitcher() {
-//   const pathname = usePathname()
-
-//   return (
-//     <div style={{ display: 'flex', gap: 12 }}>
-//       <a onClick={() => redirect({ locale: 'ru', href: pathname })}>RU</a>
-//       <a onClick={() => redirect({ locale: 'en', href: pathname })}>EN</a>
-//     </div>
-//   )
-// }

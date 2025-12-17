@@ -1,12 +1,14 @@
 import { Education } from '@/entity/education/model/Education'
 import { Card } from '@/shared/ui/Card'
 import { Typography } from '@/shared/ui/Typography'
+import { useTranslations } from 'next-intl'
 
 interface IProps {
   education: Education
 }
 
 export const EducationCard = ({ education }: IProps) => {
+  const t = useTranslations('Education')
   const { degree, description, field, finalWork, id, period, title } = education
 
   return (
@@ -15,12 +17,12 @@ export const EducationCard = ({ education }: IProps) => {
 
       <Card.Section>
         <Typography align="right" variant="light2" color="secondary">
-          Специальность: {field.specialization}
+          {t('specialization')}: {field.specialization}
         </Typography>
 
         {education.field.faculty && (
           <Typography align="right" variant="light2" color="secondary">
-            Факультет: {field.faculty}
+            {t('faculty')}: {field.faculty}
           </Typography>
         )}
       </Card.Section>

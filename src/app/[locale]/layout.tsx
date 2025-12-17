@@ -7,6 +7,7 @@ import { Header } from '@/shared/ui/Header'
 import { mainFont } from '@/shared/ui/fonts'
 import './globals.css'
 import './normalize.css'
+import { ILocaleProps } from '@/i18n/ILocaleProps'
 
 export const dynamic = 'force-static'
 
@@ -15,9 +16,8 @@ export const metadata: Metadata = {
   description: 'Personal developer site',
 }
 
-interface IProps {
+interface IProps extends ILocaleProps {
   children: React.ReactNode
-  params: Promise<{ locale: string }>
 }
 
 export default async function LocaleLayout({ children, params }: IProps) {
