@@ -38,7 +38,7 @@ export const EducationCard = ({ education }: IProps) => {
       <Card.Section>
         {Array.isArray(finalWork.description) &&
           finalWork.description.map((desc, idx) => (
-            <Typography key={idx} gutterBottom italic variant="light">
+            <Typography key={idx} gutterBottom="s" italic variant="light">
               {desc}
             </Typography>
           ))}

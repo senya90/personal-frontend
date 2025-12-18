@@ -16,7 +16,7 @@ export type TypographyVariant =
   | 'caption'
   | 'overline'
 
-export type TypographyColor = 'primary' | 'secondary' | 'error'
+export type TypographyColor = 'primary' | 'secondary' | 'error' | 'accent'
 
 export type TypographyAlign = 'left' | 'center' | 'right'
 

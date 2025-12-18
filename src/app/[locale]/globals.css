@@ -1,11 +1,18 @@
 :root {
   --bg: #f9fafb;
+  --bg-card: #ffffff;
   --text: #111827;
   --text-secondary: #6b7280;
   --text-error: #dc2626;
   --accent: #2563eb;
   --additional: #e5e7eb;
   --border: #e5e7eb;
+  --shadow: rgba(107, 114, 128, 0.1);
+  --shadow-hover-1: rgba(107, 114, 128, 0.1);
+  --shadow-hover-2: rgba(107, 114, 128, 0.05);
+  --box-shadow: 0 1px 3px 0 var(--shadow);
+  --box-shadow-hover:
+    0 10px 15px -3px var(--shadow-hover-1), 0 4px 6px -2px var(--shadow-hover-2);
 
   --color_sun: #fbbf24;
   --color_moon: #d1d5db;
@@ -46,12 +53,19 @@ html {
 
 html[data-theme='light'] {
   --bg: #f9fafb;
+  --bg-card: #ffffff;
   --text: #111827;
   --text-secondary: #6b7280;
   --text-error: #dc2626;
   --accent: #2563eb;
   --additional: #e5e7eb;
   --border: #e5e7eb;
+  --shadow: rgba(107, 114, 128, 0.1);
+  --shadow-hover-1: rgba(107, 114, 128, 0.1);
+  --shadow-hover-2: rgba(107, 114, 128, 0.05);
+  --box-shadow: 0 1px 3px 0 var(--shadow);
+  --box-shadow-hover:
+    0 10px 15px -3px var(--shadow-hover-1), 0 4px 6px -2px var(--shadow-hover-2);
 
   --color_sun: #fbbf24;
   --color_moon: #d1d5db;
@@ -70,12 +84,20 @@ html[data-theme='light'] {
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #0f172a;
+    --bg-card: #1e293b;
     --text: #e5e7eb;
     --text-secondary: #94a3b8;
     --text-error: #f87171;
     --accent: #38bdf8;
     --additional: #020617;
-    --border: #1e293b;
+    --border: #334155;
+    --shadow: rgba(30, 41, 59, 0.5);
+    --shadow-hover-1: rgba(30, 41, 59, 0.4);
+    --shadow-hover-2: rgba(30, 41, 59, 0.1);
+    --box-shadow: 0 1px 3px 0 var(--shadow);
+    --box-shadow-hover:
+      0 20px 25px -5px var(--shadow-hover-1),
+      0 10px 10px -5px var(--shadow-hover-2);
 
     --color_sun: #475569;
     --color_moon: #2563eb;
@@ -94,12 +116,20 @@ html[data-theme='light'] {
 
 html[data-theme='dark'] {
   --bg: #0f172a;
+  --bg-card: #1e293b;
   --text: #e5e7eb;
   --text-secondary: #94a3b8;
   --text-error: #f87171;
   --accent: #38bdf8;
   --additional: #020617;
-  --border: #1e293b;
+  --border: #334155;
+  --shadow: rgba(30, 41, 59, 0.5);
+  --shadow-hover-1: rgba(30, 41, 59, 0.4);
+  --shadow-hover-2: rgba(30, 41, 59, 0.1);
+  --box-shadow: 0 1px 3px 0 var(--shadow);
+  --box-shadow-hover:
+    0 20px 25px -5px var(--shadow-hover-1),
+    0 10px 10px -5px var(--shadow-hover-2);
 
   --color_sun: #475569;
   --color_moon: #2563eb;

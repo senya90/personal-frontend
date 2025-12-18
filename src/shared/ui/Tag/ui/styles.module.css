@@ -1,0 +1,5 @@
+.tag {
+  padding: 0.1rem var(--space-s);
+  background-color: var(--additional);
+  border-radius: 9999px;
+}

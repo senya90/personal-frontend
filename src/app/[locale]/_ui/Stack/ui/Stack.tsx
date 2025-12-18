@@ -27,7 +27,7 @@ export const Stack = () => {
   return (
     <section>
       <div className={stylesMain.section}>
-        <Typography variant="h3" component="h2" gutterBottom>
+        <Typography variant="h3" component="h2" gutterBottom="l">
           Стэк
         </Typography>
 
@@ -81,7 +81,7 @@ export const Stack = () => {
 
         <div className={styles.advancedBox}>
           <div>
-            <Typography variant="h5" component="h4" gutterBottom>
+            <Typography variant="h5" component="h4" gutterBottom="s">
               Backend
             </Typography>
             <div className={styleBoxMini}>
@@ -94,7 +94,7 @@ export const Stack = () => {
           </div>
 
           <div>
-            <Typography variant="h5" component="h4" gutterBottom>
+            <Typography variant="h5" component="h4" gutterBottom="s">
               CI/CD
             </Typography>
             <div className={styleBoxMini}>

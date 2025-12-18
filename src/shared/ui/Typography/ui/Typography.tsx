@@ -19,7 +19,7 @@ interface TypographyProps extends React.HTMLAttributes<HTMLElement> {
   emphasis?: 'strong' | 'em' | 'code'
   component?: React.ElementType
   noWrap?: boolean
-  gutterBottom?: boolean
+  gutterBottom?: 'xs' | 's' | 'm' | 'l' | 'xl'
   children: React.ReactNode
   className?: string
 }
@@ -67,7 +67,7 @@ export const Typography: React.FC<TypographyProps> = ({
       [styles.em]: emphasis === 'em',
       [styles.code]: emphasis === 'code',
       [styles.noWrap]: noWrap,
-      [styles.gutterBottom]: gutterBottom,
+      [styles[`gutterBottom_${gutterBottom}`]]: gutterBottom,
     },
     className
   )
