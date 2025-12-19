@@ -1,6 +1,6 @@
 .content {
-  background: var(--bg-card);
   padding: var(--space-m);
+  background: var(--bg-card);
   border-radius: var(--radius-m);
   border: 1px solid var(--border);
   box-shadow: var(--box-shadow);
@@ -12,9 +12,26 @@
   box-shadow: var(--box-shadow-hover);
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.footnote {
+  max-width: 60%;
+  margin-bottom: var(--space-m);
+  align-self: flex-end;
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin-top: var(--space-m);
+}
+
+.footer {
+  border-top: 1px solid var(--border);
+  padding-top: var(--space-s);
   margin-top: var(--space-m);
 }

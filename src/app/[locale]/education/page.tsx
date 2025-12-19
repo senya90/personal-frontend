@@ -32,7 +32,7 @@ export default function Education({ params }: IProps) {
 
       <div>
         {educationItems.map((item) => (
-          <EducationCard education={item} key={item.id} />
+          <EducationCard education={item} key={item.id} bottomOffset="l" />
         ))}
       </div>
     </main>

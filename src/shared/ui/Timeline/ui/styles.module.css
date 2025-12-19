@@ -33,7 +33,7 @@
   padding-right: var(--space-xs);
 }
 
-.date {
+.leftText {
   position: relative;
   top: 12px;
 }

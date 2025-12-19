@@ -1,28 +1,26 @@
 import styles from './styles.module.css'
-import { Card2 } from '@/shared/ui/Card/ui/Card2/ui/Card2'
 import { Typography } from '@/shared/ui/Typography'
+import { ReactNode } from 'react'
 
-type TimerLineItem = {
-  date: string
-  title: string
-  subtitle: string
-  description: string | string[]
-  tags: string[]
+interface IProps<T extends Record<string, unknown>> {
+  items: T[]
+  asLeft: (item: T) => ReactNode
+  renderRight?: (item: T) => ReactNode
 }
 
-interface IProps {
-  items: TimerLineItem[]
-}
-
-export const Timeline = ({ items = [] }: IProps) => {
+export const Timeline = <T extends Record<string, unknown>>({
+  items = [],
+  asLeft,
+  renderRight,
+}: IProps<T>) => {
   return (
     <div className={styles.timeline}>
       {items.map((item, index) => (
         <div key={index} className={styles.timelineItem}>
           <div className={styles.leftSide}>
-            <div className={styles.date}>
+            <div className={styles.leftText}>
               <Typography align="right" variant="light2" color="secondary">
-                {item.date}
+                {asLeft(item)}
               </Typography>
             </div>
           </div>
@@ -32,14 +30,7 @@ export const Timeline = ({ items = [] }: IProps) => {
             <div className={styles.bullet} />
           </div>
 
-          <div className={styles.rightSide}>
-            <Card2
-              title={item.title}
-              subtitle={item.subtitle}
-              description={item.description}
-              tags={item.tags}
-            />
-          </div>
+          <div className={styles.rightSide}>{renderRight?.(item)}</div>
         </div>
       ))}
     </div>

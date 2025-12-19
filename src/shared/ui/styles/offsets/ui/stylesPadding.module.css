@@ -1,0 +1,156 @@
+/* All */
+.p_xs {
+  padding: var(--space-xs) !important;
+}
+
+.p_s {
+  padding: var(--space-s) !important;
+}
+
+.p_m {
+  padding: var(--space-m) !important;
+}
+
+.p_l {
+  padding: var(--space-l) !important;
+}
+
+.p_xl {
+  padding: var(--space-xl) !important;
+}
+
+/* X Axis */
+.px_xs {
+  padding-left: var(--space-xs) !important;
+  padding-right: var(--space-xs) !important;
+}
+
+.px_s {
+  padding-left: var(--space-s) !important;
+  padding-right: var(--space-s) !important;
+}
+
+.px_m {
+  padding-left: var(--space-m) !important;
+  padding-right: var(--space-m) !important;
+}
+
+.px_l {
+  padding-left: var(--space-l) !important;
+  padding-right: var(--space-l) !important;
+}
+
+.px_xl {
+  padding-left: var(--space-xl) !important;
+  padding-right: var(--space-xl) !important;
+}
+
+/* Y Axis */
+.py_xs {
+  padding-top: var(--space-xs) !important;
+  padding-bottom: var(--space-xs) !important;
+}
+
+.py_s {
+  padding-top: var(--space-s) !important;
+  padding-bottom: var(--space-s) !important;
+}
+
+.py_m {
+  padding-top: var(--space-m) !important;
+  padding-bottom: var(--space-m) !important;
+}
+
+.py_l {
+  padding-top: var(--space-l) !important;
+  padding-bottom: var(--space-l) !important;
+}
+
+.py_xl {
+  padding-top: var(--space-xl) !important;
+  padding-bottom: var(--space-xl) !important;
+}
+
+/* Left */
+.pl_xs {
+  padding-left: var(--space-xs) !important;
+}
+
+.pl_s {
+  padding-left: var(--space-s) !important;
+}
+
+.pl_m {
+  padding-left: var(--space-m) !important;
+}
+
+.pl_l {
+  padding-left: var(--space-l) !important;
+}
+
+.pl_xl {
+  padding-left: var(--space-xl) !important;
+}
+
+/* Right */
+.pr_xs {
+  padding-right: var(--space-xs) !important;
+}
+
+.pr_s {
+  padding-right: var(--space-s) !important;
+}
+
+.pr_m {
+  padding-right: var(--space-m) !important;
+}
+
+.pr_l {
+  padding-right: var(--space-l) !important;
+}
+
+.pr_xl {
+  padding-right: var(--space-xl) !important;
+}
+
+/* Top */
+.pt_xs {
+  padding-top: var(--space-xs) !important;
+}
+
+.pt_s {
+  padding-top: var(--space-s) !important;
+}
+
+.pt_m {
+  padding-top: var(--space-m) !important;
+}
+
+.pt_l {
+  padding-top: var(--space-l) !important;
+}
+
+.pt_xl {
+  padding-top: var(--space-xl) !important;
+}
+
+/* Bottom */
+.pb_xs {
+  padding-bottom: var(--space-xs) !important;
+}
+
+.pb_s {
+  padding-bottom: var(--space-s) !important;
+}
+
+.pb_m {
+  padding-bottom: var(--space-m) !important;
+}
+
+.pb_l {
+  padding-bottom: var(--space-l) !important;
+}
+
+.pb_xl {
+  padding-bottom: var(--space-xl) !important;
+}
