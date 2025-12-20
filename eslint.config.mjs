@@ -1,8 +1,9 @@
 import { defineConfig, globalIgnores } from 'eslint/config'
 import nextVitals from 'eslint-config-next/core-web-vitals'
 import nextTs from 'eslint-config-next/typescript'
-import prettierPlugin from 'eslint-plugin-prettier'
 import prettierConfig from 'eslint-config-prettier'
+import importPlugin from 'eslint-plugin-import'
+import prettierPlugin from 'eslint-plugin-prettier'
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -12,10 +13,47 @@ const eslintConfig = defineConfig([
   {
     plugins: {
       prettier: prettierPlugin,
+      import: importPlugin,
     },
     rules: {
       'prettier/prettier': 'error',
       '@typescript-eslint/no-empty-object-type': 'off',
+      'import/order': [
+        'error',
+        {
+          groups: [
+            'builtin',
+            'external',
+            'internal',
+            ['parent', 'sibling', 'index'],
+            'type',
+            'object',
+          ],
+          pathGroups: [
+            {
+              pattern: '@/{shared,entities}/**',
+              group: 'internal',
+              position: 'before',
+            },
+            {
+              pattern: '@/{features,widgets}/**',
+              group: 'internal',
+            },
+            {
+              pattern: '@/{pages,app}/**',
+              group: 'internal',
+              position: 'after',
+            },
+          ],
+          pathGroupsExcludedImportTypes: ['builtin', 'external'],
+          'newlines-between': 'always',
+          alphabetize: {
+            order: 'asc',
+            caseInsensitive: true,
+          },
+          warnOnUnassignedImports: true,
+        },
+      ],
     },
   },
 

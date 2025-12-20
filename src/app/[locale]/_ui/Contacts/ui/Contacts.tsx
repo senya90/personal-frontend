@@ -1,9 +1,10 @@
-import { Typography } from '@/shared/ui/Typography'
-import stylesMain from '../../../styles.module.css'
 import { Icon } from '@/shared/ui/Icon/ui/Icon'
 import { Link } from '@/shared/ui/Link'
 import { margins } from '@/shared/ui/styles'
+import { Typography } from '@/shared/ui/Typography'
+
 import styles from './styles.module.css'
+import stylesMain from '../../../styles.module.css'
 
 export const Contacts = () => {
   return (
