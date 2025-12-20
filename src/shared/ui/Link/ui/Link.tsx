@@ -51,8 +51,8 @@ export const Link = ({
     bottomOffset,
   }
   return (
-    <NextLink {...rest}>
-      <Typography {...typography}>{children}</Typography>
-    </NextLink>
+    <Typography {...typography}>
+      <NextLink {...rest}>{children}</NextLink>
+    </Typography>
   )
 }

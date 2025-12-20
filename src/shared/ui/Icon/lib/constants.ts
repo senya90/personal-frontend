@@ -1,11 +1,17 @@
 import Sun from './svg/sun.svg'
 import Moon from './svg/moon.svg'
 import System from './svg/system.svg'
+import Mail from './svg/mail.svg'
+import Github from './svg/github.svg'
+import Telegram from './svg/telegram.svg'
 
 export const icons = {
   sun: Sun,
   moon: Moon,
   system: System,
+  github: Github,
+  mail: Mail,
+  telegram: Telegram,
 } as const
 
 export const iconSizes = {
