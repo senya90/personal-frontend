@@ -1,0 +1,156 @@
+/* All */
+.m_xs {
+  margin: var(--space-xs) !important;
+}
+
+.m_s {
+  margin: var(--space-s) !important;
+}
+
+.m_m {
+  margin: var(--space-m) !important;
+}
+
+.m_l {
+  margin: var(--space-l) !important;
+}
+
+.m_xl {
+  margin: var(--space-xl) !important;
+}
+
+/* X Axis */
+.mx_xs {
+  margin-right: var(--space-xs) !important;
+  margin-left: var(--space-xs) !important;
+}
+
+.mx_s {
+  margin-right: var(--space-s) !important;
+  margin-left: var(--space-s) !important;
+}
+
+.mx_m {
+  margin-right: var(--space-m) !important;
+  margin-left: var(--space-m) !important;
+}
+
+.mx_l {
+  margin-right: var(--space-l) !important;
+  margin-left: var(--space-l) !important;
+}
+
+.mx_xl {
+  margin-right: var(--space-xl) !important;
+  margin-left: var(--space-xl) !important;
+}
+
+/* Y Axis */
+.my_xs {
+  margin-top: var(--space-xs) !important;
+  margin-bottom: var(--space-xs) !important;
+}
+
+.my_s {
+  margin-top: var(--space-s) !important;
+  margin-bottom: var(--space-s) !important;
+}
+
+.my_m {
+  margin-top: var(--space-m) !important;
+  margin-bottom: var(--space-m) !important;
+}
+
+.my_l {
+  margin-top: var(--space-l) !important;
+  margin-bottom: var(--space-l) !important;
+}
+
+.my_xl {
+  margin-top: var(--space-xl) !important;
+  margin-bottom: var(--space-xl) !important;
+}
+
+/* Left */
+.ml_xs {
+  margin-left: var(--space-xs) !important;
+}
+
+.ml_s {
+  margin-left: var(--space-s) !important;
+}
+
+.ml_m {
+  margin-left: var(--space-m) !important;
+}
+
+.ml_l {
+  margin-left: var(--space-l) !important;
+}
+
+.ml_xl {
+  margin-left: var(--space-xl) !important;
+}
+
+/* Right */
+.mr_xs {
+  margin-right: var(--space-xs) !important;
+}
+
+.mr_s {
+  margin-right: var(--space-s) !important;
+}
+
+.mr_m {
+  margin-right: var(--space-m) !important;
+}
+
+.mr_l {
+  margin-right: var(--space-l) !important;
+}
+
+.mr_xl {
+  margin-right: var(--space-xl) !important;
+}
+
+/* Top */
+.mt_xs {
+  margin-top: var(--space-xs) !important;
+}
+
+.mt_s {
+  margin-top: var(--space-s) !important;
+}
+
+.mt_m {
+  margin-top: var(--space-m) !important;
+}
+
+.mt_l {
+  margin-top: var(--space-l) !important;
+}
+
+.mt_xl {
+  margin-top: var(--space-xl) !important;
+}
+
+/* Bottom */
+.mb_xs {
+  margin-bottom: var(--space-xs) !important;
+}
+
+.mb_s {
+  margin-bottom: var(--space-s) !important;
+}
+
+.mb_m {
+  margin-bottom: var(--space-m) !important;
+}
+
+.mb_l {
+  margin-bottom: var(--space-l) !important;
+}
+
+.mb_xl {
+  margin-bottom: var(--space-xl) !important;
+}

@@ -1,13 +1,16 @@
-import { ILocaleProps } from '@/i18n/ILocaleProps'
-import { container } from '@/shared/ui/styles'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { use } from 'react'
-import { Greetings } from '@/app/[locale]/_ui/Greetings'
+
+import { container } from '@/shared/ui/styles'
+
+import { ILocaleProps } from '@/i18n/ILocaleProps'
+
+import { Contacts } from '@/app/[locale]/_ui/Contacts'
 import { Experience } from '@/app/[locale]/_ui/Experience'
+import { Greetings } from '@/app/[locale]/_ui/Greetings'
+import { RecentProjects } from '@/app/[locale]/_ui/RecentProjects'
 import { Stack } from '@/app/[locale]/_ui/Stack'
 import { Work } from '@/app/[locale]/_ui/Work'
-import { RecentProjects } from '@/app/[locale]/_ui/RecentProjects'
-import { Contacts } from '@/app/[locale]/_ui/Contacts'
 
 interface IProps extends ILocaleProps {
   children: React.ReactNode

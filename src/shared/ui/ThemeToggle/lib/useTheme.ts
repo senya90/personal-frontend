@@ -1,6 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useState } from 'react'
+
 import { THEME } from '../model/types'
 
 const isClient = typeof window !== 'undefined'

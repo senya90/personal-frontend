@@ -1,15 +1,18 @@
-import React from 'react'
 import cn from 'classnames'
-import styles from './styles.module.css'
+import React from 'react'
+
+import { BottomOffset, calcBottomOffset } from '@/shared/ui/styles'
+import { variantForTagMapping } from '@/shared/ui/Typography/lib/utils'
 import {
   TypographyAlign,
   TypographyColor,
   TypographyUnderline,
   TypographyVariant,
 } from '@/shared/ui/Typography/model/types'
-import { variantForTagMapping } from '@/shared/ui/Typography/lib/utils'
 
-interface TypographyProps extends React.HTMLAttributes<HTMLElement> {
+import styles from './styles.module.css'
+
+export interface TypographyProps extends React.HTMLAttributes<HTMLElement> {
   variant?: TypographyVariant
   color?: TypographyColor
   align?: TypographyAlign
@@ -19,7 +22,7 @@ interface TypographyProps extends React.HTMLAttributes<HTMLElement> {
   emphasis?: 'strong' | 'em' | 'code'
   component?: React.ElementType
   noWrap?: boolean
-  gutterBottom?: boolean
+  bottomOffset?: BottomOffset
   children: React.ReactNode
   className?: string
 }
@@ -34,7 +37,7 @@ export const Typography: React.FC<TypographyProps> = ({
   emphasis,
   component,
   noWrap = false,
-  gutterBottom = false,
+  bottomOffset,
   children,
   className,
   style,
@@ -67,7 +70,7 @@ export const Typography: React.FC<TypographyProps> = ({
       [styles.em]: emphasis === 'em',
       [styles.code]: emphasis === 'code',
       [styles.noWrap]: noWrap,
-      [styles.gutterBottom]: gutterBottom,
+      [calcBottomOffset(bottomOffset)]: bottomOffset,
     },
     className
   )

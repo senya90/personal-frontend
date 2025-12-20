@@ -1,11 +1,13 @@
-import { getEducationItems } from '@/entity/education/lib/constants'
-import { EducationCard } from '@/entity/education/ui/EducationCard/EducationCard'
-import { ILocaleProps } from '@/i18n/ILocaleProps'
-import { container } from '@/shared/ui/styles'
-import { Typography } from '@/shared/ui/Typography'
 import { useTranslations } from 'next-intl'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { use } from 'react'
+
+import { container } from '@/shared/ui/styles'
+import { Typography } from '@/shared/ui/Typography'
+
+import { getEducationItems } from '@/entity/education/lib/constants'
+import { EducationCard } from '@/entity/education/ui/EducationCard/EducationCard'
+import { ILocaleProps } from '@/i18n/ILocaleProps'
 
 interface IProps extends ILocaleProps {}
 
@@ -32,7 +34,7 @@ export default function Education({ params }: IProps) {
 
       <div>
         {educationItems.map((item) => (
-          <EducationCard education={item} key={item.id} />
+          <EducationCard education={item} key={item.id} bottomOffset="l" />
         ))}
       </div>
     </main>

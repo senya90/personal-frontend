@@ -1,13 +1,16 @@
-import { NextIntlClientProvider, hasLocale } from 'next-intl'
-import { routing } from '@/i18n/routing'
-import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
+import { notFound } from 'next/navigation'
+import { NextIntlClientProvider, hasLocale } from 'next-intl'
 import { setRequestLocale } from 'next-intl/server'
-import { Header } from '@/shared/ui/Header'
+
 import { mainFont } from '@/shared/ui/fonts'
+import { Header } from '@/shared/ui/Header'
+
+import { ILocaleProps } from '@/i18n/ILocaleProps'
+import { routing } from '@/i18n/routing'
+
 import './globals.css'
 import './normalize.css'
-import { ILocaleProps } from '@/i18n/ILocaleProps'
 
 export const dynamic = 'force-static'
 

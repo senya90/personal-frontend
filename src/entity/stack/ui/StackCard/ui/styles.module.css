@@ -1,11 +1,12 @@
 .stackCard {
   display: flex;
-  width: 100%;
-  min-height: 130px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  min-height: 130px;
   padding: var(--space-s);
+  background-color: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-m);
 }

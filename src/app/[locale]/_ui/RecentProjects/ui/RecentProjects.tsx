@@ -1,19 +1,29 @@
+import { Card } from '@/shared/ui/Card'
 import { Typography } from '@/shared/ui/Typography'
+
 import styles from '../../../styles.module.css'
 
 export const RecentProjects = () => {
   return (
     <section>
       <div className={styles.section}>
-        <Typography variant="h3" component="h2">
+        <Typography variant="h3" component="h2" bottomOffset="l">
           Недавние проекты
         </Typography>
 
-        <ul>
-          <li>PRM система</li>
-          <li>Кредитный конвейер</li>
-          <li>Этот сайт</li>
-        </ul>
+        <Card
+          title="PRM (Partner Relationship Management) система"
+          subtitle="Регистрация, документооборот, выдача кредитов"
+          bottomOffset="m"
+        />
+
+        <Card
+          title="Кредитный конвейер"
+          subtitle="Заведение завки, интеграция со скорингом, сделка с клиентом"
+          bottomOffset="m"
+        />
+
+        <Card title="Этот сайт :)" subtitle="mydomain.ru" bottomOffset="m" />
       </div>
     </section>
   )

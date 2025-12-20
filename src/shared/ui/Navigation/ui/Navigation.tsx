@@ -1,6 +1,7 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
+
 import { NavLink } from './NavigationLink/ui/NavigationLink'
 
 export const Navigation = () => {

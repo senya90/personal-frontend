@@ -1,9 +1,11 @@
-import { LanguageSwitcher } from '@/shared/ui/LanguageSwitcher'
-import { ThemeToggle } from '@/shared/ui/ThemeToggle'
-import styles from './styles.module.css'
-import { container, margins } from '@/shared/ui/styles'
 import cn from 'classnames'
+
+import { LanguageSwitcher } from '@/shared/ui/LanguageSwitcher'
 import { Navigation } from '@/shared/ui/Navigation'
+import { container, margins } from '@/shared/ui/styles'
+import { ThemeToggle } from '@/shared/ui/ThemeToggle'
+
+import styles from './styles.module.css'
 
 export const Header = () => {
   return (

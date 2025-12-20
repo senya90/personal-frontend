@@ -1,6 +1,6 @@
 import container from './container/stylesContainer.module.css'
-import margins from './offsets/stylesMargin.module.css'
-import paddings from './offsets/stylesPadding.module.css'
+import margins from './offsets/ui/stylesMargin.module.css'
+import paddings from './offsets/ui/stylesPadding.module.css'
 
 // const container = {
 //   main: stylesContainer.container,
@@ -8,3 +8,5 @@ import paddings from './offsets/stylesPadding.module.css'
 // }
 
 export { container, margins, paddings }
+export type { BottomOffset } from './offsets/model/types'
+export { calcBottomOffset } from './offsets/lib/utils'

@@ -1,24 +1,27 @@
-import { Typography } from '@/shared/ui/Typography'
-import stylesMain from '../../../styles.module.css'
-import { StackCard } from '@/entity/stack'
-import styles from './styles.module.css'
 import cn from 'classnames'
+
 import { margins } from '@/shared/ui/styles'
-import js from './icons/js.png'
-import ts from './icons/ts.png'
-import reactIcon from './icons/react.png'
-import reduxIcon from './icons/redux.png'
-import reactQuery from './icons/reactQuery.png'
-import testing from './icons/testingLibrary.png'
-import zodIcon from './icons/zod.png'
-import socketioIcon from './icons/socketio.png'
+import { Typography } from '@/shared/ui/Typography'
+
+import { StackCard } from '@/entity/stack'
+
 import dockerIcon from './icons/docker.png'
-import teamcityIcon from './icons/teamcity.png'
 import eslintIcon from './icons/eslint.png'
-import nodejsIcon from './icons/nodejs.png'
-import webpackIcon from './icons/webpack.png'
 import htmlcssIcon from './icons/htmlcss.png'
+import js from './icons/js.png'
+import nodejsIcon from './icons/nodejs.png'
+import reactIcon from './icons/react.png'
 import reactHookFormIcon from './icons/reactHookForm.png'
+import reactQuery from './icons/reactQuery.png'
+import reduxIcon from './icons/redux.png'
+import socketioIcon from './icons/socketio.png'
+import teamcityIcon from './icons/teamcity.png'
+import testing from './icons/testingLibrary.png'
+import ts from './icons/ts.png'
+import webpackIcon from './icons/webpack.png'
+import zodIcon from './icons/zod.png'
+import styles from './styles.module.css'
+import stylesMain from '../../../styles.module.css'
 
 export const Stack = () => {
   const styleBox = cn(styles.stackBox, margins.mb_l)
@@ -27,7 +30,7 @@ export const Stack = () => {
   return (
     <section>
       <div className={stylesMain.section}>
-        <Typography variant="h3" component="h2" gutterBottom>
+        <Typography variant="h3" component="h2" bottomOffset="l">
           Стэк
         </Typography>
 
@@ -81,7 +84,7 @@ export const Stack = () => {
 
         <div className={styles.advancedBox}>
           <div>
-            <Typography variant="h5" component="h4" gutterBottom>
+            <Typography variant="h5" component="h4" bottomOffset="s">
               Backend
             </Typography>
             <div className={styleBoxMini}>
@@ -94,7 +97,7 @@ export const Stack = () => {
           </div>
 
           <div>
-            <Typography variant="h5" component="h4" gutterBottom>
+            <Typography variant="h5" component="h4" bottomOffset="s">
               CI/CD
             </Typography>
             <div className={styleBoxMini}>

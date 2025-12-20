@@ -1,5 +1,7 @@
-import { Typography } from '@/shared/ui/Typography'
 import cn from 'classnames'
+
+import { Typography } from '@/shared/ui/Typography'
+
 import styles from './styles.module.css'
 import stylesPage from '../../../styles.module.css'
 
