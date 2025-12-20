@@ -10,7 +10,7 @@ import {
 import { variantForTagMapping } from '@/shared/ui/Typography/lib/utils'
 import { BottomOffset, calcBottomOffset } from '@/shared/ui/styles'
 
-interface TypographyProps extends React.HTMLAttributes<HTMLElement> {
+export interface TypographyProps extends React.HTMLAttributes<HTMLElement> {
   variant?: TypographyVariant
   color?: TypographyColor
   align?: TypographyAlign
@@ -20,7 +20,7 @@ interface TypographyProps extends React.HTMLAttributes<HTMLElement> {
   emphasis?: 'strong' | 'em' | 'code'
   component?: React.ElementType
   noWrap?: boolean
-  gutterBottom?: BottomOffset
+  bottomOffset?: BottomOffset
   children: React.ReactNode
   className?: string
 }
@@ -35,7 +35,7 @@ export const Typography: React.FC<TypographyProps> = ({
   emphasis,
   component,
   noWrap = false,
-  gutterBottom,
+  bottomOffset,
   children,
   className,
   style,
@@ -68,7 +68,7 @@ export const Typography: React.FC<TypographyProps> = ({
       [styles.em]: emphasis === 'em',
       [styles.code]: emphasis === 'code',
       [styles.noWrap]: noWrap,
-      [calcBottomOffset(gutterBottom)]: gutterBottom,
+      [calcBottomOffset(bottomOffset)]: bottomOffset,
     },
     className
   )

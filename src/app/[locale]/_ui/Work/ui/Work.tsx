@@ -8,7 +8,7 @@ export const Work = () => {
   return (
     <section>
       <div className={styles.section}>
-        <Typography variant="h3" component="h2" gutterBottom="l">
+        <Typography variant="h3" component="h2" bottomOffset="l">
           Места работы
         </Typography>
 

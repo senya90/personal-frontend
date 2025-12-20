@@ -31,10 +31,13 @@ export const Card = ({
       })}
     >
       <header className={styles.header}>
-        <Typography variant="h6" component="p" gutterBottom="xs">
+        <Typography variant="h6" component="p" bottomOffset="xs">
           {title}
         </Typography>
-        <Typography color="accent" gutterBottom={footnote ? undefined : 'm'}>
+        <Typography
+          color="accent"
+          bottomOffset={!footnote && !description ? undefined : 'm'}
+        >
           {subtitle}
         </Typography>
 
@@ -62,18 +65,22 @@ export const Card = ({
         )}
       </header>
 
-      {Array.isArray(description) ? (
+      {description && (
         <>
-          {description.map((d, idx) => (
-            <Typography key={idx} color="secondary" gutterBottom="s">
-              {d}
+          {Array.isArray(description) ? (
+            <>
+              {description.map((d, idx) => (
+                <Typography key={idx} color="secondary" bottomOffset="s">
+                  {d}
+                </Typography>
+              ))}
+            </>
+          ) : (
+            <Typography color="secondary" bottomOffset="s">
+              {description}
             </Typography>
-          ))}
+          )}
         </>
-      ) : (
-        <Typography color="secondary" gutterBottom="s">
-          {description}
-        </Typography>
       )}
 
       {tags && (
