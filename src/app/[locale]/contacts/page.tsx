@@ -1,9 +1,11 @@
-import { ILocaleProps } from '@/i18n/ILocaleProps'
-import { container } from '@/shared/ui/styles'
-import { Typography } from '@/shared/ui/Typography'
 import { useTranslations } from 'next-intl'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { use } from 'react'
+
+import { container } from '@/shared/ui/styles'
+import { Typography } from '@/shared/ui/Typography'
+
+import { ILocaleProps } from '@/i18n/ILocaleProps'
 
 interface IProps extends ILocaleProps {}
 

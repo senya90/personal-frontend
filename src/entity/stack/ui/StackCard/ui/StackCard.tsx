@@ -1,7 +1,9 @@
-import { margins } from '@/shared/ui/styles'
-import styles from './styles.module.css'
-import { Typography } from '@/shared/ui/Typography'
 import Image, { StaticImageData } from 'next/image'
+
+import { margins } from '@/shared/ui/styles'
+import { Typography } from '@/shared/ui/Typography'
+
+import styles from './styles.module.css'
 
 interface IProps {
   title: string

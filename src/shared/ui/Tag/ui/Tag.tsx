@@ -1,4 +1,5 @@
 import { Typography } from '@/shared/ui/Typography'
+
 import styles from './styles.module.css'
 
 interface IProps {

@@ -1,12 +1,14 @@
+import cn from 'classnames'
+import { forwardRef, SVGProps } from 'react'
+
 import { icons, iconSizes } from '@/shared/ui/Icon/lib/constants'
 import {
   IconName,
   IconSize,
   SvgIconComponent,
 } from '@/shared/ui/Icon/model/types'
-import cn from 'classnames'
+
 import styles from './styles.module.css'
-import { forwardRef, SVGProps } from 'react'
 
 interface IProps extends Omit<SVGProps<SVGSVGElement>, 'width' | 'height'> {
   icon: IconName

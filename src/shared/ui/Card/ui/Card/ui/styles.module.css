@@ -1,8 +1,8 @@
 .content {
   padding: var(--space-m);
   background: var(--bg-card);
-  border-radius: var(--radius-m);
   border: 1px solid var(--border);
+  border-radius: var(--radius-m);
   box-shadow: var(--box-shadow);
   transition: all 0.3s ease;
 }
@@ -18,9 +18,9 @@
 }
 
 .footnote {
+  align-self: flex-end;
   max-width: 60%;
   margin-bottom: var(--space-m);
-  align-self: flex-end;
 }
 
 .tags {
@@ -31,7 +31,7 @@
 }
 
 .footer {
-  border-top: 1px solid var(--border);
   padding-top: var(--space-s);
   margin-top: var(--space-m);
+  border-top: 1px solid var(--border);
 }

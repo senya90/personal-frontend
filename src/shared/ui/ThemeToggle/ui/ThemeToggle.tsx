@@ -1,9 +1,10 @@
 'use client'
 
 import { Icon } from '@/shared/ui/Icon/ui/Icon'
+
+import styles from './styles.module.css'
 import { useTheme } from '../lib/useTheme'
 import { THEME } from '../model/types'
-import styles from './styles.module.css'
 
 export function ThemeToggle() {
   const { setTheme } = useTheme()

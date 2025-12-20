@@ -1,6 +1,7 @@
-import { educationItemsRu } from './ru'
-import { educationItemsEn } from './en'
 import { Locale } from '@/i18n/routing'
+
+import { educationItemsEn } from './en'
+import { educationItemsRu } from './ru'
 
 export const educationItems = {
   ru: educationItemsRu,

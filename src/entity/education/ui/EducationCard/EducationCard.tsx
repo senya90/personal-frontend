@@ -1,7 +1,9 @@
-import { Education } from '@/entity/education/model/Education'
+import { useTranslations } from 'next-intl'
+
 import { Card } from '@/shared/ui/Card'
 import { BottomOffset } from '@/shared/ui/styles'
-import { useTranslations } from 'next-intl'
+
+import { Education } from '@/entity/education/model/Education'
 
 interface IProps {
   education: Education

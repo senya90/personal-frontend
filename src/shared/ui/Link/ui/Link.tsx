@@ -1,3 +1,7 @@
+import NextLink from 'next/link'
+import { LinkProps as NextLinkProps } from 'next/link'
+import { AnchorHTMLAttributes, ReactNode } from 'react'
+
 import { BottomOffset } from '@/shared/ui/styles'
 import { Typography } from '@/shared/ui/Typography'
 import {
@@ -5,9 +9,6 @@ import {
   TypographyUnderline,
   TypographyVariant,
 } from '@/shared/ui/Typography/model/types'
-import NextLink from 'next/link'
-import { LinkProps as NextLinkProps } from 'next/link'
-import { AnchorHTMLAttributes, ReactNode } from 'react'
 
 interface IProps
   extends

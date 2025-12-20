@@ -1,8 +1,8 @@
 .header {
   width: 100%;
-  border-bottom: 1px solid var(--border);
   padding-top: var(--space-s);
   padding-bottom: var(--space-s);
+  border-bottom: 1px solid var(--border);
 }
 
 .container {

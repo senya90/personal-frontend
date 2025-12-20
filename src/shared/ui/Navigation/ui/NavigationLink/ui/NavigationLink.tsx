@@ -1,9 +1,12 @@
-import Link from 'next/link'
 import cn from 'classnames'
-import styles from './styles.module.css'
-import { usePathname } from '@/i18n/navigation'
+import Link from 'next/link'
 import { ReactNode } from 'react'
+
 import { Typography } from '@/shared/ui/Typography'
+
+import { usePathname } from '@/i18n/navigation'
+
+import styles from './styles.module.css'
 
 interface IProps {
   href: string

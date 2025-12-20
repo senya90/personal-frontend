@@ -1,6 +1,7 @@
-import { Typography } from '@/shared/ui/Typography'
-import styles from '../../../styles.module.css'
 import { Card } from '@/shared/ui/Card'
+import { Typography } from '@/shared/ui/Typography'
+
+import styles from '../../../styles.module.css'
 
 export const RecentProjects = () => {
   return (

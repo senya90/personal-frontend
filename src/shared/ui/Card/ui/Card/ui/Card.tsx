@@ -1,9 +1,11 @@
-import { Tag } from '@/shared/ui/Tag/ui/Tag'
-import styles from './styles.module.css'
-import { Typography } from '@/shared/ui/Typography'
-import { ReactNode } from 'react'
-import { BottomOffset, calcBottomOffset } from '@/shared/ui/styles'
 import cn from 'classnames'
+import { ReactNode } from 'react'
+
+import { BottomOffset, calcBottomOffset } from '@/shared/ui/styles'
+import { Tag } from '@/shared/ui/Tag/ui/Tag'
+import { Typography } from '@/shared/ui/Typography'
+
+import styles from './styles.module.css'
 
 interface IProps {
   title: string

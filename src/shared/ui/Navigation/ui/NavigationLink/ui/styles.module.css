@@ -1,7 +1,7 @@
 .link,
 .link * {
-  color: var(--link-nav);
   margin-left: var(--space-m);
+  color: var(--link-nav);
   text-decoration: none;
 }
 

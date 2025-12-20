@@ -1,8 +1,10 @@
-import { Typography } from '@/shared/ui/Typography'
-import styles from '../../../styles.module.css'
-import { Timeline } from '@/shared/ui/Timeline'
-import { workExperience } from '@/app/[locale]/_ui/Work/lib/constants'
 import { Card } from '@/shared/ui/Card'
+import { Timeline } from '@/shared/ui/Timeline'
+import { Typography } from '@/shared/ui/Typography'
+
+import { workExperience } from '@/app/[locale]/_ui/Work/lib/constants'
+
+import styles from '../../../styles.module.css'
 
 export const Work = () => {
   return (

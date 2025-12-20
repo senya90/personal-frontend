@@ -1,14 +1,16 @@
-import React from 'react'
 import cn from 'classnames'
-import styles from './styles.module.css'
+import React from 'react'
+
+import { BottomOffset, calcBottomOffset } from '@/shared/ui/styles'
+import { variantForTagMapping } from '@/shared/ui/Typography/lib/utils'
 import {
   TypographyAlign,
   TypographyColor,
   TypographyUnderline,
   TypographyVariant,
 } from '@/shared/ui/Typography/model/types'
-import { variantForTagMapping } from '@/shared/ui/Typography/lib/utils'
-import { BottomOffset, calcBottomOffset } from '@/shared/ui/styles'
+
+import styles from './styles.module.css'
 
 export interface TypographyProps extends React.HTMLAttributes<HTMLElement> {
   variant?: TypographyVariant

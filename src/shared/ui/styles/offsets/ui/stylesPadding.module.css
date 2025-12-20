@@ -21,28 +21,28 @@
 
 /* X Axis */
 .px_xs {
-  padding-left: var(--space-xs) !important;
   padding-right: var(--space-xs) !important;
+  padding-left: var(--space-xs) !important;
 }
 
 .px_s {
-  padding-left: var(--space-s) !important;
   padding-right: var(--space-s) !important;
+  padding-left: var(--space-s) !important;
 }
 
 .px_m {
-  padding-left: var(--space-m) !important;
   padding-right: var(--space-m) !important;
+  padding-left: var(--space-m) !important;
 }
 
 .px_l {
-  padding-left: var(--space-l) !important;
   padding-right: var(--space-l) !important;
+  padding-left: var(--space-l) !important;
 }
 
 .px_xl {
-  padding-left: var(--space-xl) !important;
   padding-right: var(--space-xl) !important;
+  padding-left: var(--space-xl) !important;
 }
 
 /* Y Axis */
