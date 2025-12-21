@@ -8,6 +8,7 @@ import { Typography } from '@/shared/ui/Typography'
 import { getEducationItems } from '@/entity/education/lib/constants'
 import { EducationCard } from '@/entity/education/ui/EducationCard/EducationCard'
 import { ILocaleProps } from '@/i18n/ILocaleProps'
+import { Locale } from '@/i18n/routing'
 
 interface IProps extends ILocaleProps {}
 
@@ -24,7 +25,7 @@ export default function Education({ params }: IProps) {
   const { locale } = use(params)
   setRequestLocale(locale)
   const t = useTranslations('Education')
-  const educationItems = getEducationItems(locale)
+  const educationItems = getEducationItems(locale as Locale)
 
   return (
     <main className={container.main}>
