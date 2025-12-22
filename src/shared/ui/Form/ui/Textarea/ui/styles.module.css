@@ -1,0 +1,44 @@
+.field {
+  margin-bottom: var(--space-s);
+}
+
+.fieldInner {
+  position: relative;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: var(--space-s) var(--space-m);
+  font-size: 1rem;
+  color: var(--text);
+  resize: vertical;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-m);
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: var(--box-shadow);
+}
+
+.primary {
+  border: 1px solid var(--border);
+}
+
+.secondary {
+  background-color: transparent;
+}
+
+.error {
+  border-color: var(--text-error) !important;
+}
+
+.warning {
+  border-color: var(--text-warning) !important;
+}

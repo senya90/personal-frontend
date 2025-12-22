@@ -4,7 +4,9 @@
   --text: #111827;
   --text-secondary: #6b7280;
   --text-error: #dc2626;
+  --text-warning: #f59e0b;
   --accent: #2563eb;
+  --accent-hover: #1d4ed8;
   --additional: #e5e7eb;
   --border: #e5e7eb;
   --shadow: rgba(107, 114, 128, 0.1);
@@ -36,10 +38,11 @@
   --space-xl: 64px;
 
   --max-width: 1130px;
-  --max-width-small: 800px;
+  --max-width-small: calc(var(--max-width) / 2);
 
   --radius: 15px;
   --radius-m: 9px;
+  --radius-xs: 5px;
 
   font-size: var(--font-size);
   font-family: var(--font-main), sans-serif; /* --font-main from nextjs fonts */
@@ -57,7 +60,9 @@ html[data-theme='light'] {
   --text: #111827;
   --text-secondary: #6b7280;
   --text-error: #dc2626;
+  --text-warning: #f59e0b;
   --accent: #2563eb;
+  --accent-hover: #1d4ed8;
   --additional: #e5e7eb;
   --border: #e5e7eb;
   --shadow: rgba(107, 114, 128, 0.1);
@@ -88,7 +93,9 @@ html[data-theme='light'] {
     --text: #e5e7eb;
     --text-secondary: #94a3b8;
     --text-error: #f87171;
+    --text-warning: #fb923c;
     --accent: #38bdf8;
+    --accent-hover: #0ea5e9;
     --additional: #020617;
     --border: #334155;
     --shadow: rgba(30, 41, 59, 0.5);
@@ -120,7 +127,9 @@ html[data-theme='dark'] {
   --text: #e5e7eb;
   --text-secondary: #94a3b8;
   --text-error: #f87171;
+  --text-warning: #fb923c;
   --accent: #38bdf8;
+  --accent-hover: #0ea5e9;
   --additional: #020617;
   --border: #334155;
   --shadow: rgba(30, 41, 59, 0.5);

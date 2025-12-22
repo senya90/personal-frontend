@@ -22,7 +22,7 @@
     "paths": {
       "@/*": ["./src/*"],
       "@/shared/*": ["./src/shared/*"],
-      "@/entity/*": ["./src/entity/*"],
+      "@/entities/*": ["./src/entities/*"],
       "@/features/*": ["./src/features/*"],
       "@/widgets/*": ["./src/widgets/*"],
       "@/pages/*": ["./src/pages/*"]
@@ -36,5 +36,5 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", ".dockerignore"]
 }

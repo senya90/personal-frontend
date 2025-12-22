@@ -109,6 +109,10 @@
   color: var(--text-error);
 }
 
+.warning {
+  color: var(--text-warning);
+}
+
 .accent {
   color: var(--accent);
 }
@@ -123,6 +127,10 @@
 
 .right {
   text-align: right;
+}
+
+.justify {
+  text-align: justify;
 }
 
 .noWrap {

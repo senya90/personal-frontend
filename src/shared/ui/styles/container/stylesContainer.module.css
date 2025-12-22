@@ -6,6 +6,14 @@
   margin: 0 auto;
 }
 
+.db {
+  display: block;
+}
+
+.full {
+  width: 100%;
+}
+
 .pure {
   width: 100%;
   max-width: var(--max-width);

@@ -1,4 +1,16 @@
 section .sectionMain {
-  padding-top: calc(var(--space-xl) * 4);
-  padding-bottom: calc(var(--space-xl) * 4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+}
+
+.textContainer {
+  display: flex;
+  gap: var(--space-m);
+  justify-content: space-between;
+}
+
+.textContainerInner {
+  max-width: var(--max-width-small);
 }

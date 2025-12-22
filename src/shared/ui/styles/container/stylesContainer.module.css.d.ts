@@ -1,5 +1,7 @@
 declare const styles: {
   readonly main: string
+  readonly db: string
+  readonly full: string
   readonly pure: string
   readonly section: string
   readonly bg: string

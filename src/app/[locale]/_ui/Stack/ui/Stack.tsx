@@ -1,9 +1,8 @@
 import cn from 'classnames'
 
+import { StackCard } from '@/entities/stack'
 import { margins } from '@/shared/ui/styles'
 import { Typography } from '@/shared/ui/Typography'
-
-import { StackCard } from '@/entity/stack'
 
 import dockerIcon from './icons/docker.png'
 import eslintIcon from './icons/eslint.png'
