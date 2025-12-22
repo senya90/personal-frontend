@@ -22,7 +22,19 @@ export const Greetings = () => {
         </div>
 
         <div className={styles.textContainer}>
-          <SendEmail className={cn(flex.self_end, flex.flex_1)} />
+          <div
+            className={cn(
+              flex.flex_1,
+              flex.flex,
+              flex.flex_column,
+              flex.justify_between
+            )}
+          >
+            <Typography variant="h5" bottomOffset="xs" align="justify">
+              Напиши мне
+            </Typography>
+            <SendEmail className={cn(flex.self_end)} />
+          </div>
           <div className={cn(styles.textContainerInner, flex.flex_1)}>
             <Typography variant="h5" bottomOffset="xs" align="justify">
               Обо мне

@@ -1,6 +1,6 @@
 .field {
   position: relative;
-  margin-bottom: var(--space-m);
+  margin-bottom: var(--space-s);
 }
 
 .input {
@@ -9,8 +9,6 @@
   font-size: 1rem;
   color: var(--text);
   background-color: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-m);
   transition:
     border-color 0.3s,
     box-shadow 0.3s;
@@ -19,5 +17,19 @@
 .input:focus {
   outline: none;
   border-color: var(--accent);
+}
+
+.input:focus.primary {
   box-shadow: var(--box-shadow);
+}
+
+.primary {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-m);
+}
+
+.secondary {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border);
 }

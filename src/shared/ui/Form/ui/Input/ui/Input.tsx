@@ -8,10 +8,11 @@ import styles from './styles.module.css'
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string
   className?: string
+  variant?: 'primary' | 'secondary'
 }
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ label, className, ...props }, ref) => {
+  ({ label, className, variant = 'primary', ...props }, ref) => {
     const generatedId = useId()
     const id = generatedId + props.name
 
@@ -21,7 +22,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           ref={ref}
           id={id}
           type="text"
-          className={styles.input}
+          className={cn(styles.input, styles[variant])}
           placeholder=" "
           {...props}
         />

@@ -8,10 +8,11 @@ import styles from './styles.module.css'
 interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   label?: string
   className?: string
+  variant?: 'primary' | 'secondary'
 }
 
 const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
-  ({ label, className, ...props }, ref) => {
+  ({ label, className, variant = 'primary', ...props }, ref) => {
     const generatedId = useId()
     const id = generatedId + props.name
 
@@ -20,7 +21,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
         <textarea
           ref={ref}
           id={id}
-          className={styles.textarea}
+          className={cn(styles.textarea, styles[variant])}
           placeholder=" "
           {...props}
         />

@@ -15,11 +15,9 @@ export const SendEmail = ({ className }: IProps) => {
     <form className={cn(styles.form, className)} action="">
       <Input label="Тема" name="theme" />
       <Input label="Куда отвечать (email)" name="email" />
-      <Textarea name="description" label="Напиши мне" />
+      <Textarea label="Напиши мне" name="description" />
 
-      <Button variant="secondary" className={container.full}>
-        Отправить
-      </Button>
+      <Button className={container.full}>Отправить</Button>
     </form>
   )
 }

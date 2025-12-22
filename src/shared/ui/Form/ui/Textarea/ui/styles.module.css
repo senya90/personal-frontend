@@ -1,6 +1,6 @@
 .field {
   position: relative;
-  margin-bottom: var(--space-m);
+  margin-bottom: var(--space-s);
 }
 
 .textarea {
@@ -22,4 +22,12 @@
   outline: none;
   border-color: var(--accent);
   box-shadow: var(--box-shadow);
+}
+
+.primary {
+  border: 1px solid var(--border);
+}
+
+.secondary {
+  background-color: transparent;
 }
