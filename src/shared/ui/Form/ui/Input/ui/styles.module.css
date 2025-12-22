@@ -1,0 +1,23 @@
+.field {
+  position: relative;
+  margin-bottom: var(--space-m);
+}
+
+.input {
+  width: 100%;
+  padding: var(--space-s) var(--space-m);
+  font-size: 1rem;
+  color: var(--text);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-m);
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: var(--box-shadow);
+}

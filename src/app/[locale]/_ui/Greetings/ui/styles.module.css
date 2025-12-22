@@ -7,7 +7,7 @@ section .sectionMain {
 
 .textContainer {
   display: flex;
-  gap: var(--space-s);
+  gap: var(--space-m);
   justify-content: space-between;
 }
 

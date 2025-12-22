@@ -1,7 +1,9 @@
 import cn from 'classnames'
 
-import { Card } from '@/shared/ui/Card'
+import { flex } from '@/shared/ui/styles'
 import { Typography } from '@/shared/ui/Typography'
+
+import { SendEmail } from '@/features/send-email/ui/SendEmail'
 
 import styles from './styles.module.css'
 import stylesPage from '../../../styles.module.css'
@@ -20,7 +22,8 @@ export const Greetings = () => {
         </div>
 
         <div className={styles.textContainer}>
-          <div className={styles.textContainerInner}>
+          <SendEmail className={cn(flex.self_end, flex.flex_1)} />
+          <div className={cn(styles.textContainerInner, flex.flex_1)}>
             <Typography variant="h5" bottomOffset="xs" align="justify">
               Обо мне
             </Typography>

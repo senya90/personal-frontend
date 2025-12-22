@@ -6,6 +6,10 @@
   margin: 0 auto;
 }
 
+.full {
+  width: 100%;
+}
+
 .pure {
   width: 100%;
   max-width: var(--max-width);

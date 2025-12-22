@@ -1,0 +1,42 @@
+.button {
+  padding: var(--space-s) var(--space-m);
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius-m);
+  transition:
+    background-color 0.3s,
+    box-shadow 0.3s;
+}
+
+.primary {
+  color: var(--bg);
+  background-color: var(--accent);
+}
+
+.primary:hover {
+  background-color: var(--accent-hover);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.primary:active {
+  background-color: var(--accent);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.secondary {
+  color: var(--text-secondary);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+}
+
+.secondary:hover {
+  background-color: var(--additional);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.secondary:active {
+  background-color: var(--bg-card);
+  box-shadow: var(--box-shadow-hover);
+}
