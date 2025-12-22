@@ -1,6 +1,9 @@
 .field {
-  position: relative;
   margin-bottom: var(--space-s);
+}
+
+.fieldInner {
+  position: relative;
 }
 
 .input {
@@ -32,4 +35,12 @@
   background-color: transparent;
   border: none;
   border-bottom: 1px solid var(--border);
+}
+
+.error {
+  border-color: var(--text-error) !important;
+}
+
+.warning {
+  border-color: var(--text-warning) !important;
 }

@@ -26,9 +26,29 @@ textarea:focus + .label {
   color: var(--accent);
 }
 
+textarea:not(:placeholder-shown) + .label.error,
+textarea:focus + .label.error {
+  color: var(--text-error);
+}
+
+textarea:not(:placeholder-shown) + .label.warning,
+textarea:focus + .label.warning {
+  color: var(--text-warning);
+}
+
 input:not(:placeholder-shown) + .label,
 input:focus + .label {
   top: 0;
   font-size: 0.7rem;
   color: var(--accent);
+}
+
+input:not(:placeholder-shown) + .label.error,
+input:focus + .label.error {
+  color: var(--text-error);
+}
+
+input:not(:placeholder-shown) + .label.warning,
+input:focus + .label.warning {
+  color: var(--text-warning);
 }

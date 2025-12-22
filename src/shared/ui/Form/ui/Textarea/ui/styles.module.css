@@ -1,6 +1,9 @@
 .field {
-  position: relative;
   margin-bottom: var(--space-s);
+}
+
+.fieldInner {
+  position: relative;
 }
 
 .textarea {
@@ -30,4 +33,12 @@
 
 .secondary {
   background-color: transparent;
+}
+
+.error {
+  border-color: var(--text-error) !important;
+}
+
+.warning {
+  border-color: var(--text-warning) !important;
 }

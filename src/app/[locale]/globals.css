@@ -4,6 +4,7 @@
   --text: #111827;
   --text-secondary: #6b7280;
   --text-error: #dc2626;
+  --text-warning: #f59e0b;
   --accent: #2563eb;
   --accent-hover: #1d4ed8;
   --additional: #e5e7eb;
@@ -59,6 +60,7 @@ html[data-theme='light'] {
   --text: #111827;
   --text-secondary: #6b7280;
   --text-error: #dc2626;
+  --text-warning: #f59e0b;
   --accent: #2563eb;
   --accent-hover: #1d4ed8;
   --additional: #e5e7eb;
@@ -91,6 +93,7 @@ html[data-theme='light'] {
     --text: #e5e7eb;
     --text-secondary: #94a3b8;
     --text-error: #f87171;
+    --text-warning: #fb923c;
     --accent: #38bdf8;
     --accent-hover: #0ea5e9;
     --additional: #020617;
@@ -124,6 +127,7 @@ html[data-theme='dark'] {
   --text: #e5e7eb;
   --text-secondary: #94a3b8;
   --text-error: #f87171;
+  --text-warning: #fb923c;
   --accent: #38bdf8;
   --accent-hover: #0ea5e9;
   --additional: #020617;
