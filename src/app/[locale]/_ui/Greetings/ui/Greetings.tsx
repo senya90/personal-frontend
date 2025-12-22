@@ -1,5 +1,6 @@
 import cn from 'classnames'
 
+import { Card } from '@/shared/ui/Card'
 import { Typography } from '@/shared/ui/Typography'
 
 import styles from './styles.module.css'
@@ -9,12 +10,42 @@ export const Greetings = () => {
   return (
     <section>
       <div className={cn(stylesPage.section, styles.sectionMain)}>
-        <Typography variant="h1">Senior Frontend Developer</Typography>
+        <div>
+          <Typography variant="h1">Senior Frontend Developer</Typography>
 
-        <Typography variant="lead">
-          Более 9&nbsp;лет в&nbsp;web&#8209;разработке. Создаю масштабируемые
-          Entrerprise приложения
-        </Typography>
+          <Typography variant="lead" bottomOffset="xl">
+            Более 9&nbsp;лет в&nbsp;web&#8209;разработке. Создаю масштабируемые
+            Entrerprise приложения
+          </Typography>
+        </div>
+
+        <div className={styles.textContainer}>
+          <div className={styles.textContainerInner}>
+            <Typography variant="h5" bottomOffset="xs" align="justify">
+              Обо мне
+            </Typography>
+            <Typography variant="body2" bottomOffset="xs" align="justify">
+              Специализируюсь на экосистеме React и построении современных
+              приложений.
+            </Typography>
+            <Typography variant="body2" bottomOffset="xs" align="justify">
+              Имею опыт разработки корпоративных систем для крупного банка:
+              создавал интерфейсы внутренних систем со сложной ролевой моделью,
+              которые используют сотрудники для работы с клиентами, партнерами и
+              документами. Работал над архитектурой, git-flow проекта, стилем и
+              качеством кода.
+            </Typography>
+            <Typography variant="body2" bottomOffset="xs" align="justify">
+              Руководил frontend-разработкой на проекте: проводил код-ревью,
+              собеседования, занимался менторингом junior-разработчиков, вёл
+              документацию в Confluence.
+            </Typography>
+            <Typography variant="body2" bottomOffset="xs" align="justify">
+              Есть опыт создания приложений для SmartTV и CMS для настройки
+              трансляций Digital Signage.
+            </Typography>
+          </div>
+        </div>
       </div>
     </section>
   )

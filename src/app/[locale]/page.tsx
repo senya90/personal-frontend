@@ -6,7 +6,6 @@ import { container } from '@/shared/ui/styles'
 import { ILocaleProps } from '@/i18n/ILocaleProps'
 
 import { Contacts } from '@/app/[locale]/_ui/Contacts'
-import { Experience } from '@/app/[locale]/_ui/Experience'
 import { Greetings } from '@/app/[locale]/_ui/Greetings'
 import { RecentProjects } from '@/app/[locale]/_ui/RecentProjects'
 import { Stack } from '@/app/[locale]/_ui/Stack'
@@ -33,8 +32,6 @@ export default function Home({ params }: IProps) {
     <main>
       <article className={container.bg}>
         <Greetings />
-
-        <Experience />
 
         <Stack />
 

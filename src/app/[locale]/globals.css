@@ -36,7 +36,7 @@
   --space-xl: 64px;
 
   --max-width: 1130px;
-  --max-width-small: 800px;
+  --max-width-small: calc(var(--max-width) / 2);
 
   --radius: 15px;
   --radius-m: 9px;

@@ -18,6 +18,6 @@ export type TypographyVariant =
 
 export type TypographyColor = 'primary' | 'secondary' | 'error' | 'accent'
 
-export type TypographyAlign = 'left' | 'center' | 'right'
+export type TypographyAlign = 'left' | 'center' | 'right' | 'justify'
 
 export type TypographyUnderline = 'none' | 'underline' | 'dashed' | 'hover'
