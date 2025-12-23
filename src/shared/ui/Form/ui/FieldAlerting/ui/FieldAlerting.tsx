@@ -35,7 +35,7 @@ export const FieldAlerting = ({ id, error, warning }: IFieldAlertingProps) => {
             <Typography
               key={idx}
               color="error"
-              variant="body2"
+              variant="light2"
               component="span"
               className={container.db}
             >
@@ -51,7 +51,7 @@ export const FieldAlerting = ({ id, error, warning }: IFieldAlertingProps) => {
             <Typography
               key={idx}
               color="warning"
-              variant="body2"
+              variant="light2"
               component="span"
               className={container.db}
             >

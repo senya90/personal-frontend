@@ -18,16 +18,16 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       label,
       className,
       variant = 'primary',
-      fieldStatus = 'regular',
       error,
       warning,
+      touched,
       ...props
     },
     ref
   ) => {
     const generatedId = useId()
     const id = generatedId + props.name
-    const actualStatus = error ? 'error' : warning ? 'warning' : fieldStatus
+    const actualStatus = error ? 'error' : warning ? 'warning' : ''
 
     return (
       <div className={cn(styles.field, className)}>
