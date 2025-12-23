@@ -22,15 +22,8 @@ export const Greetings = () => {
         </div>
 
         <div className={styles.textContainer}>
-          <div
-            className={cn(
-              flex.flex_1,
-              flex.flex,
-              flex.flex_column,
-              flex.justify_between
-            )}
-          >
-            <Typography variant="h5" bottomOffset="xs" align="justify">
+          <div className={cn(flex.flex_1, flex.flex, flex.flex_column)}>
+            <Typography variant="h5" bottomOffset="s" align="justify">
               Напиши мне
             </Typography>
             <SendEmail className={cn(flex.self_end)} />

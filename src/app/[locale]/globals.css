@@ -9,6 +9,7 @@
   --accent-hover: #1d4ed8;
   --additional: #e5e7eb;
   --border: #e5e7eb;
+  --border-touched: #9ca3af;
   --shadow: rgba(107, 114, 128, 0.1);
   --shadow-hover-1: rgba(107, 114, 128, 0.1);
   --shadow-hover-2: rgba(107, 114, 128, 0.05);
@@ -65,6 +66,7 @@ html[data-theme='light'] {
   --accent-hover: #1d4ed8;
   --additional: #e5e7eb;
   --border: #e5e7eb;
+  --border-touched: #9ca3af;
   --shadow: rgba(107, 114, 128, 0.1);
   --shadow-hover-1: rgba(107, 114, 128, 0.1);
   --shadow-hover-2: rgba(107, 114, 128, 0.05);
@@ -98,6 +100,7 @@ html[data-theme='light'] {
     --accent-hover: #0ea5e9;
     --additional: #020617;
     --border: #334155;
+    --border-touched: #64748b;
     --shadow: rgba(30, 41, 59, 0.5);
     --shadow-hover-1: rgba(30, 41, 59, 0.4);
     --shadow-hover-2: rgba(30, 41, 59, 0.1);
@@ -132,6 +135,7 @@ html[data-theme='dark'] {
   --accent-hover: #0ea5e9;
   --additional: #020617;
   --border: #334155;
+  --border-touched: #64748b;
   --shadow: rgba(30, 41, 59, 0.5);
   --shadow-hover-1: rgba(30, 41, 59, 0.4);
   --shadow-hover-2: rgba(30, 41, 59, 0.1);

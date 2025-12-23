@@ -32,3 +32,10 @@
 .bgAdditional {
   background-color: var(--additional);
 }
+
+.disabled {
+  opacity: 0.5 !important;
+  pointer-events: none !important;
+  cursor: not-allowed !important;
+  user-select: none !important;
+}

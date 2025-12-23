@@ -21,14 +21,14 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
       variant = 'primary',
       error,
       warning,
-      fieldStatus = 'regular',
+      touched,
       ...props
     },
     ref
   ) => {
     const generatedId = useId()
     const id = generatedId + props.name
-    const actualStatus = error ? 'error' : warning ? 'warning' : fieldStatus
+    const actualStatus = error ? 'error' : warning ? 'warning' : ''
 
     return (
       <div className={cn(styles.field, className)}>
@@ -39,7 +39,10 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
             className={cn(
               styles.textarea,
               styles[actualStatus],
-              styles[variant]
+              styles[variant],
+              {
+                [styles.touched]: touched,
+              }
             )}
             placeholder=" "
             {...props}

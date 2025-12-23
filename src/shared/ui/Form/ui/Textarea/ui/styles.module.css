@@ -27,6 +27,14 @@
   box-shadow: var(--box-shadow);
 }
 
+.touched {
+  border-color: var(--border-touched);
+}
+
+.textarea.touched:not(:focus):not(.error):not(.warning) {
+  border-color: var(--border-touched);
+}
+
 .primary {
   border: 1px solid var(--border);
 }

@@ -1,6 +1,8 @@
 import cn from 'classnames'
 import { forwardRef, ButtonHTMLAttributes } from 'react'
 
+import { container } from '@/shared/ui/styles'
+
 import styles from './styles.module.css'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -9,15 +11,19 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant = 'primary', children, ...props }, ref) => {
+  ({ className, variant = 'primary', children, disabled, ...props }, ref) => {
     return (
       <button
         ref={ref}
         className={cn(
           styles.button,
           variant === 'secondary' ? styles.secondary : styles.primary,
+          {
+            [container.disabled]: disabled,
+          },
           className
         )}
+        disabled={disabled}
         {...props}
       >
         {children}

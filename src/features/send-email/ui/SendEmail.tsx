@@ -1,23 +1,24 @@
-import cn from 'classnames'
+'use client'
 
-import { Button } from '@/shared/ui/Button'
-import { Input, Textarea } from '@/shared/ui/Form'
-import { container } from '@/shared/ui/styles'
-
-import styles from './styles.module.css'
+import {
+  SendEmailForm,
+  SendEmailFormData,
+} from '@/features/send-email/ui/SendEmailForm'
 
 interface IProps {
   className?: string
 }
 
-export const SendEmail = ({ className }: IProps) => {
-  return (
-    <form className={cn(styles.form, className)} action="">
-      <Input label="Тема" name="theme" />
-      <Input label="Куда отвечать (email)" name="email" />
-      <Textarea label="Напиши мне" name="description" />
+export const SendEmail = (props: IProps) => {
+  const sendEmail = async (data: SendEmailFormData) => {
+    try {
+      console.log('data', data)
+      return true
+    } catch (error) {
+      console.log(error)
+      return false
+    }
+  }
 
-      <Button className={container.full}>Отправить</Button>
-    </form>
-  )
+  return <SendEmailForm onSubmitted={sendEmail} {...props} />
 }

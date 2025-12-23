@@ -5,4 +5,5 @@ export interface IFieldAlertingProps {
   id?: string
   error?: FieldError
   warning?: FieldWarning
+  touched?: boolean
 }
