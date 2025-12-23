@@ -26,6 +26,14 @@
   box-shadow: var(--box-shadow);
 }
 
+.touched {
+  border-color: var(--border-touched);
+}
+
+.input.touched:not(:focus):not(.error):not(.warning) {
+  border-color: var(--border-touched);
+}
+
 .primary {
   border: 1px solid var(--border);
   border-radius: var(--radius-m);

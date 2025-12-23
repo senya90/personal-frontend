@@ -17,6 +17,7 @@ export const variantForTagMapping: Record<
   lead: 'p',
   light: 'p',
   light2: 'p',
+  light3: 'p',
   button: 'span',
   caption: 'span',
   overline: 'span',

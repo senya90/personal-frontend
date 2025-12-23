@@ -6,6 +6,7 @@ declare const styles: {
   readonly section: string
   readonly bg: string
   readonly bgAdditional: string
+  readonly disabled: string
 }
 
 export default styles

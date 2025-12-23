@@ -11,6 +11,7 @@ export type TypographyVariant =
   | 'body2'
   | 'light'
   | 'light2'
+  | 'light3'
   | 'lead'
   | 'button'
   | 'caption'

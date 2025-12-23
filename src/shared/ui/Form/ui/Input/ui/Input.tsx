@@ -36,7 +36,9 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             ref={ref}
             id={id}
             type="text"
-            className={cn(styles.input, styles[actualStatus], styles[variant])}
+            className={cn(styles.input, styles[actualStatus], styles[variant], {
+              [styles.touched]: touched,
+            })}
             placeholder=" "
             {...props}
           />

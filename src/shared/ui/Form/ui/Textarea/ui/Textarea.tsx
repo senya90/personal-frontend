@@ -39,7 +39,10 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
             className={cn(
               styles.textarea,
               styles[actualStatus],
-              styles[variant]
+              styles[variant],
+              {
+                [styles.touched]: touched,
+              }
             )}
             placeholder=" "
             {...props}

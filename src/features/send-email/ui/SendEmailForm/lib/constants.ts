@@ -5,11 +5,3 @@ export const INITIAL_SEND_EMAIL_DATA: SendEmailFormData = {
   email: '',
   description: '',
 }
-
-type FieldsSet = keyof SendEmailFormData
-
-export const SendEmailFormDataFields: Record<FieldsSet, FieldsSet> = {
-  theme: 'theme',
-  email: 'email',
-  description: 'description',
-}

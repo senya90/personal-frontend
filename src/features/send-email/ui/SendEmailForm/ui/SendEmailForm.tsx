@@ -44,21 +44,18 @@ export const SendEmailForm = ({ className, onSubmitted }: IProps) => {
     >
       <Input
         {...register('theme')}
-        name="theme"
         error={errors.theme?.message}
         touched={touchedFields.theme}
         label="Тема"
       />
       <Input
         {...register('email')}
-        name="email"
         error={errors.email?.message}
         touched={touchedFields.email}
         label="Куда отвечать (email)"
       />
       <Textarea
         {...register('description')}
-        name="description"
         error={errors.description?.message}
         touched={touchedFields.description}
         label="Напиши мне"
