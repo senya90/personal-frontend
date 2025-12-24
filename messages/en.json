@@ -4,7 +4,22 @@
       "title": "Semoshin"
     },
     "greetings": "Hi",
-    "pangram": "The quick brown fox jumps over the lazy dog"
+    "pangram": "The quick brown fox jumps over the lazy dog",
+    "greetings_desc": "Over 9 years of experience in web development. Building scalable enterprise applications",
+    "about_me": "About me",
+    "about_me_text": {
+      "1": "Specializing in the React ecosystem and the development of modern web applications.",
+      "2": "Experienced in building enterprise systems for a large bank, including interfaces for internal platforms with complex role-based access models used by employees to work with clients, partners, and documents. Involved in application architecture, project git-flow, and maintaining high code quality and consistent styling.",
+      "3": "Led frontend development on a project: conducted code reviews and technical interviews, mentored junior developers, and maintained project documentation in Confluence.",
+      "4": "Additionally, experienced in developing Smart TV applications and CMS platforms for managing Digital Signage broadcasts."
+    },
+    "write_to_me": {
+      "title": "Contact me",
+      "subject": "Subject",
+      "email": "Your email",
+      "message": "Message",
+      "send": "Send"
+    }
   },
   "Nav": {
     "home": "Home",
@@ -24,5 +39,12 @@
     "title": "Education",
     "specialization": "Specialization",
     "faculty": "Faculty"
+  },
+  "Validation": {
+    "required": "Required",
+    "min": "Minimum {count} characters",
+    "max": "Maximum {count} characters",
+    "wrong": "Invalid format",
+    "wrong_email": "Invalid email format"
   }
 }
