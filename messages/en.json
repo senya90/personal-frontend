@@ -26,6 +26,16 @@
     "education": "Education",
     "contacts": "Contacts"
   },
+  "Stack": {
+    "title": "Tech stack",
+    "forms": "Forms",
+    "validation": "Validation",
+    "testing": "Testing",
+    "linters": "Linters"
+  },
+  "Work_Experience": {
+    "title": "Work Experience"
+  },
   "Contacts": {
     "meta": {
       "title": "Contacts"

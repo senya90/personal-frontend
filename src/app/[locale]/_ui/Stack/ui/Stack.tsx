@@ -1,4 +1,5 @@
 import cn from 'classnames'
+import { useTranslations } from 'next-intl'
 
 import { StackCard } from '@/entities/stack'
 import { margins } from '@/shared/ui/styles'
@@ -23,6 +24,7 @@ import styles from './styles.module.css'
 import stylesMain from '../../../styles.module.css'
 
 export const Stack = () => {
+  const t = useTranslations('Stack')
   const styleBox = cn(styles.stackBox, margins.mb_l)
   const styleBoxMini = cn(styles.stackBoxMini, margins.mb_l)
 
@@ -30,7 +32,7 @@ export const Stack = () => {
     <section>
       <div className={stylesMain.section}>
         <Typography variant="h3" component="h2" bottomOffset="l">
-          Стэк
+          {t('title')}
         </Typography>
 
         <div className={styleBox}>
@@ -54,10 +56,14 @@ export const Stack = () => {
           />
           <StackCard
             title="Formik / React Hook Form"
-            description="Формы"
+            description={t('forms')}
             icon={reactHookFormIcon}
           />
-          <StackCard title="Yup / Zod" description="Валидация" icon={zodIcon} />
+          <StackCard
+            title="Yup / Zod"
+            description={t('validation')}
+            icon={zodIcon}
+          />
           <StackCard
             title="WebSocket"
             description={'WebSocket, Socket.io'}
@@ -65,7 +71,7 @@ export const Stack = () => {
           />
           <StackCard
             title="Jest / React-testing-library"
-            description="Тестирование"
+            description={t('testing')}
             icon={testing}
           />
           <StackCard
@@ -76,7 +82,7 @@ export const Stack = () => {
 
           <StackCard
             title="Eslint / Prettier / Husky"
-            description="Линтеры"
+            description={t('linters')}
             icon={eslintIcon}
           />
         </div>

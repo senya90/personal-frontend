@@ -26,6 +26,16 @@
     "education": "Образование",
     "contacts": "Контакты"
   },
+  "Stack": {
+    "title": "Стэк",
+    "forms": "Формы",
+    "validation": "Валидация",
+    "testing": "Тестирование",
+    "linters": "Линтеры"
+  },
+  "Work_Experience": {
+    "title": "Места работы"
+  },
   "Contacts": {
     "meta": {
       "title": "Контакты"
