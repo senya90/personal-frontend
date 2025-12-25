@@ -49,5 +49,6 @@ export const recentPorjectsItemsEn: RecentProject[] = [
       'Multiple themes',
       'Multilingual support',
     ],
+    href: 'mydomain.dev',
   },
 ]

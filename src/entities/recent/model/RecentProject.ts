@@ -4,4 +4,5 @@ export type RecentProject = {
   shortDescription: string
   description: string | string[]
   components: string[]
+  href?: string
 }

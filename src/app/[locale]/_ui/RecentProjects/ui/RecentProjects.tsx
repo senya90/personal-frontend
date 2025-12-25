@@ -26,6 +26,10 @@ export const RecentProjects = ({ locale }: IProps) => {
         {projects.map((project) => (
           <Card
             key={project.id}
+            link={{
+              href: project.href,
+              target: '_blank',
+            }}
             title={project.title}
             subtitle={project.shortDescription}
             footer={project.components.join(', ')}

@@ -5,4 +5,5 @@ export type WorkExperience = {
   position: string
   description: string | string[]
   stack: string[]
+  href?: string
 }

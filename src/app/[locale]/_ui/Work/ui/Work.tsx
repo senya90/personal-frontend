@@ -31,6 +31,7 @@ export const Work = ({ locale }: IProps) => {
           renderRight={(item) => (
             <Card
               title={item.title}
+              link={{ href: item.href, target: '_blank' }}
               subtitle={item.position}
               description={item.description}
               tags={item.stack}

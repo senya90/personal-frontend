@@ -1,6 +1,7 @@
 import cn from 'classnames'
-import { ReactNode } from 'react'
+import { HTMLAttributeAnchorTarget, ReactNode } from 'react'
 
+import { Link } from '@/shared/ui/Link'
 import { BottomOffset, calcBottomOffset } from '@/shared/ui/styles'
 import { Tag } from '@/shared/ui/Tag/ui/Tag'
 import { Typography } from '@/shared/ui/Typography'
@@ -9,6 +10,11 @@ import styles from './styles.module.css'
 
 interface IProps {
   title: string
+  link?: {
+    href: string | undefined
+    target?: HTMLAttributeAnchorTarget
+  }
+  titleHref?: string
   subtitle?: string
   footnote?: string | string[]
   description?: string | string[]
@@ -19,6 +25,10 @@ interface IProps {
 
 export const Card = ({
   title,
+  link = {
+    href: '',
+    target: '_self',
+  },
   subtitle,
   footnote,
   description,
@@ -33,11 +43,25 @@ export const Card = ({
       })}
     >
       <header className={styles.header}>
-        <Typography variant="h6" component="p" bottomOffset="xs">
-          {title}
-        </Typography>
+        {link?.href ? (
+          <Link
+            href={link.href}
+            target={link.target}
+            variant="h6"
+            component="span"
+            permanent
+          >
+            {title}
+          </Link>
+        ) : (
+          <Typography variant="h6" component="span" bottomOffset="xs">
+            {title}
+          </Typography>
+        )}
+
         <Typography
           color="accent"
+          variant="body2"
           bottomOffset={!footnote && !description ? undefined : 'm'}
         >
           {subtitle}

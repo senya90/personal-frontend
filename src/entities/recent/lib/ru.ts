@@ -44,5 +44,6 @@ export const recentPorjectsItemsRu: RecentProject[] = [
       'Данный сайт также используется как экспериментальная платформа для тестирования новых инструментов и подходов к разработке.',
     ],
     components: ['NextJS', 'SSR и SSG', 'Разные темы', 'Мультиязычность'],
+    href: 'mydomain.dev',
   },
 ]

@@ -21,6 +21,7 @@ export const workExperienceRu: WorkExperience[] = [
       'Yup',
       'Jest/React testing library',
     ],
+    href: 'https://www.otpbank.ru/',
   },
   {
     id: '2',
@@ -33,6 +34,7 @@ export const workExperienceRu: WorkExperience[] = [
       `Разработка и поддержка web-виджетов на React.`,
     ],
     stack: ['React', 'Redux', 'MobX', 'Socket IO', 'WebOS (LG)', 'RxJs'],
+    href: 'https://smartplayer.ru/',
   },
   {
     id: '3',
@@ -43,6 +45,7 @@ export const workExperienceRu: WorkExperience[] = [
       `Frontend разработка сайтов, лэндингов, веб-приложений: сотрудничество с веб-студией dialweb.ru и разовые проекты.`,
     ],
     stack: ['JQuery', 'HTML (Ejs, Pug)', 'CSS/LESS/SCSS', 'Верстка'],
+    href: 'https://dialweb.ru/',
   },
   {
     id: '4',

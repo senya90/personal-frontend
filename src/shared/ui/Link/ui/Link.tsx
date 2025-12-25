@@ -1,3 +1,4 @@
+import cn from 'classnames'
 import NextLink from 'next/link'
 import { LinkProps as NextLinkProps } from 'next/link'
 import { AnchorHTMLAttributes, ReactNode } from 'react'
@@ -9,6 +10,8 @@ import {
   TypographyUnderline,
   TypographyVariant,
 } from '@/shared/ui/Typography/model/types'
+
+import styles from './styles.module.css'
 
 interface IProps
   extends
@@ -27,6 +30,7 @@ interface IProps
   emphasis?: 'strong' | 'em' | 'code'
   component?: React.ElementType
   bottomOffset?: BottomOffset
+  permanent?: boolean
 }
 
 export const Link = ({
@@ -39,6 +43,8 @@ export const Link = ({
   emphasis,
   component = 'span',
   bottomOffset,
+  permanent = false,
+  className,
   ...rest
 }: IProps) => {
   const typography = {
@@ -53,7 +59,12 @@ export const Link = ({
   }
   return (
     <Typography {...typography}>
-      <NextLink {...rest}>{children}</NextLink>
+      <NextLink
+        {...rest}
+        className={cn(className, { [styles.permanent]: permanent })}
+      >
+        {children}
+      </NextLink>
     </Typography>
   )
 }
