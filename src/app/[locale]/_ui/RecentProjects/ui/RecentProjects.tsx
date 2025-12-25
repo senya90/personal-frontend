@@ -1,29 +1,38 @@
+import { useTranslations } from 'next-intl'
+
+import { getRecentProjectsItems } from '@/entities/recent/lib/constants'
 import { Card } from '@/shared/ui/Card'
 import { Typography } from '@/shared/ui/Typography'
 
+import { Locale } from '@/i18n/routing'
+
 import styles from '../../../styles.module.css'
 
-export const RecentProjects = () => {
+interface IProps {
+  locale: Locale
+}
+
+export const RecentProjects = ({ locale }: IProps) => {
+  const t = useTranslations('Recent')
+  const projects = getRecentProjectsItems(locale)
+
   return (
     <section>
       <div className={styles.section}>
         <Typography variant="h3" component="h2" bottomOffset="l">
-          Недавние проекты
+          {t('title')}
         </Typography>
 
-        <Card
-          title="PRM (Partner Relationship Management) система"
-          subtitle="Регистрация, документооборот, выдача кредитов"
-          bottomOffset="m"
-        />
-
-        <Card
-          title="Кредитный конвейер"
-          subtitle="Заведение завки, интеграция со скорингом, сделка с клиентом"
-          bottomOffset="m"
-        />
-
-        <Card title="Этот сайт :)" subtitle="mydomain.ru" bottomOffset="m" />
+        {projects.map((project) => (
+          <Card
+            key={project.id}
+            title={project.title}
+            subtitle={project.shortDescription}
+            footer={project.components.join(', ')}
+            description={project.description}
+            bottomOffset="m"
+          />
+        ))}
       </div>
     </section>
   )

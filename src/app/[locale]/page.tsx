@@ -38,7 +38,7 @@ export default function Home({ params }: IProps) {
 
         <Work locale={locale as Locale} />
 
-        <RecentProjects />
+        <RecentProjects locale={locale as Locale} />
 
         <Contacts />
       </article>

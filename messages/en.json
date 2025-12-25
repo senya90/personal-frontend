@@ -56,5 +56,8 @@
     "max": "Maximum {count} characters",
     "wrong": "Invalid format",
     "wrong_email": "Invalid email format"
+  },
+  "Recent": {
+    "title": "Recent projects"
   }
 }
