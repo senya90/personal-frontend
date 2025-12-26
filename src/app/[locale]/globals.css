@@ -45,6 +45,11 @@
   --radius-m: 9px;
   --radius-xs: 5px;
 
+  --transition-color-time: 0.2s;
+  --transition-move-time: 0.2s;
+  --transition-color: var(--transition-color-time) ease;
+  --transition-move: var(--transition-move-time) ease;
+
   font-size: var(--font-size);
   font-family: var(--font-main), sans-serif; /* --font-main from nextjs fonts */
   font-weight: 400;
@@ -162,8 +167,8 @@ body {
   background: var(--bg);
   color: var(--text);
   transition:
-    background-color 0.2s ease,
-    color 0.2s ease;
+    background-color var(--transition-color),
+    color var(--transition-color);
 }
 
 *,

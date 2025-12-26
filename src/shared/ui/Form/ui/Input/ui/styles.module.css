@@ -13,8 +13,8 @@
   color: var(--text);
   background-color: var(--bg-card);
   transition:
-    border-color 0.3s,
-    box-shadow 0.3s;
+    border-color var(--transition-color),
+    box-shadow var(--transition-color);
 }
 
 .input:focus {
@@ -30,7 +30,7 @@
   border-color: var(--border-touched);
 }
 
-.input.touched:not(:focus):not(.error):not(.warning) {
+.input.touched:not(:focus, .error, .warning) {
   border-color: var(--border-touched);
 }
 

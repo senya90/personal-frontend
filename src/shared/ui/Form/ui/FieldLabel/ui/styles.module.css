@@ -10,9 +10,9 @@
   border-radius: var(--radius-xs);
   transform: translateY(-50%);
   transition:
-    top 0.3s,
-    font-size 0.3s,
-    color 0.3s;
+    top var(--transition-move),
+    font-size var(--transition-move),
+    color var(--transition-color);
 }
 
 textarea + .label {
