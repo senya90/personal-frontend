@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { use } from 'react'
 
+import { PageTransition } from '@/shared/ui/animation'
 import { container } from '@/shared/ui/styles'
 import { Typography } from '@/shared/ui/Typography'
 
@@ -24,10 +25,12 @@ export default function Contacts({ params }: IProps) {
   const t = useTranslations('Contacts')
 
   return (
-    <main className={container.main}>
-      <section className={container.section}>
-        <Typography variant="h1">{t('title')}</Typography>
-      </section>
-    </main>
+    <PageTransition>
+      <main className={container.main}>
+        <section className={container.section}>
+          <Typography variant="h1">{t('title')}</Typography>
+        </section>
+      </main>
+    </PageTransition>
   )
 }

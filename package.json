@@ -25,6 +25,7 @@
     "@svgr/webpack": "8.1.0",
     "@tailwindcss/postcss": "4",
     "classnames": "2.5.1",
+    "framer-motion": "^12.23.26",
     "husky": "9.1.7",
     "next": "16.0.10",
     "next-intl": "4.5.8",

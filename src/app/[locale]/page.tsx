@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { use } from 'react'
 
+import { PageTransition } from '@/shared/ui/animation'
 import { container } from '@/shared/ui/styles'
 
 import { ILocaleProps } from '@/i18n/ILocaleProps'
@@ -30,18 +31,20 @@ export default function Home({ params }: IProps) {
   setRequestLocale(locale)
 
   return (
-    <main>
-      <article className={container.bg}>
-        <Greetings />
+    <PageTransition>
+      <main>
+        <article className={container.bg}>
+          <Greetings />
 
-        <Stack />
+          <Stack />
 
-        <Work locale={locale as Locale} />
+          <Work locale={locale as Locale} />
 
-        <RecentProjects locale={locale as Locale} />
+          <RecentProjects locale={locale as Locale} />
 
-        <Contacts />
-      </article>
-    </main>
+          <Contacts />
+        </article>
+      </main>
+    </PageTransition>
   )
 }
