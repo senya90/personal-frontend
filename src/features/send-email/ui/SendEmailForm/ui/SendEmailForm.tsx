@@ -2,6 +2,7 @@
 
 import { zodResolver } from '@hookform/resolvers/zod'
 import cn from 'classnames'
+import { useTranslations } from 'next-intl'
 import { useForm } from 'react-hook-form'
 
 import { Button } from '@/shared/ui/Button'
@@ -10,7 +11,7 @@ import { container } from '@/shared/ui/styles'
 
 import { INITIAL_SEND_EMAIL_DATA } from '@/features/send-email/ui/SendEmailForm/lib/constants'
 import { SendEmailFormData } from '@/features/send-email/ui/SendEmailForm/model/SendEmailFormData'
-import { sendEmailSchema } from '@/features/send-email/ui/SendEmailForm/ui/validationSchema'
+import { createSendEmailSchema } from '@/features/send-email/ui/SendEmailForm/ui/validationSchema'
 
 interface IProps {
   className?: string
@@ -18,13 +19,17 @@ interface IProps {
 }
 
 export const SendEmailForm = ({ className, onSubmitted }: IProps) => {
+  const t = useTranslations('Home')
+  const tValidation = useTranslations('Validation')
+  const validationSchema = createSendEmailSchema(tValidation)
+
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors, isSubmitting, touchedFields },
   } = useForm<SendEmailFormData>({
-    resolver: zodResolver(sendEmailSchema),
+    resolver: zodResolver(validationSchema),
     mode: 'onTouched',
     defaultValues: INITIAL_SEND_EMAIL_DATA,
   })
@@ -46,23 +51,23 @@ export const SendEmailForm = ({ className, onSubmitted }: IProps) => {
         {...register('theme')}
         error={errors.theme?.message}
         touched={touchedFields.theme}
-        label="Тема"
+        label={t('write_to_me.subject')}
       />
       <Input
         {...register('email')}
         error={errors.email?.message}
         touched={touchedFields.email}
-        label="Куда отвечать (email)"
+        label={t('write_to_me.email')}
       />
       <Textarea
         {...register('description')}
         error={errors.description?.message}
         touched={touchedFields.description}
-        label="Напиши мне"
+        label={t('write_to_me.message')}
       />
 
       <Button type="submit" className={container.full} disabled={isSubmitting}>
-        Отправить
+        {t('write_to_me.send')}
       </Button>
     </form>
   )

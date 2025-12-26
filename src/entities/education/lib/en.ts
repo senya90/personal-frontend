@@ -1,4 +1,4 @@
-import { Education } from '@/entity/education/model/Education'
+import { Education } from '@/entities/education/model/Education'
 
 export const educationItemsEn: Education[] = [
   {

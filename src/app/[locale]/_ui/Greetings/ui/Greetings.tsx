@@ -1,4 +1,5 @@
 import cn from 'classnames'
+import { useTranslations } from 'next-intl'
 
 import { flex } from '@/shared/ui/styles'
 import { Typography } from '@/shared/ui/Typography'
@@ -9,6 +10,8 @@ import styles from './styles.module.css'
 import stylesPage from '../../../styles.module.css'
 
 export const Greetings = () => {
+  const t = useTranslations('Home')
+
   return (
     <section>
       <div className={cn(stylesPage.section, styles.sectionMain)}>
@@ -16,41 +19,34 @@ export const Greetings = () => {
           <Typography variant="h1">Senior Frontend Developer</Typography>
 
           <Typography variant="lead" bottomOffset="xl">
-            Более 9&nbsp;лет в&nbsp;web&#8209;разработке. Создаю масштабируемые
-            Entrerprise приложения
+            {t('greetings_desc')}
           </Typography>
         </div>
 
         <div className={styles.textContainer}>
           <div className={cn(flex.flex_1, flex.flex, flex.flex_column)}>
             <Typography variant="h5" bottomOffset="s" align="justify">
-              Напиши мне
+              {t('write_to_me.title')}
             </Typography>
+
             <SendEmail className={cn(flex.self_end)} />
           </div>
+
           <div className={cn(styles.textContainerInner, flex.flex_1)}>
             <Typography variant="h5" bottomOffset="xs" align="justify">
-              Обо мне
+              {t('about_me')}
             </Typography>
             <Typography variant="body2" bottomOffset="xs" align="justify">
-              Специализируюсь на экосистеме React и построении современных
-              приложений.
+              {t('about_me_text.1')}
             </Typography>
             <Typography variant="body2" bottomOffset="xs" align="justify">
-              Имею опыт разработки корпоративных систем для крупного банка:
-              создавал интерфейсы внутренних систем со сложной ролевой моделью,
-              которые используют сотрудники для работы с клиентами, партнерами и
-              документами. Работал над архитектурой, git-flow проекта, стилем и
-              качеством кода.
+              {t('about_me_text.2')}
             </Typography>
             <Typography variant="body2" bottomOffset="xs" align="justify">
-              Руководил frontend-разработкой на проекте: проводил код-ревью,
-              собеседования, занимался менторингом junior-разработчиков, вёл
-              документацию в Confluence.
+              {t('about_me_text.3')}
             </Typography>
             <Typography variant="body2" bottomOffset="xs" align="justify">
-              Есть опыт создания приложений для SmartTV и CMS для настройки
-              трансляций Digital Signage.
+              {t('about_me_text.4')}
             </Typography>
           </div>
         </div>

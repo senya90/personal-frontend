@@ -1,5 +1,6 @@
 import { z } from 'zod'
 
-import { sendEmailSchema } from '@/features/send-email/ui/SendEmailForm/ui/validationSchema'
+import { createSendEmailSchema } from '@/features/send-email/ui/SendEmailForm/ui/validationSchema'
 
-export type SendEmailFormData = z.infer<typeof sendEmailSchema>
+type SchemaType = ReturnType<typeof createSendEmailSchema>
+export type SendEmailFormData = z.infer<SchemaType>

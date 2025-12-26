@@ -4,6 +4,7 @@ import { use } from 'react'
 import { container } from '@/shared/ui/styles'
 
 import { ILocaleProps } from '@/i18n/ILocaleProps'
+import { Locale } from '@/i18n/routing'
 
 import { Contacts } from '@/app/[locale]/_ui/Contacts'
 import { Greetings } from '@/app/[locale]/_ui/Greetings'
@@ -35,9 +36,9 @@ export default function Home({ params }: IProps) {
 
         <Stack />
 
-        <Work />
+        <Work locale={locale as Locale} />
 
-        <RecentProjects />
+        <RecentProjects locale={locale as Locale} />
 
         <Contacts />
       </article>

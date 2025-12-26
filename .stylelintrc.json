@@ -12,6 +12,7 @@
     "node_modules/**",
     ".next/**",
     "src/app/[locale]/globals.css",
+    "src/app/[locale]/normalize.css",
     "**/*.js",
     "**/*.jsx",
     "**/*.ts",

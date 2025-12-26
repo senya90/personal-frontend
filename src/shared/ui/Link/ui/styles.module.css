@@ -1,0 +1,12 @@
+.permanent {
+  color: var(--link-content);
+}
+
+a:visited.permanent {
+  color: var(--link-content);
+}
+
+a:hover.permanent {
+  color: var(--link-content-hover);
+  text-decoration: none;
+}

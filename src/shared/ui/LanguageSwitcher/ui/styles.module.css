@@ -1,0 +1,24 @@
+.wrapper {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.languageLink {
+  color: var(--link-nav-active);
+  text-decoration: none;
+  opacity: var(--opacity-disabled);
+  transform: scale(0.85);
+  transition:
+    transform var(--transition-move),
+    opacity var(--transition-color);
+}
+
+.languageLink:visited {
+  color: var(--link-nav-active);
+}
+
+.languageLink:hover,
+.languageLink.active {
+  opacity: 1;
+  transform: scale(1);
+}

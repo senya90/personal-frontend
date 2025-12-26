@@ -17,8 +17,8 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-m);
   transition:
-    border-color 0.3s,
-    box-shadow 0.3s;
+    border-color var(--transition-color),
+    box-shadow var(--transition-color);
 }
 
 .textarea:focus {
@@ -31,7 +31,7 @@
   border-color: var(--border-touched);
 }
 
-.textarea.touched:not(:focus):not(.error):not(.warning) {
+.textarea.touched:not(:focus, .error, .warning) {
   border-color: var(--border-touched);
 }
 

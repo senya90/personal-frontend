@@ -1,16 +1,20 @@
 import { z } from 'zod'
 
-export const sendEmailSchema = z.object({
-  theme: z
-    .string()
-    .min(1, 'Обязательное поле')
-    .max(100, 'Не более 100 символов'),
-  email: z
-    .email('Неверный формат email')
-    .min(1, 'Обязательное поле')
-    .max(500, 'Не более 500 символов'),
-  description: z
-    .string()
-    .min(10, 'Сообщение должно быть минимум 10 символов')
-    .max(1000, 'Не более 1000 символов'),
-})
+import { TranslationFunction } from '@/shared/model/TranslationFunction'
+
+export const createSendEmailSchema = (t: TranslationFunction) => {
+  return z.object({
+    theme: z
+      .string()
+      .min(1, t('required'))
+      .max(100, t('max', { count: 100 })),
+    email: z
+      .email(t('wrong_email'))
+      .min(1, t('required'))
+      .max(100, t('max', { count: 100 })),
+    description: z
+      .string()
+      .min(10, t('min', { count: 10 }))
+      .max(1000, t('max', { count: 1000 })),
+  })
+}

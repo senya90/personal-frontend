@@ -1,3 +1,5 @@
+import { useTranslations } from 'next-intl'
+
 import { Icon } from '@/shared/ui/Icon/ui/Icon'
 import { Link } from '@/shared/ui/Link'
 import { margins } from '@/shared/ui/styles'
@@ -7,11 +9,13 @@ import styles from './styles.module.css'
 import stylesMain from '../../../styles.module.css'
 
 export const Contacts = () => {
+  const t = useTranslations('Contacts')
+
   return (
     <section>
       <div className={stylesMain.section}>
         <Typography variant="h3" component="h2" bottomOffset="l">
-          Контакты
+          {t('title')}
         </Typography>
 
         <div className={styles.line}>

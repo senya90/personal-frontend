@@ -1,5 +1,7 @@
 'use client'
 
+import cn from 'classnames'
+
 import { Icon } from '@/shared/ui/Icon/ui/Icon'
 
 import styles from './styles.module.css'
@@ -12,6 +14,7 @@ export function ThemeToggle() {
   return (
     <div className={styles.themeToggle}>
       <Icon
+        className={cn(styles.item, styles.sun)}
         icon="sun"
         size="s"
         fill="var(--color_sun)"
@@ -19,6 +22,7 @@ export function ThemeToggle() {
       />
 
       <Icon
+        className={cn(styles.item, styles.moon)}
         icon="moon"
         size="s"
         fill={'var(--color_moon)'}
@@ -26,6 +30,7 @@ export function ThemeToggle() {
       />
 
       <Icon
+        className={cn(styles.item)}
         icon="system"
         size="s"
         fill={'var(--color_system)'}

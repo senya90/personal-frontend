@@ -18,10 +18,11 @@ export function useTheme() {
     if (theme === THEME.SYSTEM) {
       root.removeAttribute('data-theme')
       localStorage.removeItem('theme')
-    } else {
-      root.setAttribute('data-theme', theme)
-      localStorage.setItem('theme', theme)
+      return
     }
+
+    root.setAttribute('data-theme', theme)
+    localStorage.setItem('theme', theme)
   }, [theme])
 
   const setAppTheme = useCallback((value: THEME) => {

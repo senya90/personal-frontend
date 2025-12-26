@@ -18,6 +18,14 @@ const eslintConfig = defineConfig([
     rules: {
       'prettier/prettier': 'error',
       '@typescript-eslint/no-empty-object-type': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        {
+          varsIgnorePattern: '^__',
+          argsIgnorePattern: '^__',
+          caughtErrorsIgnorePattern: '^__',
+        },
+      ],
       'import/order': [
         'error',
         {
