@@ -23,7 +23,7 @@
 
   --link-content: #2563eb;
   --link-content-hover: #1d4ed8;
-  --link-content-visited: #3730a3;
+  --link-content-visited: #1e40af;
   --link-nav: #111827;
   --link-nav-hover: #2563eb;
   --link-nav-active: #2563eb;
@@ -80,7 +80,7 @@ html[data-theme='light'] {
 
   --link-content: #2563eb;
   --link-content-hover: #1d4ed8;
-  --link-content-visited: #3730a3;
+  --link-content-visited: #1e40af;
   --link-nav: #111827;
   --link-nav-hover: #2563eb;
   --link-nav-active: #2563eb;
@@ -115,7 +115,7 @@ html[data-theme='light'] {
 
     --link-content: #38bdf8;
     --link-content-hover: #0ea5e9;
-    --link-content-visited: #818cf8;
+    --link-content-visited: #a78bfa;
     --link-nav: #e5e7eb;
     --link-nav-hover: #38bdf8;
     --link-nav-active: #0284c7;
@@ -150,7 +150,7 @@ html[data-theme='dark'] {
 
   --link-content: #38bdf8;
   --link-content-hover: #0ea5e9;
-  --link-content-visited: #818cf8;
+  --link-content-visited: #a78bfa;
   --link-nav: #e5e7eb;
   --link-nav-hover: #38bdf8;
   --link-nav-active: #0284c7;
