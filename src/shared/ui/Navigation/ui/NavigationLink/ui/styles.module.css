@@ -3,6 +3,7 @@
   margin-left: var(--space-m);
   color: var(--link-nav);
   text-decoration: none;
+  transition: color var(--transition-color);
 }
 
 .link:hover,

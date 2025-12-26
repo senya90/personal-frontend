@@ -22,6 +22,7 @@ interface IProps
     > {
   children: ReactNode
   className?: string
+  linkClassName?: string
   variant?: TypographyVariant
   color?: TypographyColor
   underline?: TypographyUnderline
@@ -45,6 +46,7 @@ export const Link = ({
   bottomOffset,
   permanent = false,
   className,
+  linkClassName,
   ...rest
 }: IProps) => {
   const typography = {
@@ -58,10 +60,10 @@ export const Link = ({
     bottomOffset,
   }
   return (
-    <Typography {...typography}>
+    <Typography {...typography} className={className}>
       <NextLink
         {...rest}
-        className={cn(className, { [styles.permanent]: permanent })}
+        className={cn(linkClassName, { [styles.permanent]: permanent })}
       >
         {children}
       </NextLink>

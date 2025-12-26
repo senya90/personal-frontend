@@ -50,6 +50,7 @@
   --transition-color: var(--transition-color-time) ease;
   --transition-move: var(--transition-move-time) ease;
 
+  --opacity: 0.65;
   --opacity-disabled: 0.5;
   --opacity-ghost: 0.3;
 

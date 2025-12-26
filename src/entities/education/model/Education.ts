@@ -12,4 +12,5 @@ export type Education = {
     title: string
     description?: string | string[]
   }
+  href?: string
 }

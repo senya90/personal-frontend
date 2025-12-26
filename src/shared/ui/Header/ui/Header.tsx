@@ -16,9 +16,9 @@ export const Header = () => {
           <Navigation />
           <div className={styles.rightCtrls}>
             <div className={margins.mb_xs}>
-              <LanguageSwitcher />
+              <ThemeToggle />
             </div>
-            <ThemeToggle />
+            <LanguageSwitcher />
           </div>
         </div>
       </div>

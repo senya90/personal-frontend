@@ -7,6 +7,24 @@
   transition: all var(--transition-color);
 }
 
+.linkWrapper {
+  vertical-align: super;
+  transition: opacity var(--transition-color);
+}
+
+.linkWrapper:hover {
+  opacity: var(--opacity);
+}
+
+.linkWrapper:active {
+  opacity: 1;
+}
+
+.link {
+  padding: var(--space-s);
+  padding-left: var(--space-xs);
+}
+
 .content:hover {
   border-color: var(--accent);
   box-shadow: var(--box-shadow-hover);

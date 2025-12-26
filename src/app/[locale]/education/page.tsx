@@ -2,8 +2,8 @@ import { useTranslations } from 'next-intl'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { use } from 'react'
 
-import { getEducationItems } from '@/entities/education/lib/constants'
-import { EducationCard } from '@/entities/education/ui/EducationCard/EducationCard'
+import { EducationCard, getEducationItems } from '@/entities/education'
+import { PageTransition } from '@/shared/ui/animation'
 import { container } from '@/shared/ui/styles'
 import { Typography } from '@/shared/ui/Typography'
 
@@ -28,16 +28,18 @@ export default function Education({ params }: IProps) {
   const educationItems = getEducationItems(locale as Locale)
 
   return (
-    <main className={container.main}>
-      <section className={container.section}>
-        <Typography variant="h1">{t('title')}</Typography>
-      </section>
+    <PageTransition>
+      <main className={container.main}>
+        <section className={container.section}>
+          <Typography variant="h1">{t('title')}</Typography>
+        </section>
 
-      <div>
-        {educationItems.map((item) => (
-          <EducationCard education={item} key={item.id} bottomOffset="l" />
-        ))}
-      </div>
-    </main>
+        <div>
+          {educationItems.map((item) => (
+            <EducationCard education={item} key={item.id} bottomOffset="l" />
+          ))}
+        </div>
+      </main>
+    </PageTransition>
   )
 }
