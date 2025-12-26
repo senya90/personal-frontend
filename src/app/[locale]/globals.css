@@ -50,6 +50,9 @@
   --transition-color: var(--transition-color-time) ease;
   --transition-move: var(--transition-move-time) ease;
 
+  --opacity-disabled: 0.5;
+  --opacity-ghost: 0.3;
+
   font-size: var(--font-size);
   font-family: var(--font-main), sans-serif; /* --font-main from nextjs fonts */
   font-weight: 400;
