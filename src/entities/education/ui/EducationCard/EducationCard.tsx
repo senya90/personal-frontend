@@ -1,9 +1,8 @@
 import { useTranslations } from 'next-intl'
 
+import { Education } from '@/entities/education/model/Education'
 import { Card } from '@/shared/ui/Card'
 import { BottomOffset } from '@/shared/ui/styles'
-
-import { Education } from '@/entity/education/model/Education'
 
 interface IProps {
   education: Education
@@ -12,11 +11,16 @@ interface IProps {
 
 export const EducationCard = ({ education, ...rest }: IProps) => {
   const t = useTranslations('Education')
-  const { degree, description, field, finalWork, period, title } = education
+  const { degree, description, field, finalWork, period, title, href } =
+    education
 
   return (
     <Card
       title={title}
+      link={{
+        href,
+        target: '_blank',
+      }}
       subtitle={degree}
       footnote={[
         `${t('specialization')}: ${field.specialization}`,

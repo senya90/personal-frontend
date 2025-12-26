@@ -2,8 +2,7 @@ import { useTranslations } from 'next-intl'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { use } from 'react'
 
-import { getEducationItems } from '@/entities/education/lib/constants'
-import { EducationCard } from '@/entities/education/ui/EducationCard/EducationCard'
+import { EducationCard, getEducationItems } from '@/entities/education'
 import { container } from '@/shared/ui/styles'
 import { Typography } from '@/shared/ui/Typography'
 
