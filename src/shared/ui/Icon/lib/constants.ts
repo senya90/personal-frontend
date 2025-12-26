@@ -1,3 +1,4 @@
+import ExternalLink from './svg/externalLink.svg'
 import Github from './svg/github.svg'
 import Mail from './svg/mail.svg'
 import Moon from './svg/moon.svg'
@@ -12,6 +13,7 @@ export const icons = {
   github: Github,
   mail: Mail,
   telegram: Telegram,
+  externalLink: ExternalLink,
 } as const
 
 export const iconSizes = {

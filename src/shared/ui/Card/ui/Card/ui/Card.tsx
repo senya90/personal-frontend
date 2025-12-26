@@ -1,6 +1,7 @@
 import cn from 'classnames'
 import { HTMLAttributeAnchorTarget, ReactNode } from 'react'
 
+import { Icon } from '@/shared/ui/Icon/ui/Icon'
 import { Link } from '@/shared/ui/Link'
 import { BottomOffset, calcBottomOffset } from '@/shared/ui/styles'
 import { Tag } from '@/shared/ui/Tag/ui/Tag'
@@ -13,8 +14,8 @@ interface IProps {
   link?: {
     href: string | undefined
     target?: HTMLAttributeAnchorTarget
+    text?: string
   }
-  titleHref?: string
   subtitle?: string
   footnote?: string | string[]
   description?: string | string[]
@@ -25,10 +26,7 @@ interface IProps {
 
 export const Card = ({
   title,
-  link = {
-    href: '',
-    target: '_self',
-  },
+  link,
   subtitle,
   footnote,
   description,
@@ -37,32 +35,37 @@ export const Card = ({
   bottomOffset,
 }: IProps) => {
   return (
-    <div
+    <article
       className={cn(styles.content, {
         [calcBottomOffset(bottomOffset)]: bottomOffset,
       })}
     >
       <header className={styles.header}>
-        {link?.href ? (
-          <Link
-            href={link.href}
-            target={link.target}
-            variant="h6"
-            component="span"
-            permanent
-          >
-            {title}
-          </Link>
-        ) : (
+        <div>
           <Typography variant="h6" component="span" bottomOffset="xs">
             {title}
           </Typography>
-        )}
+
+          {link?.href && (
+            <Link
+              href={link.href}
+              target={link.target}
+              variant="light3"
+              component="span"
+              permanent
+              className={styles.linkWrapper}
+              linkClassName={styles.link}
+            >
+              <Icon icon="externalLink" size="xs" fill="var(--link-content)" />
+              {link.text}
+            </Link>
+          )}
+        </div>
 
         <Typography
           color="accent"
           variant="body2"
-          bottomOffset={!footnote && !description ? undefined : 'm'}
+          bottomOffset={!footnote && !description ? undefined : 's'}
         >
           {subtitle}
         </Typography>
@@ -91,31 +94,33 @@ export const Card = ({
         )}
       </header>
 
-      {description && (
-        <>
-          {Array.isArray(description) ? (
-            <>
-              {description.map((d, idx) => (
-                <Typography key={idx} color="secondary" bottomOffset="s">
-                  {d}
-                </Typography>
-              ))}
-            </>
-          ) : (
-            <Typography color="secondary" bottomOffset="s">
-              {description}
-            </Typography>
-          )}
-        </>
-      )}
+      <section>
+        {description && (
+          <>
+            {Array.isArray(description) ? (
+              <>
+                {description.map((d, idx) => (
+                  <Typography key={idx} color="secondary" bottomOffset="s">
+                    {d}
+                  </Typography>
+                ))}
+              </>
+            ) : (
+              <Typography color="secondary" bottomOffset="s">
+                {description}
+              </Typography>
+            )}
+          </>
+        )}
 
-      {tags && (
-        <div className={styles.tags}>
-          {tags.map((tag, idx) => (
-            <Tag tag={tag} key={idx} />
-          ))}
-        </div>
-      )}
+        {tags && (
+          <div className={styles.tags}>
+            {tags.map((tag, idx) => (
+              <Tag tag={tag} key={idx} />
+            ))}
+          </div>
+        )}
+      </section>
 
       {footer && (
         <footer className={styles.footer}>
@@ -128,6 +133,6 @@ export const Card = ({
           )}
         </footer>
       )}
-    </div>
+    </article>
   )
 }
