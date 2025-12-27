@@ -3,7 +3,6 @@ import { notFound } from 'next/navigation'
 import { NextIntlClientProvider, hasLocale } from 'next-intl'
 import { setRequestLocale } from 'next-intl/server'
 
-import { PageTransition } from '@/shared/ui/animation'
 import { mainFont } from '@/shared/ui/fonts'
 import { Header } from '@/shared/ui/Header'
 

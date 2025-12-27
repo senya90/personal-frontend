@@ -20,7 +20,7 @@ export const Contacts = () => {
 
         <div className={styles.line}>
           <span className={margins.mr_s}>
-            <Icon icon="mail" />
+            <Icon icon="mail2" />
           </span>
           <Link variant="h5" href="mailto:mamoshin_sem@mail.ru">
             mamoshin_sem@mail.ru
@@ -29,7 +29,7 @@ export const Contacts = () => {
 
         <div className={styles.line}>
           <span className={margins.mr_s}>
-            <Icon icon="telegram" />
+            <Icon icon="telegram2" />
           </span>
           <Link variant="h5" href="https://t.me/senya90" target="_blank">
             @senya90
@@ -38,7 +38,7 @@ export const Contacts = () => {
 
         <div className={styles.line}>
           <span className={margins.mr_s}>
-            <Icon icon="github" />
+            <Icon icon="github2" />
           </span>
           <Link variant="h5" href="https://github.com/senya90" target="_blank">
             github.com/senya90
