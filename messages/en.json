@@ -40,7 +40,8 @@
     "meta": {
       "title": "Contacts"
     },
-    "title": "Contacts"
+    "title": "Contacts",
+    "write_to_me": "Contact me"
   },
   "Education": {
     "meta": {
