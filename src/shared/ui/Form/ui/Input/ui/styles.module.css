@@ -1,5 +1,5 @@
 .field {
-  margin-bottom: var(--space-s);
+  margin-bottom: var(--space-m);
 }
 
 .fieldInner {
@@ -43,6 +43,10 @@
   background-color: transparent;
   border: none;
   border-bottom: 1px solid var(--border);
+}
+
+.input.touched.secondary:not(:focus, .error, .warning) {
+  border-color: var(--accent);
 }
 
 .error {

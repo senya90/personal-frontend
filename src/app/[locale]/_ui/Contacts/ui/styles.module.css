@@ -1,0 +1,9 @@
+.contacts {
+  background-color: var(--bg-card);
+}
+
+.contactsContainer {
+  display: flex;
+  gap: var(--space-m);
+  justify-content: space-between;
+}
