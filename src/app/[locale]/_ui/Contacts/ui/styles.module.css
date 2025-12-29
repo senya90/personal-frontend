@@ -1,5 +1,9 @@
-.line {
+.contacts {
+  background-color: var(--bg-card);
+}
+
+.contactsContainer {
   display: flex;
-  align-items: baseline;
-  margin-bottom: var(--space-m);
+  gap: var(--space-m);
+  justify-content: space-between;
 }

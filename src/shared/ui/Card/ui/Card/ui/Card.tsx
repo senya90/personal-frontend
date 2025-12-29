@@ -50,7 +50,7 @@ export const Card = ({
             <Link
               href={link.href}
               target={link.target}
-              variant="light3"
+              variant="caption"
               component="span"
               permanent
               className={styles.linkWrapper}
@@ -79,14 +79,14 @@ export const Card = ({
                     align="right"
                     key={idx}
                     color="secondary"
-                    variant="light2"
+                    variant="body2"
                   >
                     {note}
                   </Typography>
                 ))}
               </>
             ) : (
-              <Typography align="right" color="secondary" variant="light2">
+              <Typography align="right" color="secondary" variant="body2">
                 {footnote}
               </Typography>
             )}
@@ -100,15 +100,13 @@ export const Card = ({
             {Array.isArray(description) ? (
               <>
                 {description.map((d, idx) => (
-                  <Typography key={idx} color="secondary" bottomOffset="s">
+                  <Typography key={idx} bottomOffset="s">
                     {d}
                   </Typography>
                 ))}
               </>
             ) : (
-              <Typography color="secondary" bottomOffset="s">
-                {description}
-              </Typography>
+              <Typography bottomOffset="s">{description}</Typography>
             )}
           </>
         )}
@@ -125,7 +123,7 @@ export const Card = ({
       {footer && (
         <footer className={styles.footer}>
           {typeof footer === 'string' ? (
-            <Typography color="secondary" variant="light2">
+            <Typography color="secondary" variant="body2">
               {footer}
             </Typography>
           ) : (

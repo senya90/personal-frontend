@@ -11,6 +11,16 @@
   justify-content: space-between;
 }
 
+.logo {
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity var(--transition-color);
+}
+
+.logo:hover {
+  opacity: var(--opacity);
+}
+
 .rightBlock {
   display: flex;
   align-items: center;

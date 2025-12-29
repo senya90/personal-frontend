@@ -1,16 +1,8 @@
 section .sectionMain {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 100vh;
+  padding: calc(var(--space-xl) * 3) var(--space-m);
+  padding-bottom: calc(var(--space-xl) * 2);
 }
 
-.textContainer {
-  display: flex;
-  gap: var(--space-m);
-  justify-content: space-between;
-}
-
-.textContainerInner {
-  max-width: var(--max-width-small);
+.about {
+  background-color: var(--bg-card);
 }

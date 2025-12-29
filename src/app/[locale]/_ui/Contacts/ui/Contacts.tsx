@@ -1,9 +1,12 @@
+import cn from 'classnames'
 import { useTranslations } from 'next-intl'
 
-import { Icon } from '@/shared/ui/Icon/ui/Icon'
-import { Link } from '@/shared/ui/Link'
-import { margins } from '@/shared/ui/styles'
+import { flex, margins } from '@/shared/ui/styles'
 import { Typography } from '@/shared/ui/Typography'
+
+import { SendEmail } from '@/features/send-email/ui/SendEmail'
+
+import { ContactsList } from '@/app/[locale]/_ui/Contacts/ui/ContactsList'
 
 import styles from './styles.module.css'
 import stylesMain from '../../../styles.module.css'
@@ -12,37 +15,23 @@ export const Contacts = () => {
   const t = useTranslations('Contacts')
 
   return (
-    <section>
-      <div className={stylesMain.section}>
-        <Typography variant="h3" component="h2" bottomOffset="l">
-          {t('title')}
-        </Typography>
+    <section className={styles.contacts}>
+      <div className={cn(stylesMain.section, flex.flex)}>
+        <div className={flex.flex_1}>
+          <Typography variant="h3" component="h2" bottomOffset="l">
+            {t('title')}
+          </Typography>
 
-        <div className={styles.line}>
-          <span className={margins.mr_s}>
-            <Icon icon="mail" />
-          </span>
-          <Link variant="h5" href="mailto:mamoshin_sem@mail.ru">
-            mamoshin_sem@mail.ru
-          </Link>
+          <div className={margins.mb_xl}>
+            <ContactsList />
+          </div>
         </div>
 
-        <div className={styles.line}>
-          <span className={margins.mr_s}>
-            <Icon icon="telegram" />
-          </span>
-          <Link variant="h5" href="https://t.me/senya90" target="_blank">
-            @senya90
-          </Link>
-        </div>
-
-        <div className={styles.line}>
-          <span className={margins.mr_s}>
-            <Icon icon="github" />
-          </span>
-          <Link variant="h5" href="https://github.com/senya90" target="_blank">
-            github.com/senya90
-          </Link>
+        <div className={flex.flex_1}>
+          <Typography variant="h3" component="h3" bottomOffset="m" align="left">
+            Напиши мне
+          </Typography>
+          <SendEmail className={cn(flex.self_end)} variant="secondary" />
         </div>
       </div>
     </section>

@@ -2,6 +2,7 @@
   padding: var(--space-s) var(--space-m);
   font-size: 1rem;
   font-weight: 400;
+  text-transform: uppercase;
   cursor: pointer;
   border: none;
   border-radius: var(--radius-m);
@@ -27,16 +28,18 @@
 
 .secondary {
   color: var(--text-secondary);
-  background-color: var(--bg-card);
+  background-color: transparent;
   border: 1px solid var(--border);
 }
 
 .secondary:hover {
-  background-color: var(--additional);
+  background-color: var(--bg);
+  border: 1px solid var(--accent);
   box-shadow: var(--box-shadow-hover);
 }
 
 .secondary:active {
   background-color: var(--bg-card);
+  border: 1px solid var(--accent);
   box-shadow: var(--box-shadow-hover);
 }

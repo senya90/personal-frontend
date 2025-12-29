@@ -21,7 +21,7 @@ export const Timeline = <T extends Record<string, unknown>>({
         <div key={index} className={styles.timelineItem}>
           <div className={styles.leftSide}>
             <div className={styles.leftText}>
-              <Typography align="right" variant="light2" color="secondary">
+              <Typography align="right" variant="body2" color="secondary">
                 {asLeft(item)}
               </Typography>
             </div>

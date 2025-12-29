@@ -1,5 +1,7 @@
 'use client'
 
+import { FormVariant } from '@/shared/ui/Form'
+
 import {
   SendEmailForm,
   SendEmailFormData,
@@ -7,6 +9,7 @@ import {
 
 interface IProps {
   className?: string
+  variant?: FormVariant
 }
 
 export const SendEmail = (props: IProps) => {

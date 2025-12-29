@@ -36,11 +36,16 @@
 }
 
 .primary {
-  border: 1px solid var(--border);
+  border-color: var(--border);
 }
 
 .secondary {
   background-color: transparent;
+  border-color: var(--border);
+}
+
+.textarea.touched.secondary:not(:focus, .error, .warning) {
+  border-color: var(--accent);
 }
 
 .error {

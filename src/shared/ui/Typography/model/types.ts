@@ -9,11 +9,7 @@ export type TypographyVariant =
   | 'subtitle2'
   | 'body1'
   | 'body2'
-  | 'light'
-  | 'light2'
-  | 'light3'
   | 'lead'
-  | 'button'
   | 'caption'
   | 'overline'
 
