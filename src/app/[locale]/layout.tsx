@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import { NextIntlClientProvider, hasLocale } from 'next-intl'
 import { setRequestLocale } from 'next-intl/server'
 
-import { mainFont } from '@/shared/ui/fonts'
+import { mainFontUnifont } from '@/shared/ui/fonts'
 import { Header } from '@/shared/ui/Header'
 
 import { ILocaleProps } from '@/i18n/ILocaleProps'
@@ -33,7 +33,7 @@ export default async function LocaleLayout({ children, params }: IProps) {
   setRequestLocale(locale)
 
   return (
-    <html lang={locale} className={mainFont.variable}>
+    <html lang={locale} className={mainFontUnifont.variable}>
       <body>
         <NextIntlClientProvider>
           <Header />
