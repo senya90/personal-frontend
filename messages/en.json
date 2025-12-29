@@ -4,7 +4,6 @@
       "title": "Semoshin"
     },
     "greetings": "Hi",
-    "pangram": "The quick brown fox jumps over the lazy dog",
     "greetings_desc": "Over 9 years of experience in web development. Building scalable enterprise applications",
     "about_me": "About me",
     "about_me_text": {
@@ -60,5 +59,12 @@
   },
   "Recent": {
     "title": "Recent projects"
+  },
+  "Typography": {
+    "meta": {
+      "title": "Typography"
+    },
+    "title": "Typography",
+    "pangram": "The quick brown fox jumps over the lazy dog"
   }
 }

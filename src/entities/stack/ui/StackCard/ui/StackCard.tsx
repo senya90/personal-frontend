@@ -19,7 +19,7 @@ export const StackCard = ({ title, description, icon }: IProps) => {
       )}
       <Typography>{title}</Typography>
       {description && (
-        <Typography color="secondary" variant="light2" align="center">
+        <Typography color="secondary" variant="body2" align="center">
           {description}
         </Typography>
       )}

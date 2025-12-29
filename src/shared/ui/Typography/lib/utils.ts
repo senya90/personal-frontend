@@ -15,10 +15,6 @@ export const variantForTagMapping: Record<
   body1: 'p',
   body2: 'p',
   lead: 'p',
-  light: 'p',
-  light2: 'p',
-  light3: 'p',
-  button: 'span',
-  caption: 'span',
-  overline: 'span',
+  caption: 'p',
+  overline: 'p',
 }

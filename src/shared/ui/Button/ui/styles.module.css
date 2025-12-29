@@ -2,6 +2,7 @@
   padding: var(--space-s) var(--space-m);
   font-size: 1rem;
   font-weight: 400;
+  text-transform: uppercase;
   cursor: pointer;
   border: none;
   border-radius: var(--radius-m);

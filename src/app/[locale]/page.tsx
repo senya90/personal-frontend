@@ -35,13 +35,9 @@ export default function Home({ params }: IProps) {
       <main>
         <article className={container.bg}>
           <Greetings />
-
           <Stack />
-
           <Work locale={locale as Locale} />
-
           <RecentProjects locale={locale as Locale} />
-
           <Contacts />
         </article>
       </main>

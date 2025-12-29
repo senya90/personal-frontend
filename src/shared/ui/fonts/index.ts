@@ -1,1 +1,1 @@
-export { mainFont, mainFontUnifont } from './lib/constants'
+export { mainFont } from './lib/constants'
