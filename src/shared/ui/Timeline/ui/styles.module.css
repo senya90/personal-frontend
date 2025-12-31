@@ -9,7 +9,7 @@
   top: 0;
   bottom: 0;
   left: 138px;
-  z-index: 100;
+  z-index: var(--z-index-level-2);
   width: 4px;
   content: '';
   background: linear-gradient(
@@ -23,7 +23,7 @@
 
 .timelineItem {
   position: relative;
-  z-index: 100;
+  z-index: var(--z-index-level-2);
   display: flex;
   opacity: 0;
   animation: fade-in-up 0.5s ease forwards;
@@ -80,7 +80,7 @@
 .bullet {
   position: absolute;
   top: 12px;
-  z-index: 101;
+  z-index: calc(var(--z-index-level-2) + 1);
   display: flex;
   align-items: center;
   justify-content: center;

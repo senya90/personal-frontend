@@ -1,6 +1,6 @@
 .themeToggle {
   position: relative;
-  z-index: 10;
+  z-index: var(--z-index-level-1);
   display: flex;
   gap: var(--space-s);
   padding: var(--space-xs) var(--space-s);

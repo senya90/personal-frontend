@@ -53,6 +53,11 @@
   --space-m: 24px;
   --space-l: 32px;
   --space-xl: 64px;
+
+  --z-index-level-1: 10;
+  --z-index-level-2: 100;
+  --z-index-level-3: 1000;
+
   font-size: var(--font-size);
   font-family: var(--font-main), sans-serif; /* --font-main from nextjs fonts */
   font-weight: 400;

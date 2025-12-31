@@ -1,5 +1,8 @@
+'use client'
+
 import cn from 'classnames'
 
+import { useSmartHide } from '@/shared/ui/Header/lib/useSmartHide'
 import { LanguageSwitcher } from '@/shared/ui/LanguageSwitcher'
 import { Link } from '@/shared/ui/Link'
 import { Navigation } from '@/shared/ui/Navigation'
@@ -10,8 +13,10 @@ import { Typography } from '@/shared/ui/Typography'
 import styles from './styles.module.css'
 
 export const Header = () => {
+  const { isHide } = useSmartHide()
+
   return (
-    <header className={styles.header}>
+    <header className={cn(styles.header, { [styles.hidden]: isHide })}>
       <div className={cn(container.main, styles.container)}>
         <Link href="/" linkClassName={styles.logo}>
           <Typography variant="lead">SEMOSHIN</Typography>

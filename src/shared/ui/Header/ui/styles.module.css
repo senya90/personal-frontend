@@ -1,8 +1,18 @@
 .header {
+  position: fixed;
+  top: 0;
+  z-index: var(--z-index-level-3);
   width: 100%;
   padding-top: var(--space-s);
   padding-bottom: var(--space-s);
+  background-color: var(--bg-card);
   border-bottom: 1px solid var(--border);
+  box-shadow: var(--box-shadow);
+  transition: transform var(--transition-move);
+}
+
+.hidden {
+  transform: translateY(-100%);
 }
 
 .container {
