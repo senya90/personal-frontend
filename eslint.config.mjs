@@ -62,6 +62,7 @@ const eslintConfig = defineConfig([
           warnOnUnassignedImports: true,
         },
       ],
+      '@typescript-eslint/no-explicit-any': 'warn',
     },
   },
 
