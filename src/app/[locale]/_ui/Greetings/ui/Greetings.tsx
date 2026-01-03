@@ -10,27 +10,44 @@ export const Greetings = () => {
   const t = useTranslations('Home')
 
   return (
-    <section>
+    <section aria-labelledby="greetings-heading">
       <div className={cn(stylesPage.section, styles.sectionMain)}>
-        <Typography variant="h1">Senior Frontend Developer</Typography>
-        <Typography variant="lead">{t('greetings_desc')}</Typography>
+        <Typography id="greetings-heading" variant="h1">
+          Senior Frontend Developer
+        </Typography>
+        <Typography
+          variant="lead"
+          role="doc-subtitle"
+          aria-describedby="greetings-heading"
+        >
+          {t('greetings_desc')}
+        </Typography>
       </div>
 
-      <div className={styles.about}>
+      <div
+        className={styles.about}
+        role="region"
+        aria-labelledby="about-heading"
+      >
         <div className={stylesPage.section}>
-          <Typography variant="h4" bottomOffset="m" align="center">
+          <Typography
+            variant="h4"
+            bottomOffset="m"
+            align="center"
+            id="about-heading"
+          >
             {t('about_me')}
           </Typography>
-          <Typography variant="lead" bottomOffset="s">
+          <Typography variant="lead" bottomOffset="s" role="paragraph">
             {t('about_me_text.1')}
           </Typography>
-          <Typography variant="lead" bottomOffset="s">
+          <Typography variant="lead" bottomOffset="s" role="paragraph">
             {t('about_me_text.2')}
           </Typography>
-          <Typography variant="lead" bottomOffset="s">
+          <Typography variant="lead" bottomOffset="s" role="paragraph">
             {t('about_me_text.3')}
           </Typography>
-          <Typography variant="lead" bottomOffset="s">
+          <Typography variant="lead" bottomOffset="s" role="paragraph">
             {t('about_me_text.4')}
           </Typography>
         </div>

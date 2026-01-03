@@ -19,9 +19,14 @@ export const Work = ({ locale }: IProps) => {
   const workExperience = getWorkItems(locale as Locale)
 
   return (
-    <section>
+    <section aria-labelledby="work-experience-heading" role="region">
       <div className={styles.section}>
-        <Typography variant="h3" component="h2" bottomOffset="l">
+        <Typography
+          variant="h3"
+          component="h2"
+          bottomOffset="l"
+          id="work-experience-heading"
+        >
           {t('title')}
         </Typography>
 
@@ -35,6 +40,7 @@ export const Work = ({ locale }: IProps) => {
               subtitle={item.position}
               description={item.description}
               tags={item.stack}
+              role="article"
             />
           )}
         />

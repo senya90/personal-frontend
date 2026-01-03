@@ -11,23 +11,42 @@ export const ContactsList = () => {
         <span className={margins.mr_s}>
           <Icon icon="mail2" />
         </span>
-        <Link variant="h5" href="mailto:mamoshin_sem@mail.ru">
+        <Link
+          variant="h5"
+          href="mailto:mamoshin_sem@mail.ru"
+          role="listitem"
+          aria-label="email: mamoshin_sem@mail.ru"
+        >
           mamoshin_sem@mail.ru
         </Link>
       </div>
+
       <div className={styles.line}>
         <span className={margins.mr_s}>
           <Icon icon="telegram2" />
         </span>
-        <Link variant="h5" href="https://t.me/senya90" target="_blank">
+        <Link
+          variant="h5"
+          href="https://t.me/senya90"
+          target="_blank"
+          role="listitem"
+          aria-label="telegram: @senya90"
+        >
           @senya90
         </Link>
       </div>
+
       <div className={styles.line}>
         <span className={margins.mr_s}>
           <Icon icon="github2" />
         </span>
-        <Link variant="h5" href="https://github.com/senya90" target="_blank">
+        <Link
+          variant="h5"
+          href="https://github.com/senya90"
+          target="_blank"
+          role="listitem"
+          aria-label="github: github.com/senya90"
+        >
           github.com/senya90
         </Link>
       </div>

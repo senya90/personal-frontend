@@ -8,10 +8,16 @@ export const Navigation = () => {
   const t = useTranslations('Nav')
 
   return (
-    <nav>
-      <NavLink href="/">{t('home')}</NavLink>
-      <NavLink href="/education">{t('education')}</NavLink>
-      <NavLink href="/contacts">{t('contacts')}</NavLink>
+    <nav role="navigation" aria-label={t('main_menu')}>
+      <NavLink href="/" role="menuitem">
+        {t('home')}
+      </NavLink>
+      <NavLink href="/education" role="menuitem">
+        {t('education')}
+      </NavLink>
+      <NavLink href="/contacts" role="menuitem">
+        {t('contacts')}
+      </NavLink>
     </nav>
   )
 }

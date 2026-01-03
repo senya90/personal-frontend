@@ -1,6 +1,7 @@
 import cn from 'classnames'
 import Link from 'next/link'
-import { ReactNode } from 'react'
+import { LinkProps as NextLinkProps } from 'next/link'
+import { AnchorHTMLAttributes, ReactNode } from 'react'
 
 import { Typography } from '@/shared/ui/Typography'
 
@@ -8,12 +9,18 @@ import { usePathname } from '@/i18n/navigation'
 
 import styles from './styles.module.css'
 
-interface IProps {
+interface IProps
+  extends
+    NextLinkProps,
+    Omit<
+      AnchorHTMLAttributes<HTMLAnchorElement>,
+      keyof NextLinkProps | 'href'
+    > {
   href: string
   children: ReactNode
 }
 
-export const NavLink = ({ href, children }: IProps) => {
+export const NavLink = ({ href, children, ...rest }: IProps) => {
   const pathname = usePathname()
 
   const isActive = ((): boolean => {
@@ -28,6 +35,8 @@ export const NavLink = ({ href, children }: IProps) => {
       className={cn(styles.link, {
         [styles.active]: isActive,
       })}
+      aria-current={isActive ? 'page' : undefined}
+      {...rest}
     >
       <Typography component="span" variant="overline">
         {children}

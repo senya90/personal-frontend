@@ -17,26 +17,34 @@ export const RecentProjects = ({ locale }: IProps) => {
   const projects = getRecentProjectsItems(locale)
 
   return (
-    <section>
+    <section aria-labelledby="projects-heading" role="region">
       <div className={styles.section}>
-        <Typography variant="h3" component="h2" bottomOffset="l">
+        <Typography
+          variant="h3"
+          component="h2"
+          bottomOffset="l"
+          id="projects-heading"
+        >
           {t('title')}
         </Typography>
 
-        {projects.map((project) => (
-          <Card
-            key={project.id}
-            link={{
-              href: project.href,
-              target: '_blank',
-            }}
-            title={project.title}
-            subtitle={project.shortDescription}
-            footer={project.components.join(', ')}
-            description={project.description}
-            bottomOffset="m"
-          />
-        ))}
+        <div role="list" aria-label={t('title_list')}>
+          {projects.map((project) => (
+            <Card
+              key={project.id}
+              link={{
+                href: project.href,
+                target: '_blank',
+              }}
+              title={project.title}
+              subtitle={project.shortDescription}
+              footer={project.components.join(', ')}
+              description={project.description}
+              bottomOffset="m"
+              role="listitem"
+            />
+          ))}
+        </div>
       </div>
     </section>
   )

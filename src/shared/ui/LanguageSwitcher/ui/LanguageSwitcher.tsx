@@ -1,7 +1,7 @@
 'use client'
 
 import cn from 'classnames'
-import { useLocale } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 import { constantsButtons } from '@/shared/ui/LanguageSwitcher/lib/constants'
 
@@ -13,9 +13,10 @@ import styles from './styles.module.css'
 export function LanguageSwitcher() {
   const pathname = usePathname()
   const locale = useLocale() as Locale
+  const t = useTranslations('Header')
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} aria-label={t('switch_language')}>
       {constantsButtons.map((l) => (
         <Link
           key={l.locale}
@@ -24,6 +25,16 @@ export function LanguageSwitcher() {
           className={cn(styles.languageLink, {
             [styles.active]: l.locale === locale,
           })}
+          aria-label={
+            l.title === 'EN'
+              ? 'English'
+              : l.title === 'RU'
+                ? 'Russian'
+                : l.title
+          }
+          aria-current={l.locale === locale ? 'true' : undefined}
+          role="radio"
+          aria-checked={l.locale === locale}
         >
           {l.title}
         </Link>

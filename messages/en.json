@@ -20,7 +20,15 @@
       "send": "Send"
     }
   },
+  "Header": {
+    "title": "Header",
+    "theme_lang": "Theme and language controls",
+    "switch_language": "Переключить язык",
+    "english": "Английский",
+    "russian": "Русский"
+  },
   "Nav": {
+    "main_menu": "Main menu",
     "home": "Home",
     "education": "Education",
     "contacts": "Contacts"
@@ -40,7 +48,8 @@
       "title": "Contacts"
     },
     "title": "Contacts",
-    "write_to_me": "Contact me"
+    "write_to_me": "Contact me",
+    "contact_methods": "Contact methods"
   },
   "Education": {
     "meta": {
@@ -58,7 +67,8 @@
     "wrong_email": "Invalid email format"
   },
   "Recent": {
-    "title": "Recent projects"
+    "title": "Recent projects",
+    "title_list": "Recent projects list"
   },
   "Typography": {
     "meta": {

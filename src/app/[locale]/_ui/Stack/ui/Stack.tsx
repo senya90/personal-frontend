@@ -29,85 +29,110 @@ export const Stack = () => {
   const styleBoxMini = cn(styles.stackBoxMini, margins.mb_l)
 
   return (
-    <section>
+    <section aria-labelledby="stack-heading" role="region">
       <div className={stylesMain.section}>
-        <Typography variant="h3" component="h2" bottomOffset="l">
+        <Typography
+          variant="h3"
+          component="h2"
+          bottomOffset="l"
+          id="stack-heading"
+        >
           {t('title')}
         </Typography>
 
-        <div className={styleBox}>
-          <StackCard title="JavaScript" icon={js} />
-          <StackCard title="TypeScript" icon={ts} />
+        <div className={styleBox} role="list" aria-label={t('title')}>
+          <StackCard title="JavaScript" icon={js} role="listitem" />
+          <StackCard title="TypeScript" icon={ts} role="listitem" />
           <StackCard
             title="HTML / CSS"
             description="CSS-in-JS, CSS Modules"
             icon={htmlcssIcon}
+            role="listitem"
           />
-          <StackCard title="React" icon={reactIcon} />
+          <StackCard title="React" icon={reactIcon} role="listitem" />
           <StackCard
             title="Redux"
             description="Redux, Redux Toolkit (RTK)"
             icon={reduxIcon}
+            role="listitem"
           />
           <StackCard
             title="React Query / RTK Query"
             description="TanStack Query"
             icon={reactQuery}
+            role="listitem"
           />
           <StackCard
             title="Formik / React Hook Form"
             description={t('forms')}
             icon={reactHookFormIcon}
+            role="listitem"
           />
           <StackCard
             title="Yup / Zod"
             description={t('validation')}
             icon={zodIcon}
+            role="listitem"
           />
           <StackCard
             title="WebSocket"
             description={'WebSocket, Socket.io'}
             icon={socketioIcon}
+            role="listitem"
           />
           <StackCard
             title="Jest / React-testing-library"
             description={t('testing')}
             icon={testing}
+            role="listitem"
           />
           <StackCard
             title="Webpack"
             description="Vite, Turbopack"
             icon={webpackIcon}
+            role="listitem"
           />
 
           <StackCard
             title="Eslint / Prettier / Husky"
             description={t('linters')}
             icon={eslintIcon}
+            role="listitem"
           />
         </div>
 
         <div className={styles.advancedBox}>
-          <div>
-            <Typography variant="h5" component="h4" bottomOffset="s">
+          <div role="group" aria-labelledby="backend-heading">
+            <Typography
+              variant="h5"
+              component="h4"
+              bottomOffset="s"
+              id="backend-heading"
+            >
               Backend
             </Typography>
-            <div className={styleBoxMini}>
+            <div className={styleBoxMini} role="list" aria-label="Backend">
               <StackCard
                 title="Node.js"
                 description="NestJS, Express"
                 icon={nodejsIcon}
+                role="listitem"
               />
             </div>
           </div>
 
-          <div>
-            <Typography variant="h5" component="h4" bottomOffset="s">
+          <div role="group" aria-labelledby="ci-cd-heading">
+            <Typography
+              variant="h5"
+              component="h4"
+              bottomOffset="s"
+              id="ci-cd-heading"
+            >
               CI/CD
             </Typography>
-            <div className={styleBoxMini}>
-              <StackCard title="Docker" icon={dockerIcon} />
-              <StackCard title="TeamCity" icon={teamcityIcon} />
+            <div className={styleBoxMini} role="list" aria-label="CI/CD">
+              <StackCard title="Docker" icon={dockerIcon} role="listitem" />
+              <StackCard title="TeamCity" icon={teamcityIcon} role="listitem" />
             </div>
           </div>
         </div>

@@ -20,7 +20,15 @@
       "send": "Отправить"
     }
   },
+  "Header": {
+    "title": "Хедер",
+    "theme_lang": "Управление темой и языком",
+    "switch_language": "Switch language",
+    "english": "English",
+    "russian": "Russian"
+  },
   "Nav": {
+    "main_menu": "Главное меню",
     "home": "Главная",
     "education": "Образование",
     "contacts": "Контакты"
@@ -40,7 +48,8 @@
       "title": "Контакты"
     },
     "title": "Контакты",
-    "write_to_me": "Напиши мне"
+    "write_to_me": "Напиши мне",
+    "contact_methods": "Способы связи"
   },
   "Education": {
     "meta": {
@@ -58,7 +67,8 @@
     "wrong_email": "Неверный формат email"
   },
   "Recent": {
-    "title": "Недавние проекты"
+    "title": "Недавние проекты",
+    "title_list": "Список недавних проектов"
   },
   "Typography": {
     "meta": {

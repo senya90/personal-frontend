@@ -15,14 +15,27 @@ export const Contacts = () => {
   const t = useTranslations('Contacts')
 
   return (
-    <section className={styles.contacts}>
+    <section
+      className={styles.contacts}
+      aria-labelledby="contacts-heading"
+      role="region"
+    >
       <div className={cn(stylesMain.section, flex.flex)}>
         <div className={flex.flex_1}>
-          <Typography variant="h3" component="h2" bottomOffset="l">
+          <Typography
+            variant="h3"
+            component="h2"
+            bottomOffset="l"
+            id="contacts-heading"
+          >
             {t('title')}
           </Typography>
 
-          <div className={margins.mb_xl}>
+          <div
+            className={margins.mb_xl}
+            role="list"
+            aria-label={t('contact_methods')}
+          >
             <ContactsList />
           </div>
         </div>

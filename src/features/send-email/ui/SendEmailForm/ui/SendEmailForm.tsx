@@ -7,7 +7,7 @@ import { useForm } from 'react-hook-form'
 
 import { Button } from '@/shared/ui/Button'
 import { IForm, Input, Textarea } from '@/shared/ui/Form'
-import { container } from '@/shared/ui/styles'
+import { a11y, container } from '@/shared/ui/styles'
 
 import { INITIAL_SEND_EMAIL_DATA } from '@/features/send-email/ui/SendEmailForm/lib/constants'
 import { SendEmailFormData } from '@/features/send-email/ui/SendEmailForm/model/SendEmailFormData'
@@ -46,33 +46,82 @@ export const SendEmailForm = ({ className, onSubmitted, ...rest }: IProps) => {
           console.error(error)
         }
       })}
+      aria-label={t('write_to_me.title')}
+      role="form"
     >
       <Input
         {...register('theme')}
         error={errors.theme?.message}
         touched={touchedFields.theme}
         label={t('write_to_me.subject')}
+        required
+        aria-required="true"
+        aria-invalid={errors.theme ? 'true' : 'false'}
+        aria-describedby={errors.theme ? 'theme-error' : undefined}
         {...rest}
       />
+      {errors.theme && (
+        <div
+          id="theme-error"
+          role="alert"
+          aria-live="polite"
+          className={a11y.srOnly}
+        >
+          {errors.theme.message}
+        </div>
+      )}
+
       <Input
         {...register('email')}
         error={errors.email?.message}
         touched={touchedFields.email}
         label={t('write_to_me.email')}
+        required
+        aria-required="true"
+        aria-invalid={errors.email ? 'true' : 'false'}
+        aria-describedby={errors.email ? 'email-error' : undefined}
+        autoComplete="email"
         {...rest}
       />
+      {errors.email && (
+        <div
+          id="email-error"
+          role="alert"
+          aria-live="polite"
+          className={a11y.srOnly}
+        >
+          {errors.email.message}
+        </div>
+      )}
+
       <Textarea
         {...register('description')}
         error={errors.description?.message}
         touched={touchedFields.description}
         label={t('write_to_me.message')}
+        required
+        aria-required="true"
+        aria-invalid={errors.description ? 'true' : 'false'}
+        aria-describedby={errors.description ? 'message-error' : undefined}
         {...rest}
       />
+      {errors.description && (
+        <div
+          id="message-error"
+          role="alert"
+          aria-live="polite"
+          className={a11y.srOnly}
+        >
+          {errors.description.message}
+        </div>
+      )}
 
       <Button
         type="submit"
         className={container.full}
         disabled={isSubmitting}
+        aria-disabled={isSubmitting}
+        aria-busy={isSubmitting}
         {...rest}
       >
         {t('write_to_me.send')}

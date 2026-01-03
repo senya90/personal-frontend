@@ -9,7 +9,7 @@ import { Typography } from '@/shared/ui/Typography'
 
 import styles from './styles.module.css'
 
-interface IProps {
+interface IProps extends React.HTMLAttributes<HTMLElement> {
   title: string
   link?: {
     href: string | undefined
@@ -33,12 +33,14 @@ export const Card = ({
   tags,
   footer,
   bottomOffset,
+  ...rest
 }: IProps) => {
   return (
     <article
       className={cn(styles.content, {
         [calcBottomOffset(bottomOffset)]: bottomOffset,
       })}
+      {...rest}
     >
       <header className={styles.header}>
         <div>

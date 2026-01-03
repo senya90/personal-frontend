@@ -1,8 +1,9 @@
+import a11y from './a11y/a11y.module.css'
 import container from './container/stylesContainer.module.css'
 import flex from './flex/flex.module.css'
 import margins from './offsets/ui/stylesMargin.module.css'
 import paddings from './offsets/ui/stylesPadding.module.css'
 
-export { container, margins, paddings, flex }
+export { container, margins, paddings, flex, a11y }
 export type { BottomOffset } from './offsets/model/types'
 export { calcBottomOffset } from './offsets/lib/utils'
