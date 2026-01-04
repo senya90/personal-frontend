@@ -44,3 +44,9 @@
   justify-content: center;
   margin-left: var(--space-xl);
 }
+
+@media screen and (width <= 768px) {
+  .rightCtrls {
+    margin-left: var(--space-s);
+  }
+}

@@ -20,28 +20,37 @@ export const Contacts = () => {
       aria-labelledby="contacts-heading"
       role="region"
     >
-      <div className={cn(stylesMain.section, flex.flex)}>
+      <div
+        className={cn(
+          stylesMain.section,
+          styles.contactsContainer,
+          margins.mb_xl
+        )}
+      >
         <div className={flex.flex_1}>
           <Typography
             variant="h3"
             component="h2"
             bottomOffset="l"
             id="contacts-heading"
+            className={styles.title}
           >
             {t('title')}
           </Typography>
 
-          <div
-            className={margins.mb_xl}
-            role="list"
-            aria-label={t('contact_methods')}
-          >
+          <div role="list" aria-label={t('contact_methods')}>
             <ContactsList />
           </div>
         </div>
 
         <div className={flex.flex_1}>
-          <Typography variant="h3" component="h3" bottomOffset="m" align="left">
+          <Typography
+            variant="h3"
+            component="h3"
+            bottomOffset="m"
+            align="left"
+            className={styles.title}
+          >
             Напиши мне
           </Typography>
           <SendEmail className={cn(flex.self_end)} variant="secondary" />

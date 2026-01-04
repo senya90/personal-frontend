@@ -197,3 +197,15 @@ a:hover {
 a:visited {
   color: var(--link-content-visited);
 }
+
+@media screen and (width <= 768px) {
+  :root {
+    --font-size: 18px;
+
+    --space-xs: 3px;
+    --space-s: 8px;
+    --space-m: 16px;
+    --space-l: 24px;
+    --space-xl: 48px;
+  }
+}

@@ -130,7 +130,7 @@
   animation: pulse 2s infinite;
 }
 
-@media (width <= 768px) {
+@media screen and (width <= 768px) {
   .timeline::before {
     left: 18px;
   }
@@ -156,7 +156,7 @@
   }
 
   .bullet {
-    top: 65px;
+    top: 40px;
   }
 
   .rightSide {
