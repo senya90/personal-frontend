@@ -209,3 +209,27 @@ a:visited {
     --space-xl: 48px;
   }
 }
+
+@media screen and (width <= 550px) {
+  :root {
+    --font-size: 16px;
+
+    --space-xs: 3px;
+    --space-s: 8px;
+    --space-m: 12px;
+    --space-l: 18px;
+    --space-xl: 32px;
+  }
+}
+
+@media screen and (width <= 480px) {
+  :root {
+    --font-size: 14px;
+
+    --space-xs: 2px;
+    --space-s: 4px;
+    --space-m: 8px;
+    --space-l: 12px;
+    --space-xl: 18px;
+  }
+}

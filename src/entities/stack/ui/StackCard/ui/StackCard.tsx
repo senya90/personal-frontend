@@ -17,7 +17,7 @@ export const StackCard = ({ title, description, icon, ...rest }: IProps) => {
       {icon && (
         <Image src={icon} alt="js logo" height={50} className={margins.mb_s} />
       )}
-      <Typography>{title}</Typography>
+      <Typography align="center">{title}</Typography>
       {description && (
         <Typography color="secondary" variant="body2" align="center">
           {description}
