@@ -1,6 +1,6 @@
 section .sectionMain {
-  padding: calc(var(--space-xl) * 3) var(--space-m);
-  padding-bottom: calc(var(--space-xl) * 2);
+  padding: calc(var(--space-xl) * 2) var(--space-m);
+  padding-bottom: calc(var(--space-xl) * 3);
 }
 
 .about {

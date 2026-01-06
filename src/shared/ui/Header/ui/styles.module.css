@@ -3,6 +3,7 @@
   top: 0;
   z-index: var(--z-index-level-3);
   width: 100%;
+  height: var(--header-height);
   padding-top: var(--space-s);
   padding-bottom: var(--space-s);
   background-color: var(--bg-card);
