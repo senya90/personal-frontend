@@ -1,0 +1,23 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: personal-frontend:local
+    environment:
+      - NODE_ENV=production
+    expose:
+      - '3000'
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - '80:80'
+      - '443:443'
+    # volumes:
+    #   - ./nginx/conf.d:/etc/nginx/conf.d:ro
+    # - ./nginx/certs:/etc/nginx/certs:ro
+    depends_on:
+      - frontend
