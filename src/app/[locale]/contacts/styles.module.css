@@ -3,3 +3,13 @@
   gap: var(--space-m);
   justify-content: space-between;
 }
+
+@media screen and (width <= 1023px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .title {
+    text-align: center;
+  }
+}

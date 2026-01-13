@@ -1,6 +1,6 @@
 .stackBox {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: var(--space-s);
 }
 
@@ -14,6 +14,12 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   gap: var(--space-s);
+}
+
+@media screen and (width <=1023px) {
+  .stackBox {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  }
 }
 
 @media screen and (width <= 550px) {
