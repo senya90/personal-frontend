@@ -1,3 +1,4 @@
+import cn from 'classnames'
 import { useTranslations } from 'next-intl'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { use } from 'react'
@@ -9,6 +10,8 @@ import { Typography } from '@/shared/ui/Typography'
 
 import { ILocaleProps } from '@/i18n/ILocaleProps'
 import { Locale } from '@/i18n/routing'
+
+import stylesMain from '@/app/[locale]/styles.module.css'
 
 interface IProps extends ILocaleProps {}
 
@@ -29,16 +32,27 @@ export default function Education({ params }: IProps) {
 
   return (
     <PageTransition>
-      <main className={container.main}>
-        <section className={container.section}>
-          <Typography variant="h1">{t('title')}</Typography>
-        </section>
+      <main>
+        <section
+          className={cn(container.section, stylesMain.section)}
+          aria-labelledby="education-heading"
+          role="region"
+        >
+          <Typography variant="h1" bottomOffset="xl" id="education-heading">
+            {t('title')}
+          </Typography>
 
-        <div>
-          {educationItems.map((item) => (
-            <EducationCard education={item} key={item.id} bottomOffset="l" />
-          ))}
-        </div>
+          <div role="list">
+            {educationItems.map((item) => (
+              <EducationCard
+                education={item}
+                key={item.id}
+                bottomOffset="l"
+                role="listitem"
+              />
+            ))}
+          </div>
+        </section>
       </main>
     </PageTransition>
   )

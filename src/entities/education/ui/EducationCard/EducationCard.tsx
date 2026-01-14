@@ -4,7 +4,7 @@ import { Education } from '@/entities/education/model/Education'
 import { Card } from '@/shared/ui/Card'
 import { BottomOffset } from '@/shared/ui/styles'
 
-interface IProps {
+interface IProps extends React.HTMLAttributes<HTMLElement> {
   education: Education
   bottomOffset?: BottomOffset
 }

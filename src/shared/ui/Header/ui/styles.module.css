@@ -47,7 +47,17 @@
 }
 
 @media screen and (width <= 768px) {
+  :root {
+    --header-height: 66px !important;
+  }
+
   .rightCtrls {
     margin-left: var(--space-s);
+  }
+}
+
+@media screen and (width <= 480px) {
+  :root {
+    --header-height: 50px !important;
   }
 }
