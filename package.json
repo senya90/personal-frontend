@@ -21,6 +21,7 @@
     ]
   },
   "dependencies": {
+    "@heroui/dropdown": "^2.3.29",
     "@hookform/resolvers": "^5.2.2",
     "@svgr/webpack": "8.1.0",
     "@tailwindcss/postcss": "4",
@@ -31,7 +32,8 @@
     "next-intl": "4.5.8",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "react-hook-form": "^7.69.0"
+    "react-hook-form": "^7.69.0",
+    "react-select": "^5.10.2"
   },
   "devDependencies": {
     "@types/node": "20",

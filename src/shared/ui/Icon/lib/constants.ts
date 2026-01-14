@@ -2,6 +2,7 @@ import ExternalLink from './svg/externalLink.svg'
 import Favicon from './svg/favicon.svg'
 import Github from './svg/github.svg'
 import Github2 from './svg/github2.svg'
+import Languages from './svg/languages.svg'
 import Mail from './svg/mail.svg'
 import Mail2 from './svg/mail2.svg'
 import Moon from './svg/moon.svg'
@@ -22,6 +23,7 @@ export const icons = {
   telegram2: Telegram2,
   externalLink: ExternalLink,
   favicon: Favicon,
+  languages: Languages,
 } as const
 
 export const iconSizes = {

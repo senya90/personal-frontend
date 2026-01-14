@@ -8,6 +8,7 @@ declare const styles: {
   readonly bg: string
   readonly bgAdditional: string
   readonly disabled: string
+  readonly pointer: string
 }
 
 export default styles

@@ -22,3 +22,21 @@
   opacity: 1;
   transform: scale(1);
 }
+
+.menu ul {
+  list-style: none;
+}
+
+.trigger {
+  outline: none;
+  opacity: 1;
+  transition: var(--transition-color);
+}
+
+.trigger:hover {
+  opacity: var(--opacity-disabled);
+}
+
+.trigger:active {
+  opacity: 1;
+}

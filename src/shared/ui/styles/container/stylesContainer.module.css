@@ -43,3 +43,7 @@
   user-select: none !important;
   opacity: var(--opacity-disabled) !important;
 }
+
+.pointer {
+  cursor: pointer;
+}

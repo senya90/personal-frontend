@@ -1,10 +1,10 @@
 export const constantsButtons = [
   {
     locale: 'ru',
-    title: 'RU',
+    title: 'Русский',
   },
   {
     locale: 'en',
-    title: 'EN',
+    title: 'English',
   },
 ]
