@@ -12,6 +12,7 @@ import { useLocale, useTranslations } from 'next-intl'
 import { Icon } from '@/shared/ui/Icon/ui/Icon'
 import { constantsButtons } from '@/shared/ui/LanguageSwitcher/lib/constants'
 import { container } from '@/shared/ui/styles'
+import { Typography } from '@/shared/ui/Typography'
 
 import { usePathname, Link } from '@/i18n/navigation'
 import { Locale } from '@/i18n/routing'
@@ -55,7 +56,9 @@ export function LanguageSwitcher() {
                   role="radio"
                   aria-checked={l.locale === locale}
                 >
-                  {l.title}
+                  <Typography variant="caption" color="accent" component="span">
+                    {l.title}
+                  </Typography>
                 </Link>
               </DropdownItem>
             ))}
