@@ -25,7 +25,9 @@
     "theme_lang": "Управление темой и языком",
     "switch_language": "Switch language",
     "english": "English",
-    "russian": "Russian"
+    "russian": "Russian",
+    "close_menu": "Закрыть меню",
+    "open_menu": "Открыть меню"
   },
   "Nav": {
     "main_menu": "Главное меню",

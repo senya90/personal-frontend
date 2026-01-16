@@ -2,6 +2,8 @@
   position: fixed;
   top: 0;
   z-index: var(--z-index-level-3);
+  display: flex;
+  align-items: center;
   width: 100%;
   height: var(--header-height);
   padding-top: var(--space-s);
@@ -40,24 +42,36 @@
 
 .rightCtrls {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
   margin-left: var(--space-xl);
 }
 
 @media screen and (width <= 768px) {
   :root {
-    --header-height: 66px !important;
-  }
-
-  .rightCtrls {
-    margin-left: var(--space-s);
+    --header-height: 43px !important;
   }
 }
 
 @media screen and (width <= 480px) {
   :root {
-    --header-height: 50px !important;
+    --header-height: 32px !important;
+  }
+}
+
+.mobileMenuContainer {
+  position: relative;
+  z-index: 1002;
+}
+
+@media (width <= 1023px) {
+  .rightBlock {
+    display: none;
+  }
+}
+
+@media (width >= 1024px) {
+  .mobileMenuContainer {
+    display: none;
   }
 }

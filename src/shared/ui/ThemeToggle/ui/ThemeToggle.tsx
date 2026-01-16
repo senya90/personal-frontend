@@ -8,8 +8,17 @@ import styles from './styles.module.css'
 import { useTheme } from '../lib/useTheme'
 import { THEME } from '../model/types'
 
-export function ThemeToggle() {
+interface IProps {
+  onChanged?: (theme: THEME) => void
+}
+
+export function ThemeToggle({ onChanged }: IProps) {
   const { setTheme } = useTheme()
+
+  const handler = (theme: THEME) => {
+    setTheme(theme)
+    onChanged?.(theme)
+  }
 
   return (
     <div className={styles.themeToggle}>
@@ -18,7 +27,9 @@ export function ThemeToggle() {
         icon="sun"
         size="s"
         fill="var(--color_sun)"
-        onClick={() => setTheme(THEME.LIGHT)}
+        onClick={() => {
+          handler(THEME.LIGHT)
+        }}
       />
 
       <Icon
@@ -26,7 +37,7 @@ export function ThemeToggle() {
         icon="moon"
         size="s"
         fill={'var(--color_moon)'}
-        onClick={() => setTheme(THEME.DARK)}
+        onClick={() => handler(THEME.DARK)}
       />
 
       <Icon
@@ -34,7 +45,7 @@ export function ThemeToggle() {
         icon="system"
         size="s"
         fill={'var(--color_system)'}
-        onClick={() => setTheme(THEME.SYSTEM)}
+        onClick={() => handler(THEME.SYSTEM)}
       />
     </div>
   )

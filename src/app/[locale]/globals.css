@@ -54,11 +54,12 @@
   --space-l: 32px;
   --space-xl: 64px;
 
-  --header-height: 85px;
+  --header-height: 57px;
 
   --z-index-level-1: 10;
   --z-index-level-2: 100;
   --z-index-level-3: 1000;
+  --z-index-level-4: 2000;
 
   font-size: var(--font-size);
   font-family: var(--font-main), sans-serif; /* --font-main from nextjs fonts */
