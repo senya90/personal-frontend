@@ -5,8 +5,7 @@ import { useTranslations } from 'next-intl'
 import { useLayoutEffect, useState } from 'react'
 
 import { useSmartHide } from '@/shared/ui/Header/lib/useSmartHide'
-import { BurgerButton } from '@/shared/ui/Header/ui/ui/MobileMenu/ui/BurgerButton'
-import { DropdownNavMenu } from '@/shared/ui/Header/ui/ui/MobileMenu/ui/DropdownNavMenu'
+import { MobileMenu } from '@/shared/ui/Header/ui/MobileMenu'
 import { LanguageSwitcher } from '@/shared/ui/LanguageSwitcher'
 import { Link } from '@/shared/ui/Link'
 import { Navigation } from '@/shared/ui/Navigation'
@@ -69,17 +68,12 @@ export const Header = () => {
         </div>
 
         {isMobile && (
-          <div className={styles.mobileMenuContainer}>
-            <BurgerButton
-              isOpen={isMenuOpen}
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            />
-            <DropdownNavMenu
-              isOpen={isMenuOpen}
-              onOverlayClick={() => setIsMenuOpen(false)}
-              onItemClick={handleMenuItemClick}
-            />
-          </div>
+          <MobileMenu
+            isOpen={isMenuOpen}
+            onItemClick={handleMenuItemClick}
+            onOverlayClick={() => setIsMenuOpen(false)}
+            onButtonClick={() => setIsMenuOpen(!isMenuOpen)}
+          />
         )}
       </div>
     </header>

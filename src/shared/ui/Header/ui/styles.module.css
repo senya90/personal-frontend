@@ -59,19 +59,8 @@
   }
 }
 
-.mobileMenuContainer {
-  position: relative;
-  z-index: 1002;
-}
-
 @media (width <= 1023px) {
   .rightBlock {
-    display: none;
-  }
-}
-
-@media (width >= 1024px) {
-  .mobileMenuContainer {
     display: none;
   }
 }
