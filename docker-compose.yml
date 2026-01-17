@@ -1,22 +1,61 @@
 services:
   frontend:
+    container_name: personal-frontend
     build:
       context: .
       dockerfile: Dockerfile
-    image: personal-frontend:local
-    environment:
-      - NODE_ENV=production
     expose:
       - '3000'
-
-  nginx:
-    build:
-      context: ./nginx
-      dockerfile: Dockerfile
-    ports:
-      - '80:80'
-      - '443:443'
-    # volumes:
-    # - ./nginx/certs:/etc/nginx/certs:ro
+    environment:
+      - NODE_ENV=production
+    init: true
+    restart: unless-stopped
     depends_on:
-      - frontend
+      - backend
+    networks:
+      - app-network
+
+  backend:
+    container_name: personal-backend
+    build:
+      context: ../personal-backend
+      dockerfile: Dockerfile
+    expose:
+      - '4000'
+    environment:
+      - NODE_ENV=production
+      - PORT=${BACKEND_PORT}
+      - SMTP_HOST=${SMTP_HOST}
+      - SMTP_PORT=${SMTP_PORT}
+      - SMTP_USER=${SMTP_USER}
+      - SMTP_PASS=${SMTP_PASS}
+      - SMTP_SECURE=${SMTP_SECURE}
+      - TARGET_EMAIL=${TARGET_EMAIL}
+
+      - CORS_FRONTEND=${CORS_FRONTEND}
+      # - TURNSTILE_SECRET_KEY=${TURNSTILE_SECRET_KEY}
+    init: true
+    restart: unless-stopped
+    networks:
+      - app-network
+
+    nginx:
+      container_name: personal-nginx
+      build:
+        context: ./nginx
+        dockerfile: Dockerfile
+      ports:
+        - '80:80'
+        - '443:443'
+      # volumes:
+      # - ./nginx/certs:/etc/nginx/certs:ro
+      depends_on:
+        - frontend
+        - backend
+      restart: unless-stopped
+      networks:
+        - app-network
+
+networks:
+  app-network:
+    driver: bridge
