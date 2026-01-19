@@ -21,41 +21,52 @@ services:
       context: ../personal-backend
       dockerfile: Dockerfile
     expose:
-      - '4000'
+      - ${PORT}
+    secrets:
+      - smtp_user
+      - smtp_password
+      - smtp_target_email
     environment:
-      - NODE_ENV=production
-      - PORT=${BACKEND_PORT}
-      - SMTP_HOST=${SMTP_HOST}
-      - SMTP_PORT=${SMTP_PORT}
-      - SMTP_USER=${SMTP_USER}
-      - SMTP_PASS=${SMTP_PASS}
-      - SMTP_SECURE=${SMTP_SECURE}
-      - TARGET_EMAIL=${TARGET_EMAIL}
-
-      - CORS_FRONTEND=${CORS_FRONTEND}
-      # - TURNSTILE_SECRET_KEY=${TURNSTILE_SECRET_KEY}
+      NODE_ENV: production
+      PORT: ${PORT}
+      SMTP_USER_FILE: /run/secrets/smtp_user
+      SMTP_PASS_FILE: /run/secrets/smtp_password
+      TARGET_EMAIL_FILE: /run/secrets/smtp_target_email
+      SMTP_HOST: ${SMTP_HOST}
+      SMTP_PORT: ${SMTP_PORT}
+      SMTP_SECURE: ${SMTP_SECURE}
+      CORS_FRONTEND: ${CORS_FRONTEND}
+      # TURNSTILE_SECRET_KEY: TURNSTILE_SECRET_KEY
     init: true
     restart: unless-stopped
     networks:
       - app-network
 
-    nginx:
-      container_name: personal-nginx
-      build:
-        context: ./nginx
-        dockerfile: Dockerfile
-      ports:
-        - '80:80'
-        - '443:443'
-      # volumes:
-      # - ./nginx/certs:/etc/nginx/certs:ro
-      depends_on:
-        - frontend
-        - backend
-      restart: unless-stopped
-      networks:
-        - app-network
+  nginx:
+    container_name: personal-nginx
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - '80:80'
+      # - '443:443'
+    # volumes:
+    # - ./nginx/certs:/etc/nginx/certs:ro
+    depends_on:
+      - frontend
+      - backend
+    restart: unless-stopped
+    networks:
+      - app-network
 
 networks:
   app-network:
     driver: bridge
+
+secrets:
+  smtp_user:
+    file: ../secrets/secret_smtp_user.txt
+  smtp_password:
+    file: ../secrets/secret_smtp_pass.txt
+  smtp_target_email:
+    file: ../secrets/secret_smtp_target_email.txt
