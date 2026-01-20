@@ -44,3 +44,4 @@ next-env.d.ts
 
 # infra
 /ansible
+nginx/conf.d/https_conf.conf
