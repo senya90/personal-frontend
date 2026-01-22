@@ -61,7 +61,7 @@ export const DropdownNavMenu = ({
                 className={styles.mobileControls}
                 aria-label={t('theme_lang')}
               >
-                <ThemeToggle onChanged={onItemClick} />
+                <ThemeToggle />
                 <div className={margins.ml_m}>
                   <LanguageSwitcher />
                 </div>
