@@ -53,12 +53,6 @@
   }
 }
 
-@media screen and (width <= 480px) {
-  :root {
-    --header-height: 32px !important;
-  }
-}
-
 @media (width <= 1023px) {
   .rightBlock {
     display: none;
