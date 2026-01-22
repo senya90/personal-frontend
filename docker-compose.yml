@@ -51,9 +51,9 @@ services:
       dockerfile: Dockerfile
     ports:
       - '80:80'
-      # - '443:443'
-    # volumes:
-    # - ./nginx/certs:/etc/nginx/certs:ro
+      - '443:443'
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt:ro
     depends_on:
       - frontend
       - backend
