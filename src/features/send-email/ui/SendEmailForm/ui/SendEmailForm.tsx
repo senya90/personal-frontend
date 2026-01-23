@@ -3,7 +3,6 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import cn from 'classnames'
 import { useTranslations } from 'next-intl'
-import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 
 import { Button } from '@/shared/ui/Button'
@@ -25,14 +24,12 @@ export const SendEmailForm = ({ className, onSubmitted, ...rest }: IProps) => {
   const tValidation = useTranslations('Validation')
   const validationSchema = createSendEmailSchema(tValidation)
 
-  const [captchaToken, setCaptchaToken] = useState('')
-  const [isCaptchaValid, setIsCaptchaValid] = useState(false)
-  const [captchaError, setCaptchaError] = useState('')
-
   const {
     register,
     handleSubmit,
     reset,
+    trigger,
+    setValue,
     formState: { errors, isSubmitting, touchedFields },
   } = useForm<SendEmailFormData>({
     resolver: zodResolver(validationSchema),
@@ -40,34 +37,18 @@ export const SendEmailForm = ({ className, onSubmitted, ...rest }: IProps) => {
     defaultValues: INITIAL_SEND_EMAIL_DATA,
   })
 
-  const handleCaptchaVerify = (token: string) => {
-    setCaptchaToken(token)
-    setIsCaptchaValid(true)
-    setCaptchaError('')
-  }
-
   const handleCaptchaError = () => {
-    setIsCaptchaValid(false)
-    setCaptchaToken('')
+    setValue('captcha', '', { shouldValidate: true })
+    trigger('captcha')
   }
 
   return (
     <form
       className={cn(container.full, className)}
       noValidate
-      onSubmit={handleSubmit(async (data) => {
-        if (!isCaptchaValid) {
-          setCaptchaError('Пожалуйста, подтвердите, что вы не робот')
-          return
-        }
-
-        const formDataWithCaptcha = {
-          ...data,
-          captcha: captchaToken,
-        }
-
+      onSubmit={handleSubmit(async (data: SendEmailFormData) => {
         try {
-          const res = await onSubmitted(formDataWithCaptcha)
+          const res = await onSubmitted(data)
           if (res) reset()
         } catch (error) {
           console.error(error)
@@ -156,23 +137,20 @@ export const SendEmailForm = ({ className, onSubmitted, ...rest }: IProps) => {
 
       <Captcha
         className={margins.mt_s}
-        onVerify={handleCaptchaVerify}
+        onVerify={(token) => {
+          setValue('captcha', token, {
+            shouldValidate: true,
+            shouldDirty: true,
+            shouldTouch: true,
+          })
+          trigger('captcha')
+        }}
         onError={handleCaptchaError}
         onExpire={handleCaptchaError}
+        error={errors.captcha?.message}
+        touched={touchedFields.captcha}
         aria-required="true"
-        aria-invalid={errors.captcha ? 'true' : 'false'}
-        aria-describedby={errors.captcha ? 'captcha-error' : undefined}
       />
-      {errors.captcha && (
-        <div
-          id="captcha-error"
-          role="alert"
-          aria-live="polite"
-          className={a11y.srOnly}
-        >
-          {errors.captcha.message}
-        </div>
-      )}
     </form>
   )
 }
