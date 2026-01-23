@@ -16,5 +16,6 @@ export const createSendEmailSchema = (t: TranslationFunction) => {
       .string()
       .min(10, t('min', { count: 10 }))
       .max(1000, t('max', { count: 1000 })),
+    captcha: z.string().min(1, t('complete_captcha')),
   })
 }

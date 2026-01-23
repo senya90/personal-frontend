@@ -4,4 +4,5 @@ export const INITIAL_SEND_EMAIL_DATA: SendEmailFormData = {
   theme: '',
   email: '',
   description: '',
+  captcha: '',
 }

@@ -3,11 +3,13 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import cn from 'classnames'
 import { useTranslations } from 'next-intl'
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 
 import { Button } from '@/shared/ui/Button'
+import { Captcha } from '@/shared/ui/Captcha'
 import { IForm, Input, Textarea } from '@/shared/ui/Form'
-import { a11y, container } from '@/shared/ui/styles'
+import { a11y, container, margins } from '@/shared/ui/styles'
 
 import { INITIAL_SEND_EMAIL_DATA } from '@/features/send-email/ui/SendEmailForm/lib/constants'
 import { SendEmailFormData } from '@/features/send-email/ui/SendEmailForm/model/SendEmailFormData'
@@ -23,6 +25,10 @@ export const SendEmailForm = ({ className, onSubmitted, ...rest }: IProps) => {
   const tValidation = useTranslations('Validation')
   const validationSchema = createSendEmailSchema(tValidation)
 
+  const [captchaToken, setCaptchaToken] = useState('')
+  const [isCaptchaValid, setIsCaptchaValid] = useState(false)
+  const [captchaError, setCaptchaError] = useState('')
+
   const {
     register,
     handleSubmit,
@@ -34,13 +40,34 @@ export const SendEmailForm = ({ className, onSubmitted, ...rest }: IProps) => {
     defaultValues: INITIAL_SEND_EMAIL_DATA,
   })
 
+  const handleCaptchaVerify = (token: string) => {
+    setCaptchaToken(token)
+    setIsCaptchaValid(true)
+    setCaptchaError('')
+  }
+
+  const handleCaptchaError = () => {
+    setIsCaptchaValid(false)
+    setCaptchaToken('')
+  }
+
   return (
     <form
       className={cn(container.full, className)}
       noValidate
       onSubmit={handleSubmit(async (data) => {
+        if (!isCaptchaValid) {
+          setCaptchaError('Пожалуйста, подтвердите, что вы не робот')
+          return
+        }
+
+        const formDataWithCaptcha = {
+          ...data,
+          captcha: captchaToken,
+        }
+
         try {
-          const res = await onSubmitted(data)
+          const res = await onSubmitted(formDataWithCaptcha)
           if (res) reset()
         } catch (error) {
           console.error(error)
@@ -126,6 +153,26 @@ export const SendEmailForm = ({ className, onSubmitted, ...rest }: IProps) => {
       >
         {t('write_to_me.send')}
       </Button>
+
+      <Captcha
+        className={margins.mt_s}
+        onVerify={handleCaptchaVerify}
+        onError={handleCaptchaError}
+        onExpire={handleCaptchaError}
+        aria-required="true"
+        aria-invalid={errors.captcha ? 'true' : 'false'}
+        aria-describedby={errors.captcha ? 'captcha-error' : undefined}
+      />
+      {errors.captcha && (
+        <div
+          id="captcha-error"
+          role="alert"
+          aria-live="polite"
+          className={a11y.srOnly}
+        >
+          {errors.captcha.message}
+        </div>
+      )}
     </form>
   )
 }

@@ -66,7 +66,13 @@
     "min": "Minimum {count} characters",
     "max": "Maximum {count} characters",
     "wrong": "Invalid format",
-    "wrong_email": "Invalid email format"
+    "wrong_email": "Invalid email format",
+    "complete_captcha": "Please complete the CAPTCHA to submit the form."
+  },
+  "Captcha": {
+    "wrong_config": "CAPTCHA configuration error. Please contact the administrator",
+    "on_error": "Failed to load the security check",
+    "on_expired": "The verification time has expired. Please try again"
   },
   "Recent": {
     "title": "Recent projects",

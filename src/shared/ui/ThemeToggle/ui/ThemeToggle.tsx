@@ -25,9 +25,7 @@ export function ThemeToggle({ onChange }: IProps) {
   return (
     <div className={styles.themeToggle}>
       <Icon
-        className={cn(styles.item, styles.sun, {
-          [styles.active]: theme === THEME.LIGHT,
-        })}
+        className={cn(styles.item, styles.sun)}
         icon="sun"
         size="s"
         fill="var(--color_sun)"
@@ -37,9 +35,7 @@ export function ThemeToggle({ onChange }: IProps) {
       />
 
       <Icon
-        className={cn(styles.item, styles.moon, {
-          [styles.active]: theme === THEME.DARK,
-        })}
+        className={cn(styles.item, styles.moon)}
         icon="moon"
         size="s"
         fill={'var(--color_moon)'}
@@ -47,9 +43,7 @@ export function ThemeToggle({ onChange }: IProps) {
       />
 
       <Icon
-        className={cn(styles.item, {
-          [styles.active]: theme === THEME.SYSTEM,
-        })}
+        className={cn(styles.item)}
         icon="system"
         size="s"
         fill={'var(--color_system)'}

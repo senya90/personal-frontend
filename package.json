@@ -23,6 +23,7 @@
   "dependencies": {
     "@heroui/dropdown": "^2.3.29",
     "@hookform/resolvers": "^5.2.2",
+    "@marsidev/react-turnstile": "^1.4.1",
     "@svgr/webpack": "8.1.0",
     "@tailwindcss/postcss": "4",
     "classnames": "2.5.1",
