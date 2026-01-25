@@ -38,8 +38,8 @@ export const SendEmailForm = ({ className, onSubmitted, ...rest }: IProps) => {
   })
 
   const handleCaptchaError = () => {
-    setValue('captcha', '', { shouldValidate: true })
-    trigger('captcha')
+    setValue('token', '', { shouldValidate: true })
+    trigger('token')
   }
 
   return (
@@ -138,17 +138,17 @@ export const SendEmailForm = ({ className, onSubmitted, ...rest }: IProps) => {
       <Captcha
         className={margins.mt_s}
         onVerify={(token) => {
-          setValue('captcha', token, {
+          setValue('token', token, {
             shouldValidate: true,
             shouldDirty: true,
             shouldTouch: true,
           })
-          trigger('captcha')
+          trigger('token')
         }}
         onError={handleCaptchaError}
         onExpire={handleCaptchaError}
-        error={errors.captcha?.message}
-        touched={touchedFields.captcha}
+        error={errors.token?.message}
+        touched={touchedFields.token}
         aria-required="true"
       />
     </form>
