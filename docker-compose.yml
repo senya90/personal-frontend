@@ -4,7 +4,8 @@ services:
     build:
       context: .
       args:
-        - NEXT_PUBLIC_SERVICE_API=${NEXT_PUBLIC_SERVICE_API}
+        NEXT_PUBLIC_SERVICE_API: ${NEXT_PUBLIC_SERVICE_API}
+        NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY: ${NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY}
       dockerfile: Dockerfile
     expose:
       - '3000'
@@ -34,11 +35,13 @@ services:
       SMTP_USER_FILE: /run/secrets/smtp_user
       SMTP_PASS_FILE: /run/secrets/smtp_password
       TARGET_EMAIL_FILE: /run/secrets/smtp_target_email
+      CLOUDFLARE_TURNSTILE_SECRET_KEY_FILE: /run/secrets/cloudflare_turnstile_secret_key
       SMTP_HOST: ${SMTP_HOST}
       SMTP_PORT: ${SMTP_PORT}
       SMTP_SECURE: ${SMTP_SECURE}
       CORS_FRONTEND: ${CORS_FRONTEND}
-      # TURNSTILE_SECRET_KEY: TURNSTILE_SECRET_KEY
+      CLOUDFLARE_TURNSTILE_VERIFY_URL: ${CLOUDFLARE_TURNSTILE_VERIFY_URL}
+
     init: true
     restart: unless-stopped
     networks:
@@ -72,3 +75,5 @@ secrets:
     file: ../secrets/secret_smtp_pass.txt
   smtp_target_email:
     file: ../secrets/secret_smtp_target_email.txt
+  cloudflare_turnstile_secret_key:
+    file: ../secrets/secret_cloudflare_secret_key.txt
