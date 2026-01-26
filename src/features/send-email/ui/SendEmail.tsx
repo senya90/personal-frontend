@@ -2,12 +2,11 @@
 
 import { FormVariant } from '@/shared/ui/Form'
 
+import { api } from '@/application/api'
 import {
   SendEmailForm,
   SendEmailFormData,
 } from '@/features/send-email/ui/SendEmailForm'
-
-const apiUrl = process.env.NEXT_PUBLIC_SERVICE_API
 
 interface IProps {
   className?: string
@@ -16,20 +15,7 @@ interface IProps {
 
 export const SendEmail = (props: IProps) => {
   const sendEmail = async (data: SendEmailFormData) => {
-    try {
-      const res = await fetch(`${apiUrl}/api/v1/email/send`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      })
-
-      return res.ok
-    } catch (error) {
-      console.log(error)
-      return false
-    }
+    await api.email.sendEmail(data)
   }
 
   return <SendEmailForm onSubmitted={sendEmail} {...props} />

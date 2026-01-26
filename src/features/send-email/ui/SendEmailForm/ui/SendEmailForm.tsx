@@ -18,7 +18,7 @@ import { createSendEmailSchema } from '@/features/send-email/ui/SendEmailForm/ui
 
 interface IProps extends IForm {
   className?: string
-  onSubmitted: (data: SendEmailFormData) => Promise<boolean>
+  onSubmitted: (data: SendEmailFormData) => Promise<void>
 }
 
 export const SendEmailForm = ({ className, onSubmitted, ...rest }: IProps) => {
@@ -51,18 +51,12 @@ export const SendEmailForm = ({ className, onSubmitted, ...rest }: IProps) => {
       noValidate
       onSubmit={handleSubmit(async (data: SendEmailFormData) => {
         try {
-          const res = await onSubmitted(data)
-          if (res) {
-            reset()
-            toast.success(tEmail('success'))
-            return
-          }
+          await onSubmitted(data)
 
-          toast.warning(tEmail('warning'), {
-            description: tEmail('warning_desc'),
-          })
+          reset()
+          toast.success(tEmail('success'))
         } catch (error) {
-          console.error(error)
+          console.error('Send email error:', error)
           toast.error(tEmail('error'), {
             description: getErrorMessage(error),
           })
