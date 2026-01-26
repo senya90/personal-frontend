@@ -1,0 +1,6 @@
+.toast {
+  font-family: var(--font-main), sans-serif; /* --font-main from nextjs fonts */
+  font-size: var(--font-size);
+  font-weight: 400;
+  line-height: 1.15;
+}

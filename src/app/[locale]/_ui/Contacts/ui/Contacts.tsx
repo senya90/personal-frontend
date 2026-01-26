@@ -1,7 +1,7 @@
 import cn from 'classnames'
 import { useTranslations } from 'next-intl'
 
-import { flex, margins } from '@/shared/ui/styles'
+import { flex } from '@/shared/ui/styles'
 import { Typography } from '@/shared/ui/Typography'
 
 import { SendEmail } from '@/features/send-email/ui/SendEmail'
@@ -20,13 +20,7 @@ export const Contacts = () => {
       aria-labelledby="contacts-heading"
       role="region"
     >
-      <div
-        className={cn(
-          stylesMain.section,
-          styles.contactsContainer,
-          margins.mb_xl
-        )}
-      >
+      <div className={cn(stylesMain.section, styles.contactsContainer)}>
         <div className={flex.flex_1}>
           <Typography
             variant="h3"
