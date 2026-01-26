@@ -4,7 +4,9 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import cn from 'classnames'
 import { useTranslations } from 'next-intl'
 import { useForm } from 'react-hook-form'
+import { toast } from 'sonner'
 
+import { getErrorMessage } from '@/shared/lib/errorUtils'
 import { Button } from '@/shared/ui/Button'
 import { Captcha } from '@/shared/ui/Captcha'
 import { IForm, Input, Textarea } from '@/shared/ui/Form'
@@ -21,6 +23,7 @@ interface IProps extends IForm {
 
 export const SendEmailForm = ({ className, onSubmitted, ...rest }: IProps) => {
   const t = useTranslations('Home')
+  const tEmail = useTranslations('Send_email')
   const tValidation = useTranslations('Validation')
   const validationSchema = createSendEmailSchema(tValidation)
 
@@ -49,9 +52,20 @@ export const SendEmailForm = ({ className, onSubmitted, ...rest }: IProps) => {
       onSubmit={handleSubmit(async (data: SendEmailFormData) => {
         try {
           const res = await onSubmitted(data)
-          if (res) reset()
+          if (res) {
+            reset()
+            toast.success(tEmail('success'))
+            return
+          }
+
+          toast.warning(tEmail('warning'), {
+            description: tEmail('warning_desc'),
+          })
         } catch (error) {
           console.error(error)
+          toast.error(tEmail('error'), {
+            description: getErrorMessage(error),
+          })
         }
       })}
       aria-label={t('write_to_me.title')}

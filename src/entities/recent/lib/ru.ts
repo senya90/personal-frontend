@@ -37,13 +37,13 @@ export const recentPorjectsItemsRu: RecentProject[] = [
   },
   {
     id: '3',
-    title: 'Этот сайт mydomain.dev',
+    title: 'Этот сайт semoshin.ru',
     shortDescription: 'Личный сайт разработчика',
     description: [
       'Здесь представлена краткая информация о моей профессиональной деятельности и проектах, над которыми я работал в последнее время.',
       'Данный сайт также используется как экспериментальная платформа для тестирования новых инструментов и подходов к разработке.',
     ],
     components: ['NextJS', 'SSR и SSG', 'Разные темы', 'Мультиязычность'],
-    href: 'mydomain.dev',
+    href: 'https://semoshin.ru',
   },
 ]

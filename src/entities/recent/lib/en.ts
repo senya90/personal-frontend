@@ -37,7 +37,7 @@ export const recentPorjectsItemsEn: RecentProject[] = [
   },
   {
     id: '3',
-    title: 'This website mydomain.dev',
+    title: 'This website semoshin.ru',
     shortDescription: 'Developer’s personal website',
     description: [
       'This section provides a brief overview of my professional experience and the projects I have been working on recently.',
@@ -49,6 +49,6 @@ export const recentPorjectsItemsEn: RecentProject[] = [
       'Multiple themes',
       'Multilingual support',
     ],
-    href: 'mydomain.dev',
+    href: 'https://semoshin.ru',
   },
 ]

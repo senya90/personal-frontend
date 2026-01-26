@@ -5,6 +5,7 @@ import { setRequestLocale } from 'next-intl/server'
 
 import { mainFont } from '@/shared/ui/fonts'
 import { Header } from '@/shared/ui/Header'
+import { ToasterProvider } from '@/shared/ui/ToasterProvider'
 
 import { ILocaleProps } from '@/i18n/ILocaleProps'
 import { routing } from '@/i18n/routing'
@@ -38,6 +39,7 @@ export default async function LocaleLayout({ children, params }: IProps) {
         <NextIntlClientProvider>
           <Header />
           {children}
+          <ToasterProvider />
         </NextIntlClientProvider>
       </body>
     </html>

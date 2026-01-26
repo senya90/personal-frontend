@@ -20,6 +20,12 @@
       "send": "Send"
     }
   },
+  "Send_email": {
+    "success": "Email sent",
+    "warning": "Email not sent",
+    "warning_desc": "Try again later or contact administrator",
+    "error": "Error"
+  },
   "Header": {
     "title": "Header",
     "theme_lang": "Theme and language controls",
