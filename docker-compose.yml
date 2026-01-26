@@ -29,6 +29,7 @@ services:
       - smtp_user
       - smtp_password
       - smtp_target_email
+      - cloudflare_turnstile_secret_key
     environment:
       NODE_ENV: production
       PORT: ${PORT}
