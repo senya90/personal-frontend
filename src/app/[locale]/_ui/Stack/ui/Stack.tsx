@@ -1,4 +1,7 @@
+'use client'
+
 import cn from 'classnames'
+import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 
 import { StackCard } from '@/entities/stack'
@@ -29,7 +32,14 @@ export const Stack = () => {
   const styleBoxMini = cn(styles.stackBoxMini, margins.mb_l)
 
   return (
-    <section aria-labelledby="stack-heading" role="region">
+    <motion.section
+      initial={{ opacity: 0.5, scale: 0.97, y: 20 }}
+      whileInView={{ opacity: 1, scale: 1, y: 0 }}
+      transition={{ duration: 0.2 }}
+      viewport={{ once: true, amount: 0.25 }}
+      aria-labelledby="stack-heading"
+      role="region"
+    >
       <div className={stylesMain.section}>
         <Typography
           variant="h3"
@@ -137,6 +147,6 @@ export const Stack = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
