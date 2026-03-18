@@ -1,7 +1,10 @@
 {
   "Home": {
     "meta": {
-      "title": "Semoshin"
+      "title": "Semoshin",
+      "description": "Personal site of a frontend developer",
+      "og:title": "Semyon Mamoshin — Frontend Developer",
+      "og:description": "Personal site of a frontend developer. React, Next.js, TypeScript, Node.js"
     },
     "greetings": "Hi",
     "greetings_desc": "Over 9 years of experience in web development. Building scalable enterprise applications",

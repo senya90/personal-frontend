@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { NextIntlClientProvider, hasLocale } from 'next-intl'
-import { setRequestLocale } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 
 import { mainFont } from '@/shared/ui/fonts'
 import { Header } from '@/shared/ui/Header'
@@ -15,10 +15,58 @@ import './normalize.css'
 
 export const dynamic = 'force-static'
 
-export const metadata: Metadata = {
-  title: 'Semoshin',
-  description: 'Personal developer site',
-  icons: { icon: '/favicon.ico' },
+export async function generateMetadata({ params }: IProps): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'Home' })
+
+  const baseUrl = 'https://semoshin.ru'
+  const url = `${baseUrl}/${locale}`
+
+  console.log('url', url)
+
+  return {
+    title: t('meta.title'),
+    description: t('meta.description'),
+    icons: {
+      icon: [{ url: '/favicon.ico' }],
+    },
+
+    openGraph: {
+      title: t('meta.og:title'),
+      description: t('meta.og:description'),
+      url,
+      siteName: 'semoshin.ru',
+      type: 'website',
+      images: [
+        {
+          url: 'https://semoshin.ru/icons/chrome-192x192.png',
+          width: 192,
+          height: 192,
+          alt: 'semoshin.ru favicon logo',
+        },
+      ],
+    },
+
+    twitter: {
+      card: 'summary',
+      title: t('meta.og:title'),
+      description: t('meta.og:description'),
+      images: ['https://semoshin.ru/icons/chrome-192x192.png'],
+    },
+
+    alternates: {
+      canonical: url,
+      languages: {
+        ru: `${baseUrl}/ru`,
+        en: `${baseUrl}/en`,
+      },
+    },
+
+    robots: {
+      index: true,
+      follow: true,
+    },
+  }
 }
 
 interface IProps extends ILocaleProps {
