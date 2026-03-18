@@ -16,6 +16,7 @@ ENV NODE_ENV=production
 RUN npm run lint:js && \
     npm run lint:css && \
     npm run format:check
+# починить сборку через ci
 RUN npm run build
 
 FROM node:24-alpine AS runner
