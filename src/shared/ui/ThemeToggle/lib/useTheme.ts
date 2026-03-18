@@ -13,8 +13,15 @@ export function useTheme() {
   })
 
   useEffect(() => {
+    const setFavicon = (theme: THEME) => {
+      const link = document.querySelector<HTMLLinkElement>("link[rel='icon']")
+      if (!link) return
+      link.href = theme === 'dark' ? '/favicon-dark.ico' : '/favicon.ico'
+    }
+
     const root = document.documentElement
 
+    setFavicon(theme)
     if (theme === THEME.SYSTEM) {
       root.removeAttribute('data-theme')
       localStorage.removeItem('theme')

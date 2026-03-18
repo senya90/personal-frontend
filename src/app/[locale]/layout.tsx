@@ -18,6 +18,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Semoshin',
   description: 'Personal developer site',
+  icons: { icon: '/favicon.ico' },
 }
 
 interface IProps extends ILocaleProps {
