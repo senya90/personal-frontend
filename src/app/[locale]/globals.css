@@ -18,7 +18,7 @@
     0 10px 15px -3px var(--shadow-hover-1), 0 4px 6px -2px var(--shadow-hover-2);
 
   --color_sun: #fbbf24;
-  --color_moon: #d1d5db;
+  --color_moon: #2563eb;
   --color_system: #d1d5db;
 
   --link-content: #2563eb;
@@ -29,6 +29,9 @@
   --link-nav-active: #2563eb;
   --link-secondary: #6b7280;
   --link-secondary-hover: #111827;
+
+  --skeleton-base: #e5e7eb;
+  --skeleton-shimmer: rgba(255, 255, 255, 0.6);
 
   /* TOASTS */
   /* Нейтральные тосты */
@@ -116,10 +119,6 @@ html[data-theme='light'] {
   --box-shadow-hover:
     0 10px 15px -3px var(--shadow-hover-1), 0 4px 6px -2px var(--shadow-hover-2);
 
-  --color_sun: #fbbf24;
-  --color_moon: #d1d5db;
-  --color_system: #d1d5db;
-
   --link-content: #2563eb;
   --link-content-hover: #1d4ed8;
   --link-content-visited: #1e40af;
@@ -128,6 +127,9 @@ html[data-theme='light'] {
   --link-nav-active: #2563eb;
   --link-secondary: #6b7280;
   --link-secondary-hover: #111827;
+
+  --skeleton-base: #e5e7eb;
+  --skeleton-shimmer: rgba(255, 255, 255, 0.6);
 
   /* TOASTS */
   /* Нейтральные тосты */
@@ -177,10 +179,6 @@ html[data-theme='light'] {
       0 20px 25px -5px var(--shadow-hover-1),
       0 10px 10px -5px var(--shadow-hover-2);
 
-    --color_sun: #475569;
-    --color_moon: #2563eb;
-    --color_system: #475569;
-
     --link-content: #38bdf8;
     --link-content-hover: #0ea5e9;
     --link-content-visited: #a78bfa;
@@ -189,6 +187,9 @@ html[data-theme='light'] {
     --link-nav-active: #0284c7;
     --link-secondary: #94a3b8;
     --link-secondary-hover: #e5e7eb;
+
+    --skeleton-base: #334155;
+    --skeleton-shimmer: rgba(37, 99, 235, 0.18);
 
     /* TOASTS */
     --normal-bg: var(--bg-card);
@@ -233,10 +234,6 @@ html[data-theme='dark'] {
     0 20px 25px -5px var(--shadow-hover-1),
     0 10px 10px -5px var(--shadow-hover-2);
 
-  --color_sun: #475569;
-  --color_moon: #2563eb;
-  --color_system: #475569;
-
   --link-content: #38bdf8;
   --link-content-hover: #0ea5e9;
   --link-content-visited: #a78bfa;
@@ -245,6 +242,9 @@ html[data-theme='dark'] {
   --link-nav-active: #0284c7;
   --link-secondary: #94a3b8;
   --link-secondary-hover: #e5e7eb;
+
+  --skeleton-base: #334155;
+  --skeleton-shimmer: rgba(37, 99, 235, 0.18);
 
   /* TOASTS */
   --normal-bg: var(--bg-card);

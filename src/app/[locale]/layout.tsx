@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { NextIntlClientProvider, hasLocale } from 'next-intl'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { ThemeProvider } from 'next-themes'
 
 import { mainFont } from '@/shared/ui/fonts'
 import { Header } from '@/shared/ui/Header'
@@ -21,8 +22,6 @@ export async function generateMetadata({ params }: IProps): Promise<Metadata> {
 
   const baseUrl = 'https://semoshin.ru'
   const url = `${baseUrl}/${locale}`
-
-  console.log('url', url)
 
   return {
     title: t('meta.title'),
@@ -83,13 +82,20 @@ export default async function LocaleLayout({ children, params }: IProps) {
   setRequestLocale(locale)
 
   return (
-    <html lang={locale} className={mainFont.variable}>
+    <html lang={locale} className={mainFont.variable} suppressHydrationWarning>
       <body>
-        <NextIntlClientProvider>
-          <Header />
-          {children}
-          <ToasterProvider />
-        </NextIntlClientProvider>
+        <ThemeProvider
+          attribute="data-theme"
+          defaultTheme="system"
+          enableSystem
+          storageKey="theme"
+        >
+          <NextIntlClientProvider>
+            <Header />
+            {children}
+            <ToasterProvider />
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   )
