@@ -40,7 +40,8 @@
     "theme": {
       "light": "Light",
       "dark": "Dark",
-      "system": "System"
+      "system": "System",
+      "pyaterochka": "Pyaterochka"
     }
   },
   "Nav": {

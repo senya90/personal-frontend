@@ -6,10 +6,12 @@ import Languages from './svg/languages.svg'
 import Mail from './svg/mail.svg'
 import Mail2 from './svg/mail2.svg'
 import Moon from './svg/moon.svg'
+import Pyaterochka from './svg/pyaterochka.svg'
 import Sun from './svg/sun.svg'
 import System from './svg/system.svg'
 import Telegram from './svg/telegram.svg'
 import Telegram2 from './svg/telegram2.svg'
+import Ubuntu from './svg/ubuntu.svg'
 
 export const icons = {
   sun: Sun,
@@ -24,6 +26,8 @@ export const icons = {
   externalLink: ExternalLink,
   favicon: Favicon,
   languages: Languages,
+  pyaterochka: Pyaterochka,
+  ubuntu: Ubuntu,
 } as const
 
 export const iconSizes = {

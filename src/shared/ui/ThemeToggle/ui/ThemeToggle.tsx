@@ -24,6 +24,8 @@ export function ThemeToggle({ onChange }: IProps) {
     light: t('theme.light'),
     dark: t('theme.dark'),
     system: t('theme.system'),
+    pyaterochka: t('theme.pyaterochka'),
+    ubuntu: 'Ubuntu',
   })
 
   const [isOpen, setIsOpen] = useState(false)
