@@ -1,22 +1,24 @@
 import { IThemeOption, THEME } from '../model/types'
 
-export const THEME_OPTIONS: IThemeOption[] = [
+export const getThemeOptions = (
+  labels: Record<THEME, string>
+): IThemeOption[] => [
   {
     value: THEME.LIGHT,
     icon: 'sun',
-    label: 'Light',
+    label: labels.light,
     color: 'var(--color_sun)',
   },
   {
     value: THEME.DARK,
     icon: 'moon',
-    label: 'Dark',
+    label: labels.dark,
     color: 'var(--color_moon)',
   },
   {
     value: THEME.SYSTEM,
     icon: 'system',
-    label: 'System',
+    label: labels.system,
     color: 'var(--color_system)',
   },
 ]

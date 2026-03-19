@@ -36,7 +36,12 @@
     "english": "English",
     "russian": "Russian",
     "close_menu": "Закрыть меню",
-    "open_menu": "Открыть меню"
+    "open_menu": "Открыть меню",
+    "theme": {
+      "light": "Светлая",
+      "dark": "Темная",
+      "system": "Системная"
+    }
   },
   "Nav": {
     "main_menu": "Главное меню",
