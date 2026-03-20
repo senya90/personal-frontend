@@ -83,3 +83,15 @@
 .optionLabel {
   font-size: 0.8rem;
 }
+
+@media (width <= 1023px) {
+  .optionLabel {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (width <= 768px) {
+  .option {
+    padding: var(--space-m);
+  }
+}

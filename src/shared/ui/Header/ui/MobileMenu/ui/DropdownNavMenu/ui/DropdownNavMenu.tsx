@@ -3,7 +3,6 @@ import { useTranslations } from 'next-intl'
 
 import { LanguageSwitcher } from '@/shared/ui/LanguageSwitcher'
 import { Navigation } from '@/shared/ui/Navigation'
-import { margins } from '@/shared/ui/styles'
 import { ThemeToggle } from '@/shared/ui/ThemeToggle'
 
 import styles from './styles.module.css'
@@ -62,7 +61,7 @@ export const DropdownNavMenu = ({
                 aria-label={t('theme_lang')}
               >
                 <ThemeToggle onChange={onItemClick} />
-                <div className={margins.ml_m}>
+                <div className={styles.languageWrapper}>
                   <LanguageSwitcher />
                 </div>
               </div>

@@ -1,9 +1,9 @@
 .dropdownMenu {
   position: absolute;
   top: 100%;
-  right: 0;
+  left: 0;
   z-index: calc(var(--z-index-level-4) + 1);
-  width: 280px;
+  width: 100%;
   background-color: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-m);
@@ -24,7 +24,7 @@
 
 .mobileNavigation a {
   padding: var(--space-s) var(--space-xs);
-  border-radius: 8px;
+  border-radius: var(--radius-m);
   transition:
     background-color var(--transition-color),
     color var(--transition-color);
@@ -42,6 +42,10 @@
   justify-content: flex-end;
   padding-top: var(--space-s);
   border-top: 1px solid var(--border);
+}
+
+.languageWrapper {
+  margin-left: var(--space-m);
 }
 
 .menuOverlay {
@@ -63,8 +67,25 @@
   }
 }
 
+@media screen and (width <= 1023px) {
+  .mobileControls {
+    padding-right: var(--space-xs);
+  }
+}
+
 @media screen and (width <= 768px) {
-  .dropdownMenu {
-    width: 180px;
+  .mobileControls {
+    padding: var(--space-m) var(--space-l);
+    padding-bottom: var(--space-s);
+  }
+
+  .mobileNavigation a {
+    padding: var(--space-l);
+  }
+}
+
+@media screen and (width <= 480px) {
+  .languageWrapper {
+    margin-left: var(--space-xl);
   }
 }

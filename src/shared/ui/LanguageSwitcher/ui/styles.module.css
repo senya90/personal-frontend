@@ -54,3 +54,15 @@
 .trigger:active {
   opacity: 1;
 }
+
+@media (width <= 1023px) {
+  .languageLink span {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (width <= 768px) {
+  .menu li a span {
+    padding: var(--space-l) var(--space-l);
+  }
+}
