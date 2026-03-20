@@ -8,6 +8,8 @@ const FAVICONS: Record<THEME, string> = {
   [THEME.LIGHT]: '/favicon.ico',
   [THEME.DARK]: '/favicon-dark.ico',
   [THEME.SYSTEM]: '/favicon.ico',
+  [THEME.PYATEROCHKA]: '/favicon.ico',
+  [THEME.UBUNTU]: '/favicon-dark.ico',
 }
 
 export function useFavicon(theme: THEME) {
