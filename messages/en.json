@@ -3,6 +3,7 @@
     "meta": {
       "title": "Semoshin",
       "description": "Personal site of a frontend developer",
+      "keywords": "Frontend разработчик,React,TypeScript,Next.js,Senior Frontend,Semyon Mamoshin",
       "og:title": "Semyon Mamoshin — Frontend Developer",
       "og:description": "Personal site of a frontend developer. React, Next.js, TypeScript, Node.js"
     },

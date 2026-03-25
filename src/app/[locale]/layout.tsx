@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: IProps): Promise<Metadata> {
     icons: {
       icon: [{ url: '/favicon.ico' }],
     },
-
+    keywords: t('meta.keywords'),
     openGraph: {
       title: t('meta.og:title'),
       description: t('meta.og:description'),
