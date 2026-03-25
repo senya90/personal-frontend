@@ -25,9 +25,12 @@ export function LanguageSwitcher() {
   const t = useTranslations('Header')
 
   return (
-    <div className={styles.wrapper} aria-label={t('switch_language')}>
+    <div className={styles.wrapper}>
       <Dropdown placement="bottom-end">
-        <DropdownTrigger className={styles.trigger}>
+        <DropdownTrigger
+          className={styles.trigger}
+          aria-label={t('switch_language')}
+        >
           <Icon icon="languages" size="s" className={container.pointer} />
         </DropdownTrigger>
         <DropdownMenu

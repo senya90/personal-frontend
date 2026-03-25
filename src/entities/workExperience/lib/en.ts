@@ -26,7 +26,7 @@ export const workExperienceEn: WorkExperience[] = [
   {
     id: '2',
     date: '2019 - 2020',
-    title: 'Smartplayer',
+    title: 'SmartPlayer',
     position: 'Middle Frontend Developer',
     description: [
       `Development of a CMS for video broadcast management. Tech stack: React, Redux, MobX, TypeScript, SASS/SCSS, Bootstrap, Flexbox.`,

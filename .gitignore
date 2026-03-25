@@ -45,3 +45,11 @@ next-env.d.ts
 # infra
 /ansible
 nginx/conf.d/https_conf.conf
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
