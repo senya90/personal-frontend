@@ -29,4 +29,5 @@ README.md
 LICENSE
 
 test
-coverage
+coverage/
+playwright-report/
